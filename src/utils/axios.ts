@@ -1,7 +1,11 @@
 import axios from 'axios';
 
+
+// import env from 'vue';
+
+
 const intance = axios.create({
-    baseURL: ``
+    baseURL: 'https://webdev.raidmen.ru'
 });
 
 intance.interceptors.request.use(

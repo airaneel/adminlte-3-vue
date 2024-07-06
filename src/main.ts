@@ -1,7 +1,8 @@
-import {createApp} from 'vue';
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 import App from './app/app.vue';
 import router from './router';
-import store from './store';
+
 import {i18n} from './translation';
 
 import {library} from '@fortawesome/fontawesome-svg-core';
@@ -31,10 +32,10 @@ const options: PluginOptions = {
     icon: true,
     rtl: false
 };
-
+const pinia = createPinia()
 const app = createApp(App);
 app.component('font-awesome-icon', FontAwesomeIcon)
-    .use(store)
+    .use(pinia)
     .use(router)
     .use(Toast, options)
     .use(i18n as any)

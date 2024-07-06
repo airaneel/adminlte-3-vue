@@ -6,7 +6,7 @@ import {calculateWindowSize} from '@/utils/helpers';
 const uiModule = {
     namespaced: true,
     state: {
-        darkMode: false,
+        darkMode: true,
         navbarVariant: 'navbar-light',
         sidebarSkin: 'sidebar-dark-primary',
         menuSidebarCollapsed: false,

@@ -1,0 +1,61 @@
+{
+    "labels": {
+        "signInToStart": "Войдите, чтобы начать сеанс",
+        "rememberMe": "Запомнить меня",
+        "signIn": "Войти",
+        "signInUsingFB": "Войти через Facebook",
+        "signUpUsingFB": "Зарегистрироваться через Facebook",
+        "signInUsingGoogle": "Войти через Google",
+        "signUpUsingGoogle": "Зарегистрироваться через Google",
+        "forgotPassword": "Восстановить пароль",
+        "registerMembership": "Зарегистрироваться",
+        "admin": "RDH",
+        "lte": ".corp",
+        "login": "Логин",
+        "loading": "Загрузка...",
+        "copyright": "Авторское право",
+        "allRightReserved": "Все права защищены",
+        "version": "Версия",
+        "seeAllNotification": "Посмотреть все уведомления",
+        "notifications": "Уведомления",
+        "newMessages": "новые сообщения",
+        "mins": "минут",
+        "hours": "часов",
+        "days": "дней",
+        "friendRequests": "запросы в друзья",
+        "newReports": "новые отчеты",
+        "profile": "Профиль",
+        "followers": "Подписчики",
+        "sales": "Продажи",
+        "friends": "Друзья",
+        "signOut": "Выйти",
+        "memberSince": "Член с",
+        "home": "Главная",
+        "contact": "Контакт",
+        "dashboard": "Панель управления",
+        "blank": "Пустой",
+        "mainMenu": "Главное меню",
+        "subMenu": "Подменю",
+        "privacyPolicy": "Политика конфиденциальности",
+        "iAgree": "Я согласен с",
+        "terms": "условиями",
+        "register": "Регистрация",
+        "alreadyHaveMembership": "У меня уже есть членство",
+        "userProfile": "Профиль пользователя"
+    },
+    "messages": {
+        "retrieveNewPassword": "Вы забыли свой пароль? Здесь вы можете легко получить новый пароль.",
+        "recoverYourPasswordNow": "Вы всего в одном шаге от нового пароля, восстановите свой пароль сейчас."
+    },
+    "buttons": {
+        "requestNewPassword": "Запросить новый пароль"
+    },
+    "languages": {
+        "russian": "Русский",
+        "english": "Английский",
+        "german": "Немецкий",
+        "french": "Французский",
+        "spanish": "Испанский",
+        "turkish": "Турецкий"
+    }
+}

@@ -1,14 +1,15 @@
 import instance from '@/utils/axios';
+import Cookies from 'js-cookie';
+import { LoginResponse } from './rdhAuth/interfaces/auth';
+import { useRauthStore } from '@/rdhStore/auth';
 
 
-import type { LoginResponse } from './interfaces/auth';
-import useGlobalStore from '@/stores/appStore';
 
 
 
 
 // Функция для входа с использованием имени пользователя и пароля
-export const loginWithUsername = async (username: string, password: string): Promise<LoginResponse> => {
+export const login = async (username: string, password: string): Promise<LoginResponse> => {
     try {
         const response = await instance.post<LoginResponse>('/api/token/', {
             username,
@@ -52,15 +53,15 @@ export const refreshAccessToken = async (): Promise<string> => {
 };
 
 export const logout = (): void => {
-    const store = useGlobalStore();
 
-    // Удаление токенов из cookies
     Cookies.remove('accessToken');
     Cookies.remove('refreshToken');
+    useRauthStore().setIsLoggedIn(false);
+    useRauthStore().setCurrentUser(null);
 
-    // Обновление состояния глобального хранилища
-    store.isLoggedIn = false;
 };
+
+
 
 // Вспомогательная функция для установки токенов в cookies
 const setTokens = (access: string, refresh: string): void => {
