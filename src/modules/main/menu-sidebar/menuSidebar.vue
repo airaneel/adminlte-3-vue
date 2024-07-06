@@ -1,16 +1,15 @@
 <template>
   <aside v-if="menu" class="main-sidebar elevation-4" :class="sidebarSkin">
     <RouterLink to="/" class="brand-link">
-      <PfImage
+      <image
         src="assets/img/logo.png"
-        alt="AdminLTE Logo"
+        alt="Logo"
         class="brand-image"
-        height='33'
-        width='44'
-        rounded
+        :height='33'
+        :width='44'
         style="opacity: 0.8"
-      ></PfImage>
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      ></image>
+      <span class="brand-text font-weight-light">RDH corp</span>
     </RouterLink>
 
     <div class="sidebar">
@@ -21,8 +20,8 @@
             fallbackSrc="assets/img/default-profile.png"
             class="img-circle"
             alt="User Image"
-            width="34"
-            height="34"
+            :width="34"
+            :height="34"
             rounded
           ></PfImage>
         </div>

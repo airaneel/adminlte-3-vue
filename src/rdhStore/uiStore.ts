@@ -1,21 +1,59 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-import { calculateWindowSize } from '@/utils/helpers';
+import { NAVBAR_DARK_VARIANTS, NAVBAR_LIGHT_VARIANTS, SIDEBAR_DARK_SKINS, SIDEBAR_LIGHT_SKINS } from '@/utils/themes';
+import logger from '@/utils/logger';
 
 export const useUiStore = defineStore('ui', () => {
-const darkMode = ref<boolean>(true);
-  const navbarVariant = ref<string>();
-  const sidebarSkin = ref<string>();
-const menuSidebarCollapsed = ref<boolean>(false);
-  const controlSidebarCollapsed = ref<boolean>(true);
-  const screenSize = ref(calculateWindowSize(window.innerWidth));
+    const darkMode = ref<boolean>(true);
+    const navbarVariant = ref<string>(NAVBAR_DARK_VARIANTS[0].value);
+    const sidebarSkin = ref<string>(SIDEBAR_DARK_SKINS[0].value);
+    const menuSidebarCollapsed = ref<boolean>(false);
+    const controlSidebarCollapsed = ref<boolean>(true);
+    const screenSize = ref<string>('lg');
 
-    const toggleState = (state: { value: boolean }) => {
-        state.value = !state.value;
+    const toggleDarkMode = () => {
+        darkMode.value = !darkMode.value;
+        if (darkMode.value) {
+            navbarVariant.value = NAVBAR_DARK_VARIANTS[0].value;
+            sidebarSkin.value = SIDEBAR_DARK_SKINS[0].value;
+        } else {
+            navbarVariant.value = NAVBAR_LIGHT_VARIANTS[0].value;
+            sidebarSkin.value = SIDEBAR_LIGHT_SKINS[0].value;
+        }
+        logger.debug('Dark mode toggled:', darkMode.value);
     };
 
-    const setState = <T>(state: { value: T }, value: T) => {
-        state.value = value;
+    const toggleMenuSidebar = () => {
+        menuSidebarCollapsed.value = !menuSidebarCollapsed.value;
+        logger.debug('Menu sidebar toggled:', menuSidebarCollapsed.value);
+    };
+
+    const toggleControlSidebar = () => {
+        controlSidebarCollapsed.value = !controlSidebarCollapsed.value;
+        logger.debug('Control sidebar toggled:', controlSidebarCollapsed.value);
+    };
+
+    const setScreenSize = (size: string) => {
+        screenSize.value = size;
+        logger.debug('Screen size set to:', screenSize.value);
+    };
+
+    const setNavbarVariant = (payload: string) => {
+        if (darkMode.value) {
+            navbarVariant.value = payload || NAVBAR_DARK_VARIANTS[0].value;
+        } else {
+            navbarVariant.value = payload || NAVBAR_LIGHT_VARIANTS[0].value;
+        }
+        logger.debug('Navbar variant set to:', navbarVariant.value);
+    };
+
+    const setSidebarSkin = (payload: string) => {
+        if (darkMode.value) {
+            sidebarSkin.value = payload || SIDEBAR_DARK_SKINS[0].value;
+        } else {
+            sidebarSkin.value = payload || SIDEBAR_LIGHT_SKINS[0].value;
+        }
+        logger.debug('Sidebar skin set to:', sidebarSkin.value);
     };
 
     return {
@@ -25,12 +63,11 @@ const menuSidebarCollapsed = ref<boolean>(false);
         menuSidebarCollapsed,
         controlSidebarCollapsed,
         screenSize,
-        toggleDarkMode: () => toggleState(darkMode),
-        toggleMenuSidebar: () => toggleState(menuSidebarCollapsed),
-        toggleControlSidebar: () => toggleState(controlSidebarCollapsed),
-        setDarkMode: (selected: boolean) => setState(darkMode, selected),
-        setNavbarVariant: (variant: string) => setState(navbarVariant, variant),
-        setSidebarSkin: (skin: string) => setState(sidebarSkin, skin),
-        setScreenSize: (size: string) => setState(screenSize, size),
+        toggleDarkMode,
+        toggleMenuSidebar,
+        toggleControlSidebar,
+        setScreenSize,
+        setNavbarVariant,
+        setSidebarSkin,
     };
 });

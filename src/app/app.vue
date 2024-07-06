@@ -4,46 +4,39 @@
 
 </template>
 <script setup lang="ts">
-    import { onMounted, watch, computed, ref } from 'vue';
+    import { onMounted, watch, computed, ref, onUnmounted } from 'vue';
     import { useWindowSize } from '@vueuse/core';
     import { calculateWindowSize } from '@/utils/helpers';
-    import { useRauthStore } from '../rdhStore/auth';
     import { useUiStore } from '../rdhStore/uiStore';
-    import Cookies from 'js-cookie';
-    import router from '@/router';
+    import logger from '@/utils/logger';
     
     const isAppLoading = ref(true);
-    const authStore = useRauthStore();
     const uiStore = useUiStore();
 
     const { width } = useWindowSize();
     const windowSize = computed(() => calculateWindowSize(width.value));
 
-    const checkSession = async () => { 
-        
 
-        if (Cookies.get('accessToken')) {
-            authStore.setIsLoggedIn(true);
-        } else {
-            authStore.setIsLoggedIn(false);
-            router.push({ name: 'Login' });
-        }
-        isAppLoading.value = false;
+// Установить начальное значение screenSize при монтировании компонента
+onMounted(() => {
+    logger.debug('app.vue mounted');
+    uiStore.setScreenSize(windowSize.value);
+    logger.debug('app.vue windowSize', windowSize.value);
+    isAppLoading.value = false;
+});
 
+// Отслеживать изменения windowSize и обновлять screenSize в хранилище
+watch(windowSize, (newValue) => {
+    if (uiStore.screenSize !== newValue) {
+        uiStore.setScreenSize(newValue);
+        logger.debug('app.vue windowSize changed', newValue);
     }
+});
 
-    onMounted(async () => {
-        await checkSession();
-    });
-
-
-
-    watch(windowSize, (newValue) => {
-        if (uiStore.screenSize !== newValue) {
-            uiStore.setScreenSize(newValue);
-        }
-    });
-
+onUnmounted(() => {
+    logger.debug('app.vue unmounted');
+    // Нет необходимости обновлять screenSize при размонтировании
+});
 
 
 </script>

@@ -1,7 +1,5 @@
 import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router';
 
-
-import Main from '@/modules/main/main.vue';
 import rdhmain from '@/modules/main/rdhMain.vue';
 import rdhLogin from '@/modules/rdhLogin/login.vue';
 import Register from '@/modules/register/register.vue';
