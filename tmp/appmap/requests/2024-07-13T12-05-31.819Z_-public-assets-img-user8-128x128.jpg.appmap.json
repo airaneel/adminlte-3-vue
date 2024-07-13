@@ -1,0 +1,141 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/public/assets/img/user8-128x128.jpg",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/src/components/main/header/messages/messages.vue",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0,
+      "message": [
+        {
+          "name": "import",
+          "value": "''",
+          "class": "String"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "id": 2,
+      "thread_id": 0,
+      "method_id": "formatMessage",
+      "static": true,
+      "parameters": [
+        {
+          "class": "String",
+          "value": "'warn'",
+          "name": "type"
+        },
+        {
+          "class": "String",
+          "value": "'\\x1B[33mAssets in public directory cannot be imported from JavaScript.\\n' +\n  'If you intend to import that asset, put the file in the src directory, and use \\x1B[36m/src/assets/img/user8-128x128.jpg\\x1B[33m instead of \\x1B[36m/public/assets/img/user8-128x128.jpg\\x1B[33m.\\n' +\n  'If you intend to use the URL of that asset, use \\x1B[36m/assets/img/user8-128x128.jpg?url\\x1B[33m.\\x1B[39m'",
+          "name": "msg"
+        },
+        {
+          "class": "undefined",
+          "value": "undefined",
+          "name": "options"
+        }
+      ],
+      "defined_class": "viteLogger",
+      "path": "src/utils/viteLogger.ts",
+      "lineno": 7
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 3,
+      "parent_id": 2,
+      "return_value": {
+        "class": "String",
+        "value": "'RDH [3:05:31 PM] [WARN] \\x1B[33mAssets in public directory cannot be imported from JavaScript.\\n' +\n  'If you intend to import that asset, put the file in the src directory, and use \\x1B[36m/src/assets/img/user8-128x128.jpg\\x1B[33m instead of \\x1B[36m/public/assets/img/user8-128x128.jpg\\x1B[33m.\\n' +\n  'If you intend to use the URL of that asset, use \\x1B[36m/assets/img/user8-128x128.jpg?url\\x1B[33m.\\x1B[39m'"
+      },
+      "elapsed": 0.0000076669966802001
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"35-q7jgi6on+AgwkcVCNfOYIuGGqdo\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "export default \"/public/assets/img/user8-128x128.jpg\"\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVzZXI4LTEyOHgxMjguanBnP2ltcG9ydCJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBcIi9wdWJsaWMvYXNzZXRzL2ltZy91c2VyOC0xMjh4MTI4LmpwZ1wiIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE1BQU0sQ0FBQyxPQUFPLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxNQUFNLENBQUMsR0FBRyxDQUFDLEtBQUssQ0FBQyxPQUFPLENBQUMsR0FBRyJ9"
+        }
+      },
+      "id": 4,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.0003076249995501712
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /public/assets/img/user8-128x128.jpg (200) — 2024-07-13T12:05:31.819Z"
+  },
+  "classMap": [
+    {
+      "name": "utils",
+      "type": "package",
+      "children": [
+        {
+          "type": "class",
+          "name": "viteLogger",
+          "children": [
+            {
+              "type": "function",
+              "name": "formatMessage",
+              "static": true,
+              "location": "src/utils/viteLogger.ts:7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /public/assets/img/user8-128x128.jpg"
+        }
+      ]
+    }
+  ]
+}

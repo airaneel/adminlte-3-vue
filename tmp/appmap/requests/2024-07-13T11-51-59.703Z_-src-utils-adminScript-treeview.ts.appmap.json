@@ -1,0 +1,80 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/utils/adminScript/treeview.ts",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/src/components/main/MenuSideBar/menuSidebar.vue",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin",
+          "Pragma": "no-cache",
+          "Cache-Control": "no-cache"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"aff-hLEGTzH7HY1JmaYflCL6YY0xaUk\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "/**\n * --------------------------------------------\n * @file AdminLTE treeview.ts\n * @description Treeview plugin for AdminLTE.\n * @license MIT\n * --------------------------------------------\n */\nimport {\n  onDOMContentLoaded,\n  slideDown,\n  slideUp\n} from \"/src/utils/adminScript/util/index.ts\";\nconst DATA_KEY = \"lte.treeview\";\nconst EVENT_KEY = `.${DATA_KEY}`;\nconst EVENT_EXPANDED = `expanded${EVENT_KEY}`;\nconst EVENT_COLLAPSED = `collapsed${EVENT_KEY}`;\nconst CLASS_NAME_MENU_OPEN = \"menu-open\";\nconst SELECTOR_NAV_ITEM = \".nav-item\";\nconst SELECTOR_NAV_LINK = \".nav-link\";\nconst SELECTOR_TREEVIEW_MENU = \".nav-treeview\";\nconst SELECTOR_DATA_TOGGLE = '[data-lte-toggle=\"treeview\"]';\nconst Default = {\n  animationSpeed: 300,\n  accordion: true\n};\nclass Treeview {\n  constructor(element, config) {\n    this._element = element;\n    this._config = { ...Default, ...config };\n  }\n  open() {\n    const event = new Event(EVENT_EXPANDED);\n    if (this._config.accordion) {\n      const openMenuList = this._element.parentElement?.querySelectorAll(`${SELECTOR_NAV_ITEM}.${CLASS_NAME_MENU_OPEN}`);\n      openMenuList?.forEach((openMenu) => {\n        if (openMenu !== this._element.parentElement) {\n          openMenu.classList.remove(CLASS_NAME_MENU_OPEN);\n          const childElement2 = openMenu?.querySelector(SELECTOR_TREEVIEW_MENU);\n          if (childElement2) {\n            slideUp(childElement2, this._config.animationSpeed);\n          }\n        }\n      });\n    }\n    this._element.classList.add(CLASS_NAME_MENU_OPEN);\n    const childElement = this._element?.querySelector(SELECTOR_TREEVIEW_MENU);\n    if (childElement) {\n      slideDown(childElement, this._config.animationSpeed);\n    }\n    this._element.dispatchEvent(event);\n  }\n  close() {\n    const event = new Event(EVENT_COLLAPSED);\n    this._element.classList.remove(CLASS_NAME_MENU_OPEN);\n    const childElement = this._element?.querySelector(SELECTOR_TREEVIEW_MENU);\n    if (childElement) {\n      slideUp(childElement, this._config.animationSpeed);\n    }\n    this._element.dispatchEvent(event);\n  }\n  toggle() {\n    if (this._element.classList.contains(CLASS_NAME_MENU_OPEN)) {\n      this.close();\n    } else {\n      this.open();\n    }\n  }\n}\nonDOMContentLoaded(() => {\n  const button = document.querySelectorAll(SELECTOR_DATA_TOGGLE);\n  button.forEach((btn) => {\n    btn.addEventListener(\"click\", (event) => {\n      const target = event.target;\n      const targetItem = target.closest(SELECTOR_NAV_ITEM);\n      const targetLink = target.closest(SELECTOR_NAV_LINK);\n      if (target?.getAttribute(\"href\") === \"#\" || targetLink?.getAttribute(\"href\") === \"#\") {\n        event.preventDefault();\n      }\n      if (targetItem) {\n        const data = new Treeview(targetItem, Default);\n        data.toggle();\n      }\n    });\n  });\n});\nexport default Treeview;\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRyZWV2aWV3LnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqIEBmaWxlIEFkbWluTFRFIHRyZWV2aWV3LnRzXG4gKiBAZGVzY3JpcHRpb24gVHJlZXZpZXcgcGx1Z2luIGZvciBBZG1pbkxURS5cbiAqIEBsaWNlbnNlIE1JVFxuICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqL1xuXG5pbXBvcnQge1xuICBvbkRPTUNvbnRlbnRMb2FkZWQsXG4gIHNsaWRlRG93bixcbiAgc2xpZGVVcFxufSBmcm9tICcuL3V0aWwvaW5kZXgnXG5cbi8qKlxuICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiBDb25zdGFudHNcbiAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICovXG5cbi8vIGNvbnN0IE5BTUUgPSAnVHJlZXZpZXcnXG5jb25zdCBEQVRBX0tFWSA9ICdsdGUudHJlZXZpZXcnXG5jb25zdCBFVkVOVF9LRVkgPSBgLiR7REFUQV9LRVl9YFxuXG5jb25zdCBFVkVOVF9FWFBBTkRFRCA9IGBleHBhbmRlZCR7RVZFTlRfS0VZfWBcbmNvbnN0IEVWRU5UX0NPTExBUFNFRCA9IGBjb2xsYXBzZWQke0VWRU5UX0tFWX1gXG4vLyBjb25zdCBFVkVOVF9MT0FEX0RBVEFfQVBJID0gYGxvYWQke0VWRU5UX0tFWX1gXG5cbmNvbnN0IENMQVNTX05BTUVfTUVOVV9PUEVOID0gJ21lbnUtb3BlbidcbmNvbnN0IFNFTEVDVE9SX05BVl9JVEVNID0gJy5uYXYtaXRlbSdcbmNvbnN0IFNFTEVDVE9SX05BVl9MSU5LID0gJy5uYXYtbGluaydcbmNvbnN0IFNFTEVDVE9SX1RSRUVWSUVXX01FTlUgPSAnLm5hdi10cmVldmlldydcbmNvbnN0IFNFTEVDVE9SX0RBVEFfVE9HR0xFID0gJ1tkYXRhLWx0ZS10b2dnbGU9XCJ0cmVldmlld1wiXSdcblxuY29uc3QgRGVmYXVsdCA9IHtcbiAgYW5pbWF0aW9uU3BlZWQ6IDMwMCxcbiAgYWNjb3JkaW9uOiB0cnVlXG59XG5cbmV4cG9ydCB0eXBlIENvbmZpZyA9IHtcbiAgYW5pbWF0aW9uU3BlZWQ6IG51bWJlcjtcbiAgYWNjb3JkaW9uOiBib29sZWFuO1xufVxuXG4vKipcbiAqIENsYXNzIERlZmluaXRpb25cbiAqID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbiAqL1xuXG5jbGFzcyBUcmVldmlldyB7XG4gIF9lbGVtZW50OiBIVE1MRWxlbWVudFxuICBfY29uZmlnOiBDb25maWdcblxuICBjb25zdHJ1Y3RvcihlbGVtZW50OiBIVE1MRWxlbWVudCwgY29uZmlnOiBDb25maWcpIHtcbiAgICB0aGlzLl9lbGVtZW50ID0gZWxlbWVudFxuICAgIHRoaXMuX2NvbmZpZyA9IHsgLi4uRGVmYXVsdCwgLi4uY29uZmlnIH1cbiAgfVxuXG4gIG9wZW4oKTogdm9pZCB7XG4gICAgY29uc3QgZXZlbnQgPSBuZXcgRXZlbnQoRVZFTlRfRVhQQU5ERUQpXG5cbiAgICBpZiAodGhpcy5fY29uZmlnLmFjY29yZGlvbikge1xuICAgICAgY29uc3Qgb3Blbk1lbnVMaXN0ID0gdGhpcy5fZWxlbWVudC5wYXJlbnRFbGVtZW50Py5xdWVyeVNlbGVjdG9yQWxsKGAke1NFTEVDVE9SX05BVl9JVEVNfS4ke0NMQVNTX05BTUVfTUVOVV9PUEVOfWApXG5cbiAgICAgIG9wZW5NZW51TGlzdD8uZm9yRWFjaChvcGVuTWVudSA9PiB7XG4gICAgICAgIGlmIChvcGVuTWVudSAhPT0gdGhpcy5fZWxlbWVudC5wYXJlbnRFbGVtZW50KSB7XG4gICAgICAgICAgb3Blbk1lbnUuY2xhc3NMaXN0LnJlbW92ZShDTEFTU19OQU1FX01FTlVfT1BFTilcbiAgICAgICAgICBjb25zdCBjaGlsZEVsZW1lbnQgPSBvcGVuTWVudT8ucXVlcnlTZWxlY3RvcihTRUxFQ1RPUl9UUkVFVklFV19NRU5VKSBhcyBIVE1MRWxlbWVudCB8IHVuZGVmaW5lZFxuICAgICAgICAgIGlmIChjaGlsZEVsZW1lbnQpIHtcbiAgICAgICAgICAgIHNsaWRlVXAoY2hpbGRFbGVtZW50LCB0aGlzLl9jb25maWcuYW5pbWF0aW9uU3BlZWQpXG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICB9KVxuICAgIH1cblxuICAgIHRoaXMuX2VsZW1lbnQuY2xhc3NMaXN0LmFkZChDTEFTU19OQU1FX01FTlVfT1BFTilcblxuICAgIGNvbnN0IGNoaWxkRWxlbWVudCA9IHRoaXMuX2VsZW1lbnQ/LnF1ZXJ5U2VsZWN0b3IoU0VMRUNUT1JfVFJFRVZJRVdfTUVOVSkgYXMgSFRNTEVsZW1lbnQgfCB1bmRlZmluZWRcbiAgICBpZiAoY2hpbGRFbGVtZW50KSB7XG4gICAgICBzbGlkZURvd24oY2hpbGRFbGVtZW50LCB0aGlzLl9jb25maWcuYW5pbWF0aW9uU3BlZWQpXG4gICAgfVxuXG4gICAgdGhpcy5fZWxlbWVudC5kaXNwYXRjaEV2ZW50KGV2ZW50KVxuICB9XG5cbiAgY2xvc2UoKTogdm9pZCB7XG4gICAgY29uc3QgZXZlbnQgPSBuZXcgRXZlbnQoRVZFTlRfQ09MTEFQU0VEKVxuXG4gICAgdGhpcy5fZWxlbWVudC5jbGFzc0xpc3QucmVtb3ZlKENMQVNTX05BTUVfTUVOVV9PUEVOKVxuXG4gICAgY29uc3QgY2hpbGRFbGVtZW50ID0gdGhpcy5fZWxlbWVudD8ucXVlcnlTZWxlY3RvcihTRUxFQ1RPUl9UUkVFVklFV19NRU5VKSBhcyBIVE1MRWxlbWVudCB8IHVuZGVmaW5lZFxuICAgIGlmIChjaGlsZEVsZW1lbnQpIHtcbiAgICAgIHNsaWRlVXAoY2hpbGRFbGVtZW50LCB0aGlzLl9jb25maWcuYW5pbWF0aW9uU3BlZWQpXG4gICAgfVxuXG4gICAgdGhpcy5fZWxlbWVudC5kaXNwYXRjaEV2ZW50KGV2ZW50KVxuICB9XG5cbiAgdG9nZ2xlKCk6IHZvaWQge1xuICAgIGlmICh0aGlzLl9lbGVtZW50LmNsYXNzTGlzdC5jb250YWlucyhDTEFTU19OQU1FX01FTlVfT1BFTikpIHtcbiAgICAgIHRoaXMuY2xvc2UoKVxuICAgIH0gZWxzZSB7XG4gICAgICB0aGlzLm9wZW4oKVxuICAgIH1cbiAgfVxufVxuXG4vKipcbiAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogRGF0YSBBcGkgaW1wbGVtZW50YXRpb25cbiAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICovXG5cbm9uRE9NQ29udGVudExvYWRlZCgoKSA9PiB7XG4gIGNvbnN0IGJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoU0VMRUNUT1JfREFUQV9UT0dHTEUpXG5cbiAgYnV0dG9uLmZvckVhY2goYnRuID0+IHtcbiAgICBidG4uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBldmVudCA9PiB7XG4gICAgICBjb25zdCB0YXJnZXQgPSBldmVudC50YXJnZXQgYXMgSFRNTEVsZW1lbnRcbiAgICAgIGNvbnN0IHRhcmdldEl0ZW0gPSB0YXJnZXQuY2xvc2VzdChTRUxFQ1RPUl9OQVZfSVRFTSkgYXMgSFRNTEVsZW1lbnQgfCB1bmRlZmluZWRcbiAgICAgIGNvbnN0IHRhcmdldExpbmsgPSB0YXJnZXQuY2xvc2VzdChTRUxFQ1RPUl9OQVZfTElOSykgYXMgSFRNTEFuY2hvckVsZW1lbnQgfCB1bmRlZmluZWRcblxuICAgICAgaWYgKHRhcmdldD8uZ2V0QXR0cmlidXRlKCdocmVmJykgPT09ICcjJyB8fCB0YXJnZXRMaW5rPy5nZXRBdHRyaWJ1dGUoJ2hyZWYnKSA9PT0gJyMnKSB7XG4gICAgICAgIGV2ZW50LnByZXZlbnREZWZhdWx0KClcbiAgICAgIH1cblxuICAgICAgaWYgKHRhcmdldEl0ZW0pIHtcbiAgICAgICAgY29uc3QgZGF0YSA9IG5ldyBUcmVldmlldyh0YXJnZXRJdGVtLCBEZWZhdWx0KVxuICAgICAgICBkYXRhLnRvZ2dsZSgpXG4gICAgICB9XG4gICAgfSlcbiAgfSlcbn0pXG5cbmV4cG9ydCBkZWZhdWx0IFRyZWV2aWV3XG4iXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBUUE7QUFBQSxFQUNFO0FBQUEsRUFDQTtBQUFBLEVBQ0E7QUFBQSxPQUNLO0FBU1AsTUFBTSxXQUFXO0FBQ2pCLE1BQU0sWUFBWSxJQUFJLFFBQVE7QUFFOUIsTUFBTSxpQkFBaUIsV0FBVyxTQUFTO0FBQzNDLE1BQU0sa0JBQWtCLFlBQVksU0FBUztBQUc3QyxNQUFNLHVCQUF1QjtBQUM3QixNQUFNLG9CQUFvQjtBQUMxQixNQUFNLG9CQUFvQjtBQUMxQixNQUFNLHlCQUF5QjtBQUMvQixNQUFNLHVCQUF1QjtBQUU3QixNQUFNLFVBQVU7QUFBQSxFQUNkLGdCQUFnQjtBQUFBLEVBQ2hCLFdBQVc7QUFDYjtBQVlBLE1BQU0sU0FBUztBQUFBLEVBSWIsWUFBWSxTQUFzQixRQUFnQjtBQUNoRCxTQUFLLFdBQVc7QUFDaEIsU0FBSyxVQUFVLEVBQUUsR0FBRyxTQUFTLEdBQUcsT0FBTztBQUFBLEVBQ3pDO0FBQUEsRUFFQSxPQUFhO0FBQ1gsVUFBTSxRQUFRLElBQUksTUFBTSxjQUFjO0FBRXRDLFFBQUksS0FBSyxRQUFRLFdBQVc7QUFDMUIsWUFBTSxlQUFlLEtBQUssU0FBUyxlQUFlLGlCQUFpQixHQUFHLGlCQUFpQixJQUFJLG9CQUFvQixFQUFFO0FBRWpILG9CQUFjLFFBQVEsY0FBWTtBQUNoQyxZQUFJLGFBQWEsS0FBSyxTQUFTLGVBQWU7QUFDNUMsbUJBQVMsVUFBVSxPQUFPLG9CQUFvQjtBQUM5QyxnQkFBTUEsZ0JBQWUsVUFBVSxjQUFjLHNCQUFzQjtBQUNuRSxjQUFJQSxlQUFjO0FBQ2hCLG9CQUFRQSxlQUFjLEtBQUssUUFBUSxjQUFjO0FBQUEsVUFDbkQ7QUFBQSxRQUNGO0FBQUEsTUFDRixDQUFDO0FBQUEsSUFDSDtBQUVBLFNBQUssU0FBUyxVQUFVLElBQUksb0JBQW9CO0FBRWhELFVBQU0sZUFBZSxLQUFLLFVBQVUsY0FBYyxzQkFBc0I7QUFDeEUsUUFBSSxjQUFjO0FBQ2hCLGdCQUFVLGNBQWMsS0FBSyxRQUFRLGNBQWM7QUFBQSxJQUNyRDtBQUVBLFNBQUssU0FBUyxjQUFjLEtBQUs7QUFBQSxFQUNuQztBQUFBLEVBRUEsUUFBYztBQUNaLFVBQU0sUUFBUSxJQUFJLE1BQU0sZUFBZTtBQUV2QyxTQUFLLFNBQVMsVUFBVSxPQUFPLG9CQUFvQjtBQUVuRCxVQUFNLGVBQWUsS0FBSyxVQUFVLGNBQWMsc0JBQXNCO0FBQ3hFLFFBQUksY0FBYztBQUNoQixjQUFRLGNBQWMsS0FBSyxRQUFRLGNBQWM7QUFBQSxJQUNuRDtBQUVBLFNBQUssU0FBUyxjQUFjLEtBQUs7QUFBQSxFQUNuQztBQUFBLEVBRUEsU0FBZTtBQUNiLFFBQUksS0FBSyxTQUFTLFVBQVUsU0FBUyxvQkFBb0IsR0FBRztBQUMxRCxXQUFLLE1BQU07QUFBQSxJQUNiLE9BQU87QUFDTCxXQUFLLEtBQUs7QUFBQSxJQUNaO0FBQUEsRUFDRjtBQUNGO0FBUUEsbUJBQW1CLE1BQU07QUFDdkIsUUFBTSxTQUFTLFNBQVMsaUJBQWlCLG9CQUFvQjtBQUU3RCxTQUFPLFFBQVEsU0FBTztBQUNwQixRQUFJLGlCQUFpQixTQUFTLFdBQVM7QUFDckMsWUFBTSxTQUFTLE1BQU07QUFDckIsWUFBTSxhQUFhLE9BQU8sUUFBUSxpQkFBaUI7QUFDbkQsWUFBTSxhQUFhLE9BQU8sUUFBUSxpQkFBaUI7QUFFbkQsVUFBSSxRQUFRLGFBQWEsTUFBTSxNQUFNLE9BQU8sWUFBWSxhQUFhLE1BQU0sTUFBTSxLQUFLO0FBQ3BGLG... (234 more characters)"
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.00012316599895711988
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/utils/adminScript/treeview.ts (200) — 2024-07-13T11:51:59.703Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/utils/adminScript/treeview.ts"
+        }
+      ]
+    }
+  ]
+}

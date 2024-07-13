@@ -1,0 +1,30 @@
+[
+  {
+    "name": "utils",
+    "type": "package",
+    "children": [
+      {
+        "type": "class",
+        "name": "viteLogger",
+        "children": [
+          {
+            "type": "function",
+            "name": "formatMessage",
+            "static": true,
+            "location": "src/utils/viteLogger.ts:7"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "GET /src/components/regru/bigSearchForm.vue"
+      }
+    ]
+  }
+]

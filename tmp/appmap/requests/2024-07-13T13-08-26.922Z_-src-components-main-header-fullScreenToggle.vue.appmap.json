@@ -1,0 +1,80 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/components/main/header/fullScreenToggle.vue",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/src/components/main/header/header.vue",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin",
+          "Pragma": "no-cache",
+          "Cache-Control": "no-cache"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"cf6-d9xwngbvZC82BoNz8gX+OtcFRes\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/components/main/header/fullScreenToggle.vue\");import { defineComponent as _defineComponent } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nimport { faMaximize, faMinimize } from \"/node_modules/.vite/deps/@fortawesome_free-solid-svg-icons.js?v=e79d9748\";\nimport { FontAwesomeIcon } from \"/node_modules/.vite/deps/@fortawesome_vue-fontawesome.js?v=e79d9748\";\nimport FullScreen from \"/src/utils/adminScript/fullscreen.ts\";\nimport { onMounted, ref } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nconst _sfc_main = /* @__PURE__ */ _defineComponent({\n  __name: \"fullScreenToggle\",\n  setup(__props, { expose: __expose }) {\n    __expose();\n    const fullEl = ref(null);\n    const FullScreenMod = ref();\n    onMounted(() => {\n      fullEl.value = document.getElementById(\"fullscreen\");\n      FullScreenMod.value = new FullScreen(fullEl.value);\n    });\n    const __returned__ = { fullEl, FullScreenMod, get faMaximize() {\n      return faMaximize;\n    }, get faMinimize() {\n      return faMinimize;\n    }, get FontAwesomeIcon() {\n      return FontAwesomeIcon;\n    } };\n    Object.defineProperty(__returned__, \"__isScriptSetup\", { enumerable: false, value: true });\n    return __returned__;\n  }\n});\nimport { createCommentVNode as _createCommentVNode, createVNode as _createVNode, createElementVNode as _createElementVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nconst _hoisted_1 = {\n  class: \"nav-item\",\n  id: \"fullscreen\"\n};\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return _openBlock(), _createElementBlock(\n    _Fragment,\n    null,\n    [\n      _createCommentVNode(\"begin::Fullscreen Toggle\"),\n      _createElementVNode(\"li\", _hoisted_1, [\n        _createElementVNode(\"a\", {\n          class: \"nav-link\",\n          href: \"#\",\n          \"data-lte-toggle\": \"fullscreen\",\n          onClick: _cache[0] || (_cache[0] = ($event) => $setup.FullScreenMod.toggleFullScreen())\n        }, [\n          _createVNode($setup[\"FontAwesomeIcon\"], {\n            icon: $setup.faMaximize,\n            \"data-lte-icon\": \"maximize\"\n          }, null, 8, [\"icon\"]),\n          _createVNode($setup[\"FontAwesomeIcon\"], {\n            icon: $setup.faMinimize,\n            \"data-lte-icon\": \"minimize\",\n            style: { \"display\": \"none\" }\n          }, null, 8, [\"icon\"])\n        ])\n      ]),\n      _createCommentVNode(\"end::Fullscreen Toggle\")\n    ],\n    2112\n    /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */\n  );\n}\n_sfc_main.__hmrId = \"0c5ac645\";\ntypeof __VUE_HMR_RUNTIME__ !== \"undefined\" && __VUE_HMR_RUNTIME__.createRecord(_sfc_main.__hmrId, _sfc_main);\nimport.meta.hot.accept((mod) => {\n  if (!mod) return;\n  const { default: updated, _rerender_only } = mod;\n  if (_rerender_only) {\n    __VUE_HMR_RUNTIME__.rerender(updated.__hmrId, updated.render);\n  } else {\n    __VUE_HMR_RUNTIME__.reload(updated.__hmrId, updated);\n  }\n});\nimport _export_sfc from \"/@id/__x00__plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"render\", _sfc_render], [\"__file\", \"/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/main/header/fullScreenToggle.vue\"]]);\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IjtBQUNBLFNBQVEsWUFBWSxrQkFBa0I7QUFDbEMsU0FBUyx1QkFBdUI7QUFDaEMsT0FBTyxnQkFBZ0I7QUFDdkIsU0FBUyxXQUFXLFdBQVc7Ozs7O0FBRy9CLFVBQU0sU0FBUyxJQUF3QixJQUFJO0FBQzNDLFVBQU0sZ0JBQWdCLElBQWdCO0FBSXRDLGNBQVUsTUFBTTtBQUNaLGFBQU8sUUFBUSxTQUFTLGVBQWUsWUFBWTtBQUNuRCxvQkFBYyxRQUFRLElBQUksV0FBVyxPQUFPLEtBQUs7QUFBQSxJQUVyRCxDQUFDOzs7Ozs7Ozs7Ozs7OztFQU1LLE9BQU07QUFBQSxFQUFXLElBQUc7Ozt1QkF0QjlCO0FBQUE7QUFBQTtBQUFBO0FBQUEsTUFxQlU7QUFBQSxNQUNKLG9CQUtLLE1BTEwsWUFLSztBQUFBLFFBSkgsb0JBR0k7QUFBQSxVQUhELE9BQU07QUFBQSxVQUFXLE1BQUs7QUFBQSxVQUFLLG1CQUFnQjtBQUFBLFVBQWMsU0FBSyxzQ0FBRSxxQkFBYyxpQkFBZ0I7QUFBQTtVQUMvRixhQUE4RDtBQUFBLFlBQTVDLE1BQU07QUFBQSxZQUFZLGlCQUFjO0FBQUE7VUFDbEQsYUFBcUY7QUFBQSxZQUFuRSxNQUFNO0FBQUEsWUFBWSxpQkFBYztBQUFBLFlBQVc7QUFBQTs7O01BR2pFO0FBQUEiLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImZ1bGxTY3JlZW5Ub2dnbGUudnVlIl0sInNvdXJjZXNDb250ZW50IjpbIjxzY3JpcHQgc2V0dXAgbGFuZz1cInRzXCI+XG5pbXBvcnQge2ZhTWF4aW1pemUsIGZhTWluaW1pemUgfSBmcm9tICdAZm9ydGF3ZXNvbWUvZnJlZS1zb2xpZC1zdmctaWNvbnMnO1xuICAgIGltcG9ydCB7IEZvbnRBd2Vzb21lSWNvbiB9IGZyb20gJ0Bmb3J0YXdlc29tZS92dWUtZm9udGF3ZXNvbWUnO1xuICAgIGltcG9ydCBGdWxsU2NyZWVuIGZyb20gJ0AvdXRpbHMvYWRtaW5TY3JpcHQvZnVsbHNjcmVlbic7XG4gICAgaW1wb3J0IHsgb25Nb3VudGVkLCByZWYgfSBmcm9tICd2dWUnO1xuXG5cbiAgICBjb25zdCBmdWxsRWwgPSByZWY8SFRNTEVsZW1lbnQgfCBudWxsPihudWxsKTtcbiAgICBjb25zdCBGdWxsU2NyZWVuTW9kID0gcmVmPEZ1bGxTY3JlZW4+KClcblxuXG5cbiAgICBvbk1vdW50ZWQoKCkgPT4ge1xuICAgICAgICBmdWxsRWwudmFsdWUgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnZnVsbHNjcmVlbicpO1xuICAgICAgICBGdWxsU2NyZWVuTW9kLnZhbHVlID0gbmV3IEZ1bGxTY3JlZW4oZnVsbEVsLnZhbHVlKTtcblxuICAgIH0pO1xuXG48L3NjcmlwdD5cblxuPHRlbXBsYXRlPlxuICAgICAgICAgIDwhLS1iZWdpbjo6RnVsbHNjcmVlbiBUb2dnbGUtLT5cbiAgICAgIDxsaSBjbGFzcz1cIm5hdi1pdGVtXCIgaWQ9XCJmdWxsc2NyZWVuXCI+XG4gICAgICAgIDxhIGNsYXNzPVwibmF2LWxpbmtcIiBocmVmPVwiI1wiICBkYXRhLWx0ZS10b2dnbGU9XCJmdWxsc2NyZWVuXCIgQGNsaWNrPSdGdWxsU2NyZWVuTW9kLnRvZ2dsZUZ1bGxTY3JlZW4oKSc+XG4gICAgICAgICAgPEZvbnRBd2Vzb21lSWNvbiA6aWNvbj1cImZhTWF4aW1pemVcIiBkYXRhLWx0ZS1pY29uPVwibWF4aW1pemVcIi8+XG4gICAgICAgICAgPEZvbnRBd2Vzb21lSWNvbiA6aWNvbj1cImZhTWluaW1pemVcIiBkYXRhLWx0ZS1pY29uPVwibWluaW1pemVcIiBzdHlsZT1cImRpc3BsYXk6IG5vbmU7XCIvPlxuICAgICAgICA8L2E+XG4gICAgICA8L2xpPlxuICAgICAgPCEtLWVuZDo6RnVsbHNjcmVlbiBUb2dnbGUtLT5cblxuPC90ZW1wbGF0ZT4iXSwiZmlsZSI6Ii9Vc2Vycy9hbmR5amF6enkvRG9jdW1lbnRzL2NvZGVzL0FkbWluQ29ycC9jb3JwL3NyYy9jb21wb25lbnRzL21haW4vaGVhZGVyL2Z1bGxTY3JlZW5Ub2dnbGUudnVlIn0="
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.00006112499977461994
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/components/main/header/fullScreenToggle.vue (200) — 2024-07-13T13:08:26.922Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/components/main/header/fullScreenToggle.vue"
+        }
+      ]
+    }
+  ]
+}

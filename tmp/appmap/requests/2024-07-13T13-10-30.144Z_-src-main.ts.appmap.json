@@ -1,0 +1,85 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/main.ts",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/regru",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0,
+      "message": [
+        {
+          "name": "t",
+          "value": "'1720876219531'",
+          "class": "String"
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"607-4d9grh1R4I6sGOeNtqUy/iRI12g\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "import.meta.env = {\"VITE_MODE_ENV\": \"development\", \"VITE_BASE_URL\": \"http://127.0.0.1:8000\", \"VITE_FIREBASE_CONFIG\": \"\", \"BASE_URL\": \"/\", \"MODE\": \"development\", \"DEV\": true, \"PROD\": false, \"SSR\": false};import { createApp } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nimport { createPinia } from \"/node_modules/.vite/deps/pinia.js?v=e79d9748\";\nimport App from \"/src/app/app.vue\";\nimport router from \"/src/router/index.ts?t=1720876219531\";\nimport { i18n } from \"/src/translation/index.ts\";\nimport \"/node_modules/vuetify/lib/styles/main.css\";\nimport \"/node_modules/@mdi/font/css/materialdesignicons.css\";\nimport \"/src/main.scss\";\nimport Toast from \"/node_modules/.vite/deps/vue-toastification.js?v=e79d9748\";\nimport { ProfabricComponents } from \"/node_modules/.vite/deps/@profabric_vue-components.js?v=e79d9748\";\nimport testMe from \"/src/components/widgets/testMe.vue\";\nimport vuetify from \"/src/utils/vuetify.ts\";\nimport logger from \"/src/utils/logger.ts\";\nconst { VITE_NODE_ENV, VITE_GA_ID } = import.meta.env;\nlogger.info(`Vite is running in ${VITE_NODE_ENV} mode.`);\nconst options = {\n  timeout: 3e3,\n  closeOnClick: true,\n  pauseOnFocusLoss: true,\n  pauseOnHover: true,\n  draggable: true,\n  draggablePercent: 0.6,\n  showCloseButtonOnHover: false,\n  hideProgressBar: false,\n  closeButton: \"button\",\n  icon: true,\n  rtl: false\n};\nconst pinia = createPinia();\nconst app = createApp(App);\napp.component(\"testMe\", testMe);\napp.use(pinia).use(router).use(Toast, options).use(i18n).use(vuetify).use(ProfabricComponents);\napp.mount(\"#app\");\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4udHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY3JlYXRlQXBwIH0gZnJvbSAndnVlJztcbmltcG9ydCB7IGNyZWF0ZVBpbmlhIH0gZnJvbSAncGluaWEnO1xuaW1wb3J0IEFwcCBmcm9tICcuL2FwcC9hcHAudnVlJztcbmltcG9ydCByb3V0ZXIgZnJvbSAnLi9yb3V0ZXInO1xuXG5pbXBvcnQgeyBpMThuIH0gZnJvbSAnLi90cmFuc2xhdGlvbic7XG5cbi8vIFN0eWxlc1xuaW1wb3J0ICd2dWV0aWZ5L3N0eWxlcydcbmltcG9ydCAnQG1kaS9mb250L2Nzcy9tYXRlcmlhbGRlc2lnbmljb25zLmNzcydcbmltcG9ydCAnLi9tYWluLnNjc3MnXG5cblxuXG5pbXBvcnQgVG9hc3QsIHtQbHVnaW5PcHRpb25zfSBmcm9tICd2dWUtdG9hc3RpZmljYXRpb24nO1xuaW1wb3J0IHsgUHJvZmFicmljQ29tcG9uZW50cyB9IGZyb20gJ0Bwcm9mYWJyaWMvdnVlLWNvbXBvbmVudHMnO1xuaW1wb3J0IHRlc3RNZSBmcm9tICdAL2NvbXBvbmVudHMvd2lkZ2V0cy90ZXN0TWUudnVlJztcbmltcG9ydCB2dWV0aWZ5IGZyb20gJ0AvdXRpbHMvdnVldGlmeSc7XG5pbXBvcnQgbG9nZ2VyIGZyb20gJ0AvdXRpbHMvbG9nZ2VyJztcblxuXG5jb25zdCB7VklURV9OT0RFX0VOViwgVklURV9HQV9JRH0gPSBpbXBvcnQubWV0YS5lbnY7XG5sb2dnZXIuaW5mbyhgVml0ZSBpcyBydW5uaW5nIGluICR7VklURV9OT0RFX0VOVn0gbW9kZS5gKTtcblxuY29uc3Qgb3B0aW9uczogUGx1Z2luT3B0aW9ucyA9IHtcbiAgICB0aW1lb3V0OiAzMDAwLFxuICAgIGNsb3NlT25DbGljazogdHJ1ZSxcbiAgICBwYXVzZU9uRm9jdXNMb3NzOiB0cnVlLFxuICAgIHBhdXNlT25Ib3ZlcjogdHJ1ZSxcbiAgICBkcmFnZ2FibGU6IHRydWUsXG4gICAgZHJhZ2dhYmxlUGVyY2VudDogMC42LFxuICAgIHNob3dDbG9zZUJ1dHRvbk9uSG92ZXI6IGZhbHNlLFxuICAgIGhpZGVQcm9ncmVzc0JhcjogZmFsc2UsXG4gICAgY2xvc2VCdXR0b246ICdidXR0b24nLFxuICAgIGljb246IHRydWUsXG4gICAgcnRsOiBmYWxzZVxufTtcbmNvbnN0IHBpbmlhID0gY3JlYXRlUGluaWEoKVxuY29uc3QgYXBwID0gY3JlYXRlQXBwKEFwcCk7XG5cblxuYXBwLmNvbXBvbmVudChcInRlc3RNZVwiLCB0ZXN0TWUpO1xuXG5cbmFwcC51c2UocGluaWEpXG4gICAgLnVzZShyb3V0ZXIpXG4gICAgLnVzZShUb2FzdCwgb3B0aW9ucylcbiAgICAudXNlKGkxOG4gYXMgYW55KVxuICAgIC51c2UodnVldGlmeSlcbiAgICAudXNlKFByb2ZhYnJpY0NvbXBvbmVudHMpO1xuICAgIFxuXG5cbmFwcC5tb3VudCgnI2FwcCcpO1xuIl0sIm1hcHBpbmdzIjoiQUFBQSxTQUFTLGlCQUFpQjtBQUMxQixTQUFTLG1CQUFtQjtBQUM1QixPQUFPLFNBQVM7QUFDaEIsT0FBTyxZQUFZO0FBRW5CLFNBQVMsWUFBWTtBQUdyQixPQUFPO0FBQ1AsT0FBTztBQUNQLE9BQU87QUFJUCxPQUFPLFdBQTRCO0FBQ25DLFNBQVMsMkJBQTJCO0FBQ3BDLE9BQU8sWUFBWTtBQUNuQixPQUFPLGFBQWE7QUFDcEIsT0FBTyxZQUFZO0FBR25CLE1BQU0sRUFBQyxlQUFlLFdBQVUsSUFBSSxZQUFZO0FBQ2hELE9BQU8sS0FBSyxzQkFBc0IsYUFBYSxRQUFRO0FBRXZELE1BQU0sVUFBeUI7QUFBQSxFQUMzQixTQUFTO0FBQUEsRUFDVCxjQUFjO0FBQUEsRUFDZCxrQkFBa0I7QUFBQSxFQUNsQixjQUFjO0FBQUEsRUFDZCxXQUFXO0FBQUEsRUFDWCxrQkFBa0I7QUFBQSxFQUNsQix3QkFBd0I7QUFBQSxFQUN4QixpQkFBaUI7QUFBQSxFQUNqQixhQUFhO0FBQUEsRUFDYixNQUFNO0FBQUEsRUFDTixLQUFLO0FBQ1Q7QUFDQSxNQUFNLFFBQVEsWUFBWTtBQUMxQixNQUFNLE1BQU0sVUFBVSxHQUFHO0FBR3pCLElBQUksVUFBVSxVQUFVLE1BQU07QUFHOUIsSUFBSSxJQUFJLEtBQUssRUFDUixJQUFJLE1BQU0sRUFDVixJQUFJLE9BQU8sT0FBTyxFQUNsQixJQUFJLElBQVcsRUFDZixJQUFJLE9BQU8sRUFDWCxJQUFJLG1CQUFtQjtBQUk1QixJQUFJLE1BQU0sTUFBTTsiLCJuYW1lcyI6W119"
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.00013295799726620317
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/main.ts (200) — 2024-07-13T13:10:30.144Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/main.ts"
+        }
+      ]
+    }
+  ]
+}

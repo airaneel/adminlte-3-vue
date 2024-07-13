@@ -1,21 +1,56 @@
+<script setup lang="ts">
+import BreadCrumbs from '@/components/widgets/breadCrumbs.vue';
+import SmallBox from '@/components/widgets/smallBox.vue';
+  import { faInfoCircle, faSchool } from '@fortawesome/free-solid-svg-icons';
+import { ref } from 'vue';
+
+
+
+
+const items = ref([
+  {
+    boxType: 'warning',
+    faIcon: faSchool,
+    count: '150',
+    description: 'New Orders',
+    link: '#'
+  },
+  {
+    boxType: 'info',
+    faIcon: faInfoCircle,
+    count: '53',
+    description: 'Bounce Rate',
+    link: '#'
+  },
+  {
+    boxType: 'danger',
+    faIcon: faSchool,
+    count: '150',
+    description: 'New Orders',
+    link: '#'
+  },
+  {
+    boxType: 'primary',
+    faIcon: faInfoCircle,
+    count: '53',
+    description: 'Bounce Rate',
+    link: '#'
+  }
+])
+
+</script>
+
 <template>
     <!-- Content Header (Page header) -->
-<div class="content-header">
+<div class="app-content-header">
     <div class="container-fluid">
-        <div class="row mb-2">
-            <div class="col-sm-6">
+        <div class="row">
+            <div class="col-sm-8">
                 <h1 class="m-0">{{ $t("labels.dashboard") }}</h1>
             </div>
             <!-- /.col -->
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item">
-                        <router-link to="/"
-                            >{{ $t("labels.home") }}</router-link
-                        >
-                    </li>
-                    <li class="breadcrumb-item active">Dashboard v1</li>
-                </ol>
+            <div class="col-sm-4">
+                <BreadCrumbs />
             </div>
             <!-- /.col -->
         </div>
@@ -26,83 +61,399 @@
 <!-- /.content-header -->
 
 <!-- Main content -->
-<section class="content">
-    <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-info">
-                    <div class="inner">
-                        <h3>150</h3>
+    <div class="app-content">
+          <!--begin::Container-->
+          <div class="container-fluid">
+            <!--begin::Row-->
+            <div class="row">
 
-                        <p>New Orders</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-bag"></i>
-                    </div>
-                    <router-link to="/" class="small-box-footer"
-                        >More info <i class="fas fa-arrow-circle-right"></i
-                    ></router-link>
-                </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-success">
-                    <div class="inner">
-                        <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-                        <p>Bounce Rate</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
-                    </div>
-                    <router-link to="/" class="small-box-footer"
-                        >More info <i class="fas fa-arrow-circle-right"></i
-                    ></router-link>
-                </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-warning">
-                    <div class="inner">
-                        <h3>44</h3>
+ 
+       
+          <SmallBox v-for="element, index in items"
+            :boxType="element.boxType"
+            :faIcon="element.faIcon"
+            :count="element.count"
+            :description="element.description"
+            :link="element.link"
+            :key='index'
+          />
+     
+ 
 
-                        <p>User Registrations</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-person-add"></i>
-                    </div>
-                    <router-link to="/" class="small-box-footer"
-                        >More info <i class="fas fa-arrow-circle-right"></i
-                    ></router-link>
-                </div>
+              <!--end::Col-->
             </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-danger">
-                    <div class="inner">
-                        <h3>65</h3>
+            <!--end::Row-->
+            <!--begin::Row-->
+            <div class="row">
+              <!-- Start col -->
+              <div class="col-lg-7 connectedSortable">
+                <div class="card mb-4">
+                  <div class="card-header">
+                    <h3 class="card-title">Sales Value</h3>
+                  </div>
 
-                        <p>Unique Visitors</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-pie-graph"></i>
-                    </div>
-                    <router-link to="/" class="small-box-footer"
-                        >More info <i class="fas fa-arrow-circle-right"></i
-                    ></router-link>
+                  <div class="card-body">
+                    <div id="revenue-chart"></div>
+                  </div>
                 </div>
+                <!-- /.card -->
+
+                <!-- DIRECT CHAT -->
+                <div class="card direct-chat direct-chat-primary mb-4">
+                  <div class="card-header">
+                    <h3 class="card-title">Direct Chat</h3>
+
+                    <div class="card-tools">
+                      <span
+                        title="3 New Messages"
+                        class="badge text-bg-primary"
+                      >
+                        3
+                      </span>
+                      <button
+                        type="button"
+                        class="btn btn-tool"
+                        data-lte-toggle="card-collapse"
+                      >
+                        <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
+                        <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-tool"
+                        title="Contacts"
+                        data-lte-toggle="chat-pane"
+                      >
+                        <i class="bi bi-chat-text-fill"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-tool"
+                        data-lte-toggle="card-remove"
+                      >
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <!-- Conversations are loaded here -->
+                    <div class="direct-chat-messages">
+                      <!-- Message. Default to the start -->
+                      <div class="direct-chat-msg">
+                        <div class="direct-chat-infos clearfix">
+                          <span class="direct-chat-name float-start">
+                            Alexander Pierce
+                          </span>
+                          <span class="direct-chat-timestamp float-end">
+                            23 Jan 2:00 pm
+                          </span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img
+                          class="direct-chat-img"
+                          src="/public/assets/img/user1-128x128.jpg"
+                          alt="message user image"
+                        />
+                        <!-- /.direct-chat-img -->
+                        <div class="direct-chat-text">
+                          Is this template really for free? That's unbelievable!
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                      <!-- Message to the end -->
+                      <div class="direct-chat-msg end">
+                        <div class="direct-chat-infos clearfix">
+                          <span class="direct-chat-name float-end">
+                            Sarah Bullock
+                          </span>
+                          <span class="direct-chat-timestamp float-start">
+                            23 Jan 2:05 pm
+                          </span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img
+                          class="direct-chat-img"
+                          src="/public/assets/img/user3-128x128.jpg"
+                          alt="message user image"
+                        />
+                        <!-- /.direct-chat-img -->
+                        <div class="direct-chat-text">
+                          You better believe it!
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                      <!-- Message. Default to the start -->
+                      <div class="direct-chat-msg">
+                        <div class="direct-chat-infos clearfix">
+                          <span class="direct-chat-name float-start">
+                            Alexander Pierce
+                          </span>
+                          <span class="direct-chat-timestamp float-end">
+                            23 Jan 5:37 pm
+                          </span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img
+                          class="direct-chat-img"
+                          src="/public/assets/img/user1-128x128.jpg"
+                          alt="message user image"
+                        />
+                        <!-- /.direct-chat-img -->
+                        <div class="direct-chat-text">
+                          Working with AdminLTE on a great new app! Wanna join?
+                        </div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+
+                      <!-- Message to the end -->
+                      <div class="direct-chat-msg end">
+                        <div class="direct-chat-infos clearfix">
+                          <span class="direct-chat-name float-end">
+                            Sarah Bullock
+                          </span>
+                          <span class="direct-chat-timestamp float-start">
+                            23 Jan 6:10 pm
+                          </span>
+                        </div>
+                        <!-- /.direct-chat-infos -->
+                        <img
+                          class="direct-chat-img"
+                          src="/public/assets/img/user3-128x128.jpg"
+                          alt="message user image"
+                        />
+                        <!-- /.direct-chat-img -->
+                        <div class="direct-chat-text">I would love to.</div>
+                        <!-- /.direct-chat-text -->
+                      </div>
+                      <!-- /.direct-chat-msg -->
+                    </div>
+                    <!-- /.direct-chat-messages-->
+
+                    <!-- Contacts are loaded here -->
+                    <div class="direct-chat-contacts">
+                      <ul class="contacts-list">
+                        <li>
+                          <a href="#">
+                            <img
+                              class="contacts-list-img"
+                              src="/public/assets/img/user1-128x128.jpg"
+                              alt="User Avatar"
+                            />
+
+                            <div class="contacts-list-info">
+                              <span class="contacts-list-name">
+                                Count Dracula
+                                <small class="contacts-list-date float-end">
+                                  2/28/2023
+                                </small>
+                              </span>
+                              <span class="contacts-list-msg">
+                                How have you been? I was...
+                              </span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href="#">
+                            <img
+                              class="contacts-list-img"
+                              src="/public/assets/img/user7-128x128.jpg"
+                              alt="User Avatar"
+                            />
+
+                            <div class="contacts-list-info">
+                              <span class="contacts-list-name">
+                                Sarah Doe
+                                <small class="contacts-list-date float-end">
+                                  2/23/2023
+                                </small>
+                              </span>
+                              <span class="contacts-list-msg">
+                                I will be waiting for...
+                              </span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href="#">
+                            <img
+                              class="contacts-list-img"
+                              src="/public/assets/img/user3-128x128.jpg"
+                              alt="User Avatar"
+                            />
+
+                            <div class="contacts-list-info">
+                              <span class="contacts-list-name">
+                                Nadia Jolie
+                                <small class="contacts-list-date float-end">
+                                  2/20/2023
+                                </small>
+                              </span>
+                              <span class="contacts-list-msg">
+                                I'll call you back at...
+                              </span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href="#">
+                            <img
+                              class="contacts-list-img"
+                              src="/public/assets/img/user5-128x128.jpg"
+                              alt="User Avatar"
+                            />
+
+                            <div class="contacts-list-info">
+                              <span class="contacts-list-name">
+                                Nora S. Vans
+                                <small class="contacts-list-date float-end">
+                                  2/10/2023
+                                </small>
+                              </span>
+                              <span class="contacts-list-msg">
+                                Where is your new...
+                              </span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href="#">
+                            <img
+                              class="contacts-list-img"
+                              src="/public/assets/img/user6-128x128.jpg"
+                              alt="User Avatar"
+                            />
+
+                            <div class="contacts-list-info">
+                              <span class="contacts-list-name">
+                                John K.
+                                <small class="contacts-list-date float-end">
+                                  1/27/2023
+                                </small>
+                              </span>
+                              <span class="contacts-list-msg">
+                                Can I take a look at...
+                              </span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href="#">
+                            <img
+                              class="contacts-list-img"
+                              src="/public/assets/img/user8-128x128.jpg"
+                              alt="User Avatar"
+                            />
+
+                            <div class="contacts-list-info">
+                              <span class="contacts-list-name">
+                                Kenneth M.
+                                <small class="contacts-list-date float-end">
+                                  1/4/2023
+                                </small>
+                              </span>
+                              <span class="contacts-list-msg">
+                                Never mind I found...
+                              </span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                      </ul>
+                      <!-- /.contacts-list -->
+                    </div>
+                    <!-- /.direct-chat-pane -->
+                  </div>
+                  <!-- /.card-body -->
+                  <div class="card-footer">
+                    <form action="#" method="post">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          name="message"
+                          placeholder="Type Message ..."
+                          class="form-control"
+                        />
+                        <span class="input-group-append">
+                          <button type="button" class="btn btn-primary">
+                            Send
+                          </button>
+                        </span>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.card-footer-->
+                </div>
+                <!-- /.direct-chat -->
+              </div>
+              <!-- /.Start col -->
+
+              <!-- Start col -->
+              <div class="col-lg-5 connectedSortable">
+                <div
+                  class="card text-white bg-primary bg-gradient border-primary mb-4"
+                >
+                  <div class="card-header border-0">
+                    <h3 class="card-title">Sales Value</h3>
+                    <div class="card-tools">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-sm"
+                        data-lte-toggle="card-collapse"
+                      >
+                        <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
+                        <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div id="world-map" style="height: 220px"></div>
+                  </div>
+                  <div class="card-footer border-0">
+                    <!--begin::Row-->
+                    <div class="row">
+                      <div class="col-4 text-center">
+                        <div id="sparkline-1" class="text-dark"></div>
+                        <div class="text-white">Visitors</div>
+                      </div>
+                      <div class="col-4 text-center">
+                        <div id="sparkline-2" class="text-dark"></div>
+                        <div class="text-white">Online</div>
+                      </div>
+                      <div class="col-4 text-center">
+                        <div id="sparkline-3" class="text-dark"></div>
+                        <div class="text-white">Sales</div>
+                      </div>
+                    </div>
+                    <!--end::Row-->
+                  </div>
+                </div>
+              </div>
+              <!-- /.Start col -->
             </div>
-            <!-- ./col -->
+            <!-- /.row (main row) -->
+          </div>
+          <!--end::Container-->
         </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container-fluid -->
-</section>
 <!-- /.content -->
 
 </template>
+

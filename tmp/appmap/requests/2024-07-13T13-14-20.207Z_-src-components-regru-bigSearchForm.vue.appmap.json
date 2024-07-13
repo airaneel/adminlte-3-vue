@@ -1,0 +1,201 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/components/regru/bigSearchForm.vue",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/@vite/client",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0,
+      "message": [
+        {
+          "name": "t",
+          "value": "'1720876460197'",
+          "class": "String"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "id": 2,
+      "thread_id": 0,
+      "method_id": "formatMessage",
+      "static": true,
+      "parameters": [
+        {
+          "class": "String",
+          "value": "'error'",
+          "name": "type"
+        },
+        {
+          "class": "String",
+          "value": "'\\x1B[31mInternal server error: Error parsing JavaScript expression: Unexpected token, expected \",\" (1:17)\\x1B[39m\\n' +\n  '  Plugin: \\x1B[35mvite:vue\\x1B[39m\\n' +\n  '  File: \\x1B[36m/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/regru/bigSearchForm.vue\\x1B[39m:8:129\\n' +\n  '\\x1B[33m  6  |          <form @submit.prevent=\"handleSubmit\">\\n' +\n  '  7  |            <div class=\"row\">\\n' +\n  '  8  |              <Field v-for=\"(field, index) in fields\" :key=\"index\" :index=\"index\" :field=\"field\" v-model:Query[field.props.name]=\"field.props.name]\" />\\n' +\n  '     |                                                                                                                                   ^\\n' +\n  '  9  |            </div>\\n' +\n  '  10 |            <div class=\"d-grid\">\\x1B[39m\\n' +\n  '      at createCompilerError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1328:17)\\n' +\n  '      at emitError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2812:5)\\n' +\n  '      at createExp (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2805:7)\\n' +\n  '      at Object.onattribend (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2329:29)\\n' +\n  '      at Tokenizer.handleInAttrValue (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:909:16)\\n' +\n  '      at Tokenizer.stateInAttrValueDoubleQuotes (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:919:10)\\n' +\n  '      at Tokenizer.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1063:16)\\n' +\n  '      at Object.baseParse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2851:13)\\n' +\n  '      at Object.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:706:23)\\n' +\n  '      at Object.parse$2 [as parse] (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1850:24)'",
+          "name": "msg"
+        },
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "clear",
+              "class": "Boolean"
+            },
+            {
+              "name": "timestamp",
+              "class": "Boolean"
+            },
+            {
+              "name": "error",
+              "class": "Object",
+              "properties": [
+                {
+                  "name": "id",
+                  "class": "String"
+                },
+                {
+                  "name": "plugin",
+                  "class": "String"
+                },
+                {
+                  "name": "message",
+                  "class": "String"
+                },
+                {
+                  "name": "name",
+                  "class": "String"
+                },
+                {
+                  "name": "stack",
+                  "class": "String"
+                },
+                {
+                  "name": "loc",
+                  "class": "Object",
+                  "properties": [
+                    {
+                      "name": "file",
+                      "class": "String"
+                    },
+                    {
+                      "name": "line",
+                      "class": "Number"
+                    },
+                    {
+                      "name": "column",
+                      "class": "Number"
+                    }
+                  ]
+                },
+                {
+                  "name": "pluginCode",
+                  "class": "String"
+                },
+                {
+                  "name": "frame",
+                  "class": "String"
+                }
+              ]
+            }
+          ],
+          "value": "{\n  clear: true,\n  timestamp: true,\n  error: {\n    id: '/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/regru/bigSearchForm.vue',\n    plugin: 'vite:vue',\n    message: 'Error parsing JavaScript expression: Unexpected token, expected \",\" (1:17)',\n    name: 'SyntaxError',\n    stack: 'SyntaxError: Error parsing JavaScript expression: Unexpected token, expected \",\" (1:17)\\n' +\n      '    at createCompilerError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1328:17)\\n' +\n      '    at emitError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2812:5)\\n' +\n      '    at createExp (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2805:7)\\n' +\n      '    at Object.onattribend (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2329:29)\\n' +\n      '    at Tokenizer.handleInAttrValue (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:909:16)\\n' +\n      '    at Tokenizer.stateInAttrValueDoubleQuotes (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:919:10)\\n' +\n      '    at Tokenizer.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1063:16)\\n' +\n      '    at Object.baseParse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2851:13)\\n' +\n      '    at Object.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:706:23)\\n' +\n      '    at Object.parse$2 [as parse] (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1850:24)',\n    loc: [Object],\n    pluginCode: '<template>\\n' +\n      '  <div class=\"container-fuid\">\\n' +\n      '    {{ Query }}\\n' +\n      '    <div class=\"card card-success card-outline\">\\n' +\n      '      <div class=\"card-body\">\\n' +\n      '        <form @submit.prevent=\"handleSubmit\">\\n' +\n      '          <div class=\"row\">\\n' +\n      '            <Field v-for=\"(field, index) in fields\" :key=\"index\" :index=\"index\" :field=\"field\" v-model:Query[field.props.name]=\"field.props.name]\" />\\n' +\n      '          </div>\\n' +\n      '          <div class=\"d-grid\">\\n' +\n      '            <button type=\"submit\" class=\"btn btn-success\">Поиск</button>\\n' +\n      '          </div>\\n' +\n      '        </form>\\n' +\n      '      </div>\\n' +\n      '    </div>\\n' +\n      '    <div class=\"row\">\\n' +\n      '      <div class=\"col-12\" v-for=\"item, index in items\" :key=\"index\">\\n' +\n      '        <div class=\"card card-primary card-outline\"\">\\n' +\n      '          <div class=\"card-header\">\\n' +\n      '            <h3 class=\"card-title\">РУ № {{ item.ru_number }}</h3>\\n' +\n      '          </div>\\n' +\n      '          <div class=\"card-body\">\\n' +\n      '            <p class=\"card-text\">ОКПД: {{ item.okp_okpd2 }}</p>\\n' +\n      '            <p class=\"card-text\">Дата публикации: {{ item.reg_date }}</p>\\n' +\n      '          </div>\\n' +\n      '          <div class=\"card-footer\">\\n' +\n      '            <a href=\"#\" class=\"btn btn-primary\">Подробнее</a>\\n' +\n      '          </div>\\n' +\n      '        </div>\\n' +\n      '      </div>\\n' +\n      '    </div>\\n' +\n      '  </div>\\n' +\n      '</template>\\n' +\n      '\\n' +\n      '<script setup lang=\"ts\">\\n' +\n      \"import { reactive, ref } from 'vue';\\n\" +\n      \"import Field from './field.vue'; // компонент Field\\n\" +\n      \"import axios from 'axios';\\n\" +\n      \"import { Regdoc } from '@/types/regdoc';\\n\" +\n      \"import { useToast } from 'vue-toastification'\\n\" +\n      \"import { Field as FieldType, Query } from './types';\\n\" +\n      '\\n' +\n      '\\n' +\n      '\\n' +\n      'const fields: FieldType[] = [\\n' +\n      '  {\\n' +\n      \"    label: 'Описание МИ содержит',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'ru_body', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: '№ РУ',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'ru_number', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Код вида МИ',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'device_type', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Код ОКП/ОКПД2',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'okp_okpd2', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Дата регистрации',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'reg_date', type: 'text', ref: 'startDate' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Действует до',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'exp_date', type: 'text', ref: 'endDate' },\\n\" +\n      '  },\\n' +\n      '\\n' +\n      '  {\\n' +\n      \"    label: 'Адрес производства (изготовления)',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'production_address', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Уник. номер реестровой записи',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'unique_record_number', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Заявитель',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'applicant_name', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Место нахождения заявителя',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'applicant_location', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Юр. адрес заявителя',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'manufacturer_rep_location', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Представитель',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'manufacturer_rep_name', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Адрес представителя',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'manufacturer_rep_location', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Юр. адрес представителя',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'manufacturer_rep_legal_address', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Производитель',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'manufacturer_name', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Адрес производителя',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'manufacturer_location', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Юр. адрес производителя',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'manufacturer_address', type: 'text' },\\n\" +\n      '  },\\n' +\n      '  {\\n' +\n      \"    label: 'Назначение МИ',\\n\" +\n      \"    type: 'input',\\n\" +\n      \"    props: { name: 'prescription', type: 'text' },\\n\" +\n      '  },\\n' +\n      '];\\n' +\n      '\\n' +\n      'const Query = reactive<Query>({});\\n' +\n      '\\n' +\n      'const updateModelValue = ({ value, fieldName }: { value: string; fieldName: string }) => {\\n' +\n      '  Query[fieldName] = value;\\n' +\n      '};\\n' +\n      '\\n' +\n      '\\n' +\n      '\\n' +\n      'const items = ref<Regdoc[]>()\\n' +\n      '\\n' +\n      'const handleSubmit = async () => {\\n' +\n      '  // Фильтрация пустых значений\\n' +\n      '  const filteredQuery = Object.fromEntries(\\n' +\n      \"    Object.entries(Query).filter(([key, value]) => value !== '')\\n\" +\n      '  );\\n' +\n      '\\n' +\n      '  const queryString = new URLSearchParams(filteredQuery).toString();\\n' +\n      \"  console.log('Form submitted with:', queryString);\\n\" +\n      '\\n' +\n      '  try {\\n' +\n      '    let response = await axios.get(`http://localhost:8000/api/regdocs/?${queryString}`);\\n' +\n      '    items.value = response.data.results;\\n' +\n      \"    useToast().success('Запрос успешно выполнен!');\\n\" +\n      '\\n' +\n      \"    console.log('API Response:', items.value);\\n\" +\n      '    // Обработка данных ответа здесь\\n' +\n      '  } catch (error) {\\n' +\n      \"    useToast().error('Ошибка при выполнении запроса к API!');\\n\" +\n      '\\n' +\n      \"    console.error('Ошибка при запросе API:', error);\\n\" +\n      '  }\\n' +\n      '};\\n' +\n      '</script>\\n' +\n      '\\n' +\n      '<style scoped>\\n' +\n      '.input-group-text {\\n' +\n      '  min-width: 150px;\\n' +\n      '}\\n' +\n      '</style>\\n',\n    frame: '6  |          <form @submit.prevent=\"handleSubmit\">\\n' +\n      '7  |            <div class=\"row\">\\n' +\n      '8  |              <Field v-for=\"(field, index) in fields\" :key=\"index\" :index=\"index\" :field=\"field\" v-model:Query[field.props.name]=\"field.props.name]\" />\\n' +\n      '   |                                                                                                                                   ^\\n' +\n      '9  |            </div>\\n' +\n      '10 |            <div class=\"d-grid\">'\n  }\n}",
+          "object_id": 61,
+          "name": "options"
+        }
+      ],
+      "defined_class": "viteLogger",
+      "path": "src/utils/viteLogger.ts",
+      "lineno": 7
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 3,
+      "parent_id": 2,
+      "return_value": {
+        "class": "String",
+        "value": "'RDH [4:14:20 PM] [ERROR] \\x1B[31mInternal server error: Error parsing JavaScript expression: Unexpected token, expected \",\" (1:17)\\x1B[39m\\n' +\n  '  Plugin: \\x1B[35mvite:vue\\x1B[39m\\n' +\n  '  File: \\x1B[36m/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/regru/bigSearchForm.vue\\x1B[39m:8:129\\n' +\n  '\\x1B[33m  6  |          <form @submit.prevent=\"handleSubmit\">\\n' +\n  '  7  |            <div class=\"row\">\\n' +\n  '  8  |              <Field v-for=\"(field, index) in fields\" :key=\"index\" :index=\"index\" :field=\"field\" v-model:Query[field.props.name]=\"field.props.name]\" />\\n' +\n  '     |                                                                                                                                   ^\\n' +\n  '  9  |            </div>\\n' +\n  '  10 |            <div class=\"d-grid\">\\x1B[39m\\n' +\n  '      at createCompilerError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1328:17)\\n' +\n  '      at emitError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2812:5)\\n' +\n  '      at createExp (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2805:7)\\n' +\n  '      at Object.onattribend (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2329:29)\\n' +\n  '      at Tokenizer.handleInAttrValue (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:909:16)\\n' +\n  '      at Tokenizer.stateInAttrValueDoubleQuotes (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:919:10)\\n' +\n  '      at Tokenizer.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1063:16)\\n' +\n  '      at Object.baseParse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2851:13)\\n' +\n  '      at Object.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:706:23)\\n' +\n  '      at Object.parse$2 [as parse] (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1850:24)'"
+      },
+      "elapsed": 0.000018749997252598405
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 500,
+        "headers": {
+          "Access-Control-Allow-Origin": "*"
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "\n        <!DOCTYPE html>\n        <html lang=\"en\">\n          <head>\n            <meta charset=\"UTF-8\" />\n            <title>Error</title>\n            <script type=\"module\">\n              import { ErrorOverlay } from '/@vite/client'\n              document.body.appendChild(new ErrorOverlay({\"message\":\"Error parsing JavaScript expression: Unexpected token, expected \\\",\\\" (1:17)\",\"stack\":\"    at createCompilerError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1328:17)\\n    at emitError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2812:5)\\n    at createExp (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2805:7)\\n    at Object.onattribend (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2329:29)\\n    at Tokenizer.handleInAttrValue (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:909:16)\\n    at Tokenizer.stateInAttrValueDoubleQuotes (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:919:10)\\n    at Tokenizer.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1063:16)\\n    at Object.baseParse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2851:13)\\n    at Object.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:706:23)\\n    at Object.parse$2 [as parse] (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1850:24)\",\"id\":\"/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/regru/bigSearchForm.vue\",\"frame\":\"6  |          \\u003cform @submit.prevent=\\\"handleSubmit\\\">\\n7  |            \\u003cdiv class=\\\"row\\\">\\n8  |              \\u003cField v-for=\\\"(field, index) in fields\\\" :key=\\\"index\\\" :index=\\\"index\\\" :field=\\\"field\\\" v-model:Query[field.props.name]=\\\"field.props.name]\\\" />\\n   |                                                                                                                                   ^\\n9  |            \\u003c/div>\\n10 |            \\u003cdiv class=\\\"d-grid\\\">\",\"plugin\":\"vite:vue\",\"pluginCode\":\"\\u003ctemplate>\\n  \\u003cdiv class=\\\"container-fuid\\\">\\n    {{ Query }}\\n    \\u003cdiv class=\\\"card card-success card-outline\\\">\\n      \\u003cdiv class=\\\"card-body\\\">\\n        \\u003cform @submit.prevent=\\\"handleSubmit\\\">\\n          \\u003cdiv class=\\\"row\\\">\\n            \\u003cField v-for=\\\"(field, index) in fields\\\" :key=\\\"index\\\" :index=\\\"index\\\" :field=\\\"field\\\" v-model:Query[field.props.name]=\\\"field.props.name]\\\" />\\n          \\u003c/div>\\n          \\u003cdiv class=\\\"d-grid\\\">\\n            \\u003cbutton type=\\\"submit\\\" class=\\\"btn btn-success\\\">Поиск\\u003c/button>\\n          \\u003c/div>\\n        \\u003c/form>\\n      \\u003c/div>\\n    \\u003c/div>\\n    \\u003cdiv class=\\\"row\\\">\\n      \\u003cdiv class=\\\"col-12\\\" v-for=\\\"item, index in items\\\" :key=\\\"index\\\">\\n        \\u003cdiv class=\\\"card card-primary card-outline\\\"\\\">\\n          \\u003cdiv class=\\\"card-header\\\">\\n            \\u003ch3 class=\\\"card-title\\\">РУ № {{ item.ru_number }}\\u003c/h3>\\n          \\u003c/div>\\n          \\u003cdiv class=\\\"card-body\\\">\\n            \\u003cp class=\\\"card-text\\\">ОКПД: {{ item.okp_okpd2 }}\\u003c/p>\\n            \\u003cp class=\\\"card-text\\\">Дата публикации: {{ item.reg_date }}\\u003c/p>\\n          \\u003c/div>\\n          \\u003cdiv class=\\\"card-footer\\\">\\n            \\u003ca href=\\\"#\\\" class=\\\"btn btn-primary\\\">Подробнее\\u003c/a>\\n          \\u003c/div>\\n        \\u003c/div>\\n      \\u003c/div>\\n    \\u003c/div>\\n  \\u003c/div>\\n\\u003c/template>\\n\\n\\u003cscript setup lang=\\\"ts\\\">\\nimport { reactive, ref } from 'vue';\\nimport Field from './field.vue'; // компонент Field\\nimport axios from 'axios';\\nimport { Regdoc } from '@/types/regdoc';\\nimport { useToast } from 'vue-toastification'\\nimport { Field as FieldType, Query } from './types';\\n\\n\\n\\nconst fields: FieldType[] = [\\n  {\\n    label: 'Описание МИ содержит',\\n    type: 'input',\\n    props: { name: 'ru_body', type: 'text' },\\n  },\\n  {\\n    label: '№ РУ',\\n    type: 'input',\\n    props: { name: 'ru_number', type: 'text' },\\n  },\\n  {\\n    label: 'Код вида МИ',\\n    type: 'input',\\n    props: { name: 'device_type', type: 'text' },\\n  },\\n  {\\n    label: 'Код ОКП/ОКПД2',\\n    type: 'input',\\n    props: { name: 'okp_okpd2', type: 'text' },\\n  },\\n  {\\n    label: 'Дата регистрации',\\n    type: 'input',\\n    props: { name: 'reg_date', type: 'text', ref: 'startDate' },\\n  },\\n  {\\n    label: 'Действует до',\\n    type: 'input',\\n    props: { name: 'exp_date', type: 'text', ref: 'endDate' },\\n  },\\n\\n  {\\n    label: 'Адрес производства (изготовления)',\\n    type: 'input',\\n    props: { name: 'production_address', type: 'text' },\\n  },\\n  {\\n    label: 'Уник. номер реестровой записи',\\n    type: 'input',\\n    props: { name: 'unique_record_number', type: 'text' },\\n  },\\n  {\\n    label: 'Заявитель',\\n    type: 'input',\\n    props: { name: 'applicant_name', type: 'text' },\\n  },\\n  {\\n    label: 'Место нахождения заявителя',\\n    type: 'input',\\n    props: { name: 'applicant_location', type: 'text' },\\n  },\\n  {\\n    label: 'Юр. адрес заявителя',\\n    type: 'input',\\n    props: { name: 'manufacturer_rep_location', type: 'text' },\\n  },\\n  {\\n    label: 'Представитель',\\n    type: 'input',\\n    props: { name: 'manufacturer_rep_name', type: 'text' },\\n  },\\n  {\\n    label: 'Адрес представителя',\\n    type: 'input',\\n    props: { name: 'manufacturer_rep_location', type: 'text' },\\n  },\\n  {\\n    label: 'Юр. адрес представителя',\\n    type: 'input',\\n    props: { name: 'manufacturer_rep_legal_address', type: 'text' },\\n  },\\n  {\\n    label: 'Производитель',\\n    type: 'input',\\n    props: { name: 'manufacturer_name', type: 'text' },\\n  },\\n  {\\n    label: 'Адрес производителя',\\n    type: 'input',\\n    props: { name: 'manufacturer_location', type: 'text' },\\n  },\\n  {\\n    label: 'Юр. адрес производителя',\\n    type: 'input',\\n    props: { name: 'manufacturer_address', type: 'text' },\\n  },\\n  {\\n    label: 'Назначение МИ',\\n    type: 'input',\\n    props: { name: 'prescription', type: 'text' },\\n  },\\n];\\n\\nconst Query = reactive\\u003cQuery>({});\\n\\nconst updateModelValue = ({ value, fieldName }: { value: string; fieldName: string }) => {\\n  Query[fieldName] = value;\\n};\\n\\n\\n\\nconst items = ref\\u003cRegdoc[]>()\\n\\nconst handleSubmit = async () => {\\n  // Фильтрация пустых значений\\n  const filteredQuery = Object.fromEntries(\\n    Object.entries(Query).filter(([key, value]) => value !== '')\\n  );\\n\\n  const queryString = new URLSearchParams(filteredQuery).toString();\\n  console.log('Form submitted with:', queryString);\\n\\n  try {\\n    let response = await axios.get(`http://localhost:8000/api/regdocs/?${queryString}`);\\n    items.value = response.data.results;\\n    useToast().success('Запрос успешно выполнен!');\\n\\n    console.log('API Response:', items.value);\\n    // Обработка данных ответа здесь\\n  } catch (error) {\\n    useToast().error('Ошибка при выполнении запроса к API!');\\n\\n    console.error('Ошибка при запросе API:', error);\\n  }\\n};\\n\\u003c/script>\\n\\n\\u003cstyle scoped>\\n.input-group-text {\\n  min-width: 150px;\\n}\\n\\u003c/style>\\n\",\"loc\":{\"file\":\"/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/regru/bigSearchForm.vue\",\"line\":8,\"column\":129}}))\n            </script>\n          </head>\n          <body>\n          </body>\n        </html>\n      "
+        }
+      },
+      "id": 4,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.004379207995953038
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/components/regru/bigSearchForm.vue (500) — 2024-07-13T13:14:20.207Z"
+  },
+  "classMap": [
+    {
+      "name": "utils",
+      "type": "package",
+      "children": [
+        {
+          "type": "class",
+          "name": "viteLogger",
+          "children": [
+            {
+              "type": "function",
+              "name": "formatMessage",
+              "static": true,
+              "location": "src/utils/viteLogger.ts:7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/components/regru/bigSearchForm.vue"
+        }
+      ]
+    }
+  ]
+}

@@ -14,10 +14,10 @@ export const useUiStore = defineStore('ui', () => {
     const toggleDarkMode = () => {
         darkMode.value = !darkMode.value;
         if (darkMode.value) {
-            navbarVariant.value = NAVBAR_DARK_VARIANTS[0].value;
+            navbarVariant.value = NAVBAR_DARK_VARIANTS[2].value;
             sidebarSkin.value = SIDEBAR_DARK_SKINS[0].value;
         } else {
-            navbarVariant.value = NAVBAR_LIGHT_VARIANTS[0].value;
+            navbarVariant.value = NAVBAR_LIGHT_VARIANTS[2].value;
             sidebarSkin.value = SIDEBAR_LIGHT_SKINS[0].value;
         }
         logger.debug('Dark mode toggled:', darkMode.value);
@@ -56,6 +56,13 @@ export const useUiStore = defineStore('ui', () => {
         logger.debug('Sidebar skin set to:', sidebarSkin.value);
     };
 
+    const setMainSidebarState = (payload: boolean) => {
+        menuSidebarCollapsed.value = payload;
+
+        logger.debug('Main sidebar state set to:', payload);
+        
+    };
+
     return {
         darkMode,
         navbarVariant,
@@ -69,5 +76,6 @@ export const useUiStore = defineStore('ui', () => {
         setScreenSize,
         setNavbarVariant,
         setSidebarSkin,
+        setMainSidebarState,
     };
 });

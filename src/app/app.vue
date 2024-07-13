@@ -9,8 +9,9 @@
     import { calculateWindowSize } from '@/utils/helpers';
     import { useUiStore } from '../rdhStore/uiStore';
     import logger from '@/utils/logger';
-    
-    const isAppLoading = ref(true);
+import { addAppClass } from '@/utils/updateClass';
+
+    const isAppLoading = ref();
     const uiStore = useUiStore();
 
     const { width } = useWindowSize();
@@ -18,11 +19,12 @@
 
 
 // Установить начальное значение screenSize при монтировании компонента
-onMounted(() => {
+    onMounted(() => {
     logger.debug('app.vue mounted');
     uiStore.setScreenSize(windowSize.value);
     logger.debug('app.vue windowSize', windowSize.value);
-    isAppLoading.value = false;
+        isAppLoading.value = false;
+    addAppClass('app-loaded', 'app-body');
 });
 
 // Отслеживать изменения windowSize и обновлять screenSize в хранилище

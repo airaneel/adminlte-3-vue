@@ -1,0 +1,6 @@
+[
+  {
+    "caller": "GET /src/components/regru/field.vue",
+    "callee": "utils/viteLogger"
+  }
+]

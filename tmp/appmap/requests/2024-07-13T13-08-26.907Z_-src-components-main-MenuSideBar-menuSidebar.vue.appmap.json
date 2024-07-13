@@ -1,0 +1,80 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/components/main/MenuSideBar/menuSidebar.vue",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/src/pages/main.vue?t=1720874283103",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin",
+          "Pragma": "no-cache",
+          "Cache-Control": "no-cache"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"1e6c-SdhoT7c+LnY3K1UHo7QX/Uz7Dz8\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/components/main/MenuSideBar/menuSidebar.vue\");import { defineComponent as _defineComponent } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nimport configRdh from \"/src/config.ts/configRdh.ts\";\nimport { computed, onMounted, reactive } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nimport { useRauthStore } from \"/src/rdhStore/auth.ts\";\nimport { useUiStore } from \"/src/rdhStore/uiStore.ts\";\nimport { RouterLink, useRouter } from \"/node_modules/.vite/deps/vue-router.js?v=e79d9748\";\nimport Treeview from \"/src/utils/adminScript/treeview.ts\";\nimport { FontAwesomeIcon } from \"/node_modules/.vite/deps/@fortawesome_vue-fontawesome.js?v=e79d9748\";\nconst _sfc_main = /* @__PURE__ */ _defineComponent({\n  __name: \"menuSidebar\",\n  setup(__props, { expose: __expose }) {\n    __expose();\n    const authStore = useRauthStore();\n    const ui = useUiStore();\n    const router = useRouter();\n    const config = {\n      animationSpeed: 200,\n      accordion: false\n    };\n    const TreeViewPlugin = reactive({\n      element: null,\n      treeview: null\n    });\n    onMounted(() => {\n      TreeViewPlugin.element = document.getElementById(\"treeview\");\n      if (TreeViewPlugin.element) {\n        TreeViewPlugin.treeview = new Treeview(TreeViewPlugin.element, config);\n        console.log(\"Treeview instance created\");\n      }\n    });\n    const mainRoute = router.options.routes.find((route) => route.name === \"Main\");\n    const mainChildrenRoutes = mainRoute ? mainRoute.children || [] : [];\n    const currentUser = computed(() => authStore.getCurrentUsername);\n    const sidebarSkin = computed(() => ui.sidebarSkin);\n    const __returned__ = { authStore, ui, router, config, TreeViewPlugin, mainRoute, mainChildrenRoutes, currentUser, sidebarSkin, get configRdh() {\n      return configRdh;\n    }, get RouterLink() {\n      return RouterLink;\n    }, get FontAwesomeIcon() {\n      return FontAwesomeIcon;\n    } };\n    Object.defineProperty(__returned__, \"__isScriptSetup\", { enumerable: false, value: true });\n    return __returned__;\n  }\n});\nimport { createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode, withCtx as _withCtx, createVNode as _createVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, createBlock as _createBlock, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nconst _withScopeId = (n) => (_pushScopeId(\"data-v-43dc617a\"), n = n(), _popScopeId(), n);\nconst _hoisted_1 = {\n  class: \"app-sidebar bg-body-secondary shadow\",\n  \"data-bs-theme\": \"dark\"\n};\nconst _hoisted_2 = { class: \"sidebar-brand justify-content-start\" };\nconst _hoisted_3 = { class: \"brand-text\" };\nconst _hoisted_4 = [\"src\"];\nconst _hoisted_5 = { class: \"sidebar-wrapper\" };\nconst _hoisted_6 = { class: \"mt-2\" };\nconst _hoisted_7 = {\n  class: \"nav sidebar-menu flex-column\",\n  role: \"menu\",\n  \"data-accordion\": \"false\"\n};\nconst _hoisted_8 = {\n  key: 0,\n  class: \"nav nav-treeview\"\n};\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return _openBlock(), _createElementBlock(\"aside\", _hoisted_1, [\n    _createCommentVNode(\"begin::Sidebar Brand\"),\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createVNode($setup[\"RouterLink\"], {\n        to: \"/\",\n        class: \"brand-link\"\n      }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"div\", _hoisted_3, [\n            _createElementVNode(\"img\", {\n              src: $setup.configRdh.logo,\n              alt: \"Logo\"\n            }, null, 8, _hoisted_4)\n          ])\n        ]),\n        _: 1\n        /* STABLE */\n      })\n    ]),\n    _createCommentVNode(\"end::Sidebar Brand\"),\n    _createCommentVNode(\"begin::Sidebar Wrapper\"),\n    _createElementVNode(\"div\", _hoisted_5, [\n      _createElementVNode(\"nav\", _hoisted_6, [\n        _createCommentVNode(\"begin::Sidebar Menu\"),\n        _createCommentVNode(\"begin::Sidebar Menu\"),\n        _createCommentVNode(\" Sidebar Menu \"),\n        _createElementVNode(\"ul\", _hoisted_7, [\n          (_openBlock(true), _createElementBlock(\n            _Fragment,\n            null,\n            _renderList($setup.mainChildrenRoutes, (route) => {\n              return _openBlock(), _createElementBlock(\"li\", {\n                key: route.name,\n                class: \"nav-item\"\n              }, [\n                _createVNode($setup[\"RouterLink\"], {\n                  class: \"nav-link align-items-center\",\n                  to: { name: route.name }\n                }, {\n                  default: _withCtx(() => [\n                    route.meta.icon ? (_openBlock(), _createBlock($setup[\"FontAwesomeIcon\"], {\n                      key: 0,\n                      icon: route.meta.icon,\n                      class: \"nav-icon\"\n                    }, null, 8, [\"icon\"])) : _createCommentVNode(\"v-if\", true),\n                    _createElementVNode(\n                      \"p\",\n                      null,\n                      _toDisplayString(route.meta.ruName || route.name),\n                      1\n                      /* TEXT */\n                    )\n                  ]),\n                  _: 2\n                  /* DYNAMIC */\n                }, 1032, [\"to\"]),\n                route.children && route.children.length ? (_openBlock(), _createElementBlock(\"ul\", _hoisted_8, [\n                  (_openBlock(true), _createElementBlock(\n                    _Fragment,\n                    null,\n                    _renderList(route.children, (child) => {\n                      return _openBlock(), _createElementBlock(\"li\", {\n                        key: child.name\n                      }, [\n                        _createVNode($setup[\"RouterLink\"], {\n                          class: \"nav-link\",\n                          to: { name: child.name }\n                        }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(\n                              _toDisplayString(child.meta.ruName || child.name),\n                              1\n                              /* TEXT */\n                            )\n                          ]),\n                          _: 2\n                          /* DYNAMIC */\n                        }, 1032, [\"to\"])\n                      ]);\n                    }),\n                    128\n                    /* KEYED_FRAGMENT */\n                  ))\n                ])) : _createCommentVNode(\"v-if\", true)\n              ]);\n            }),\n            128\n            /* KEYED_FRAGMENT */\n          ))\n        ]),\n        _createCommentVNode(\" End Sidebar Menu \"),\n        _createCommentVNode(\"end::Sidebar Menu\"),\n        _createCommentVNode(\"end::Sidebar Menu\")\n      ])\n    ]),\n    _createCommentVNode(\"end::Sidebar Wrapper\")\n  ]);\n}\nimport \"/src/components/main/MenuSideBar/menuSidebar.vue?vue&type=style&index=0&scoped=43dc617a&lang.css\";\n_sfc_main.__hmrId = \"43dc617a\";\ntypeof __VUE_HMR_RUNTIME__ !== \"undefined\" && __VUE_HMR_RUNTIME__.createRecord(_sfc_main.__hmrId, _sfc_main);\nimport.meta.hot.accept((mod) => {\n  if (!mod) return;\n  const { default: updated, _rerender_only } = mod;\n  if (_rerender_only) {\n    __VUE_HMR_RUNTIME__.rerender(updated.__hmrId, updated.render);\n  } else {\n    __VUE_HMR_RUNTIME__.reload(updated.__hmrId, updated);\n  }\n});\nimport _export_sfc from \"/@id/__x00__plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"render\", _sfc_render], [\"__scopeId\", \"data-v-43dc617a\"], [\"__file\", \"/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/main/MenuSideBar/menuSidebar.vue\"]]);\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IjtBQXdDQSxPQUFPLGVBQWU7QUFDdEIsU0FBUyxVQUFVLFdBQVcsZ0JBQWdCO0FBQzlDLFNBQVMscUJBQXFCO0FBQzlCLFNBQVMsa0JBQWtCO0FBRzNCLFNBQVMsWUFBc0IsaUJBQWlCO0FBR2hELE9BQU8sY0FBYztBQUNyQixTQUFTLHVCQUF1Qjs7Ozs7QUFLaEMsVUFBTSxZQUFZLGNBQWM7QUFDaEMsVUFBTSxLQUFLLFdBQVc7QUFDdEIsVUFBTSxTQUFTLFVBQVU7QUFDekIsVUFBTSxTQUFTO0FBQUEsTUFDYixnQkFBZ0I7QUFBQSxNQUNoQixXQUFXO0FBQUEsSUFDYjtBQUVBLFVBQU0saUJBQWlCLFNBQVM7QUFBQSxNQUM5QixTQUFTO0FBQUEsTUFDVCxVQUFVO0FBQUEsSUFDWixDQUFDO0FBRUQsY0FBVSxNQUFNO0FBQ2QscUJBQWUsVUFBVSxTQUFTLGVBQWUsVUFBVTtBQUMzRCxVQUFJLGVBQWUsU0FBUztBQUMxQix1QkFBZSxXQUFXLElBQUksU0FBUyxlQUFlLFNBQVMsTUFBTTtBQUNyRSxnQkFBUSxJQUFJLDJCQUEyQjtBQUFBLE1BQ3pDO0FBQUEsSUFDRixDQUFDO0FBRUQsVUFBTSxZQUFZLE9BQU8sUUFBUSxPQUFPLEtBQUssV0FBUyxNQUFNLFNBQVMsTUFBTTtBQUMzRSxVQUFNLHFCQUFxQixZQUFZLFVBQVUsWUFBWSxDQUFDLElBQUksQ0FBQztBQUVuRSxVQUFNLGNBQWMsU0FBUyxNQUFNLFVBQVUsa0JBQWtCO0FBQy9ELFVBQU0sY0FBYyxTQUFTLE1BQU0sR0FBRyxXQUFXOzs7Ozs7Ozs7Ozs7Ozs7RUEvRXhDLE9BQU07QUFBQSxFQUF1QyxpQkFBYzs7cUJBRTNELE9BQU0sc0NBQXFDO3FCQUV4QyxPQUFNLGFBQVk7bUJBTDlCO3FCQVdTLE9BQU0sa0JBQWlCO3FCQUNyQixPQUFNLE9BQU07O0VBSWYsT0FBTTtBQUFBLEVBQStCLE1BQUs7QUFBQSxFQUFPLGtCQUFlOzs7RUFoQnhFO0FBQUEsRUFzQjJELE9BQU07Ozt1QkFyQi9ELG9CQW1DUSxTQW5DUixZQW1DUTtBQUFBLElBbENOO0FBQUEsSUFDQSxvQkFJTSxPQUpOLFlBSU07QUFBQSxNQUhKLGFBRWE7QUFBQSxRQUZELElBQUc7QUFBQSxRQUFJLE9BQU07QUFBQTtRQUovQixrQkFLTyxNQUFzRTtBQUFBLFVBQXRFLG9CQUFzRSxPQUF0RSxZQUFzRTtBQUFBLFlBQTdDLG9CQUF1QztBQUFBLGNBQWpDLEtBQUssaUJBQVU7QUFBQSxjQUFNLEtBQUk7QUFBQSx3QkFML0Q7QUFBQTs7UUFBQTtBQUFBO0FBQUE7O0lBUUk7QUFBQSxJQUVBO0FBQUEsSUFDQSxvQkFzQk0sT0F0Qk4sWUFzQk07QUFBQSxNQXJCSixvQkFvQk0sT0FwQk4sWUFvQk07QUFBQSxRQW5CSjtBQUFBLFFBQ0Y7QUFBQSxRQUNGO0FBQUEsUUFDQSxvQkFZSyxNQVpMLFlBWUs7QUFBQSw2QkFYSDtBQUFBLFlBVUs7QUFBQTtBQUFBLFlBM0JYLFlBaUIwQiwyQkFqQjFCLENBaUJpQixVQUFLO21DQUFoQixvQkFVSztBQUFBLGdCQVZvQyxLQUFLLE1BQU07QUFBQSxnQkFBTSxPQUFNO0FBQUE7Z0JBQzlELGFBR2E7QUFBQSxrQkFIRCxPQUFNO0FBQUEsa0JBQStCLElBQUUsUUFBVSxNQUFNLEtBQUk7QUFBQTtrQkFsQi9FLGtCQW1CVSxNQUFtRjtBQUFBLG9CQUE1RCxNQUFNLEtBQUssc0JBQWxDLGFBQW1GO0FBQUEsc0JBbkI3RjtBQUFBLHNCQW1CbUQsTUFBTSxNQUFNLEtBQUs7QUFBQSxzQkFBTSxPQUFNO0FBQUEsNkNBbkJoRjtBQUFBLG9CQW9CVTtBQUFBLHNCQUE0QztBQUFBO0FBQUEsdUNBQXRDL... (5183 more characters)"
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.00009954100823961198
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/components/main/MenuSideBar/menuSidebar.vue (200) — 2024-07-13T13:08:26.907Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/components/main/MenuSideBar/menuSidebar.vue"
+        }
+      ]
+    }
+  ]
+}

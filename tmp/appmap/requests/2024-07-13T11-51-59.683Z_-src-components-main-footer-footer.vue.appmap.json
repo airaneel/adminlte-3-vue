@@ -1,0 +1,80 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/components/main/footer/footer.vue",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/src/pages/main.vue",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin",
+          "Pragma": "no-cache",
+          "Cache-Control": "no-cache"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"ba6-3dN/yGAPtw2eCfSAcOiuOalXAjg\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/components/main/footer/footer.vue\");import { defineComponent as _defineComponent } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nimport { useI18n } from \"/node_modules/.vite/deps/vue-i18n.js?v=e79d9748\";\nimport { computed } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nconst _sfc_main = /* @__PURE__ */ _defineComponent({\n  __name: \"footer\",\n  setup(__props, { expose: __expose }) {\n    __expose();\n    const currentYear = computed(() => (/* @__PURE__ */ new Date()).getFullYear());\n    const i18n = useI18n();\n    const __returned__ = { currentYear, i18n };\n    Object.defineProperty(__returned__, \"__isScriptSetup\", { enumerable: false, value: true });\n    return __returned__;\n  }\n});\nimport { toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nconst _hoisted_1 = { class: \"app-footer\" };\nconst _hoisted_2 = { class: \"float-end d-none d-sm-inline-block\" };\nconst _hoisted_3 = /* @__PURE__ */ _createElementVNode(\n  \"a\",\n  {\n    href: \"https://erdkse.com\",\n    target: \"_blank\",\n    rel: \"noopener noreferrer\"\n  },\n  [\n    /* @__PURE__ */ _createElementVNode(\"span\", null, \"\\xA0erdkse.com\")\n  ],\n  -1\n  /* HOISTED */\n);\nconst _hoisted_4 = /* @__PURE__ */ _createElementVNode(\n  \"span\",\n  null,\n  \".\",\n  -1\n  /* HOISTED */\n);\nconst _hoisted_5 = /* @__PURE__ */ _createElementVNode(\n  \"span\",\n  null,\n  \"\\u0432\\u0435\\u0440\\u0441\\u0438\\u044F\",\n  -1\n  /* HOISTED */\n);\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return _openBlock(), _createElementBlock(\"footer\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"strong\", null, [\n        _createElementVNode(\n          \"span\",\n          null,\n          _toDisplayString(_ctx.$t(\"labels.copyright\")) + \" \\xA9 \" + _toDisplayString($setup.currentYear),\n          1\n          /* TEXT */\n        ),\n        _hoisted_3,\n        _hoisted_4\n      ]),\n      _createElementVNode(\n        \"b\",\n        null,\n        _toDisplayString(_ctx.$t(\"labels.version\")),\n        1\n        /* TEXT */\n      ),\n      _hoisted_5\n    ])\n  ]);\n}\n_sfc_main.__hmrId = \"d41adb59\";\ntypeof __VUE_HMR_RUNTIME__ !== \"undefined\" && __VUE_HMR_RUNTIME__.createRecord(_sfc_main.__hmrId, _sfc_main);\nimport.meta.hot.accept((mod) => {\n  if (!mod) return;\n  const { default: updated, _rerender_only } = mod;\n  if (_rerender_only) {\n    __VUE_HMR_RUNTIME__.rerender(updated.__hmrId, updated.render);\n  } else {\n    __VUE_HMR_RUNTIME__.reload(updated.__hmrId, updated);\n  }\n});\nimport _export_sfc from \"/@id/__x00__plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"render\", _sfc_render], [\"__file\", \"/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/main/footer/footer.vue\"]]);\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IjtBQWtCSSxTQUFTLGVBQWU7QUFDeEIsU0FBUyxnQkFBZ0I7Ozs7O0FBQ3pCLFVBQU0sY0FBYyxTQUFTLE9BQU0sb0JBQUksS0FBSyxHQUFFLFlBQVksQ0FBQztBQUUzRCxVQUFNLE9BQU8sUUFBUTs7Ozs7OztxQkFyQmIsT0FBTSxhQUFZO3FCQUNqQixPQUFNLHFDQUFvQzttQkFHM0M7QUFBQSxFQUVJO0FBQUE7QUFBQSxJQUZELE1BQUs7QUFBQSxJQUFxQixRQUFPO0FBQUEsSUFBUyxLQUFJO0FBQUE7O0lBQzdDLG9DQUE2QixjQUF2QixnQkFBZ0I7QUFBQTs7OzttQkFFMUI7QUFBQSxFQUFjO0FBQUE7QUFBQSxFQUFSO0FBQUEsRUFBQztBQUFBO0FBQUE7bUJBR1g7QUFBQSxFQUFtQjtBQUFBO0FBQUEsRUFBYjtBQUFBLEVBQU07QUFBQTtBQUFBOzt1QkFWaEIsb0JBWUssVUFaTCxZQVlLO0FBQUEsSUFYRCxvQkFVRSxPQVZGLFlBVUU7QUFBQSxNQVRGLG9CQU1TO0FBQUEsUUFMTDtBQUFBLFVBQWdFO0FBQUE7QUFBQSwyQkFBdkQsUUFBRSx1QkFBdUIsV0FBUSxpQkFBRSxrQkFBVztBQUFBO0FBQUE7QUFBQTtBQUFBLFFBQ3ZEO0FBQUEsUUFHQTtBQUFBO01BRUo7QUFBQSxRQUFpQztBQUFBO0FBQUEseUJBQTNCLFFBQUU7QUFBQTtBQUFBO0FBQUE7QUFBQSxNQUNSO0FBQUEiLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImZvb3Rlci52dWUiXSwic291cmNlc0NvbnRlbnQiOlsiPHRlbXBsYXRlPlxuICAgIDxmb290ZXIgY2xhc3M9XCJhcHAtZm9vdGVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3M9XCJmbG9hdC1lbmQgZC1ub25lIGQtc20taW5saW5lLWJsb2NrXCI+XG4gICAgICAgIDxzdHJvbmc+XG4gICAgICAgICAgICA8c3Bhbj57eyAkdChcImxhYmVscy5jb3B5cmlnaHRcIikgfX0gJmNvcHk7IHt7Y3VycmVudFllYXJ9fTwvc3Bhbj5cbiAgICAgICAgICAgIDxhIGhyZWY9XCJodHRwczovL2VyZGtzZS5jb21cIiB0YXJnZXQ9XCJfYmxhbmtcIiByZWw9XCJub29wZW5lciBub3JlZmVycmVyXCI+XG4gICAgICAgICAgICAgICAgPHNwYW4+Jm5ic3A7ZXJka3NlLmNvbTwvc3Bhbj5cbiAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgIDxzcGFuPi48L3NwYW4+XG4gICAgICAgIDwvc3Ryb25nPlxuICAgICAgICA8Yj57eyAkdChcImxhYmVscy52ZXJzaW9uXCIpIH19PC9iPlxuICAgICAgICA8c3Bhbj7QstC10YDRgdC40Y88L3NwYW4+XG4gICAgPC9kaXY+XG48L2Zvb3Rlcj5cblxuPC90ZW1wbGF0ZT5cblxuPHNjcmlwdCBzZXR1cCBsYW5nPVwidHNcIj5cbiAgICBpbXBvcnQgeyB1c2VJMThuIH0gZnJvbSBcInZ1ZS1pMThuXCI7XG4gICAgaW1wb3J0IHsgY29tcHV0ZWQgfSBmcm9tIFwidnVlXCI7XG4gICAgY29uc3QgY3VycmVudFllYXIgPSBjb21wdXRlZCgoKSA9PiBuZXcgRGF0ZSgpLmdldEZ1bGxZZWFyKCkpXG5cbiAgICBjb25zdCBpMThuID0gdXNlSTE4bigpO1xuPC9zY3JpcHQ+Il0sImZpbGUiOiIvVXNlcnMvYW5keWphenp5L0RvY3VtZW50cy9jb2Rlcy9BZG1pbkNvcnAvY29ycC9zcmMvY29tcG9uZW50cy9tYWluL2Zvb3Rlci9mb290ZXIudnVlIn0="
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.00008558300032746047
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/components/main/footer/footer.vue (200) — 2024-07-13T11:51:59.683Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/components/main/footer/footer.vue"
+        }
+      ]
+    }
+  ]
+}

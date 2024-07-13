@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /regru",
+    "parameters": "()",
+    "status": 200
+  }
+]

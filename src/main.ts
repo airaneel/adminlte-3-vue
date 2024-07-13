@@ -3,21 +3,24 @@ import { createPinia } from 'pinia';
 import App from './app/app.vue';
 import router from './router';
 
-import {i18n} from './translation';
+import { i18n } from './translation';
 
-import {library} from '@fortawesome/fontawesome-svg-core';
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
+// Styles
+import 'vuetify/styles'
+import '@mdi/font/css/materialdesignicons.css'
+import './main.scss'
+
+
 
 import Toast, {PluginOptions} from 'vue-toastification';
-import {ProfabricComponents} from '@profabric/vue-components';
-import VueGtag from 'vue-gtag';
+import { ProfabricComponents } from '@profabric/vue-components';
+import testMe from '@/components/widgets/testMe.vue';
+import vuetify from '@/utils/vuetify';
+import logger from '@/utils/logger';
 
-import './index.scss';
-import {faEnvelope, faLock} from '@fortawesome/free-solid-svg-icons';
 
 const {VITE_NODE_ENV, VITE_GA_ID} = import.meta.env;
-
-library.add(faEnvelope, faLock);
+logger.info(`Vite is running in ${VITE_NODE_ENV} mode.`);
 
 const options: PluginOptions = {
     timeout: 3000,
@@ -34,21 +37,18 @@ const options: PluginOptions = {
 };
 const pinia = createPinia()
 const app = createApp(App);
-app.component('font-awesome-icon', FontAwesomeIcon)
-    .use(pinia)
+
+
+app.component("testMe", testMe);
+
+
+app.use(pinia)
     .use(router)
     .use(Toast, options)
     .use(i18n as any)
+    .use(vuetify)
     .use(ProfabricComponents);
+    
 
-if (VITE_NODE_ENV === 'production' && VITE_GA_ID) {
-    app.use(
-        VueGtag,
-        {
-            config: {id: VITE_GA_ID}
-        },
-        router
-    );
-}
 
 app.mount('#app');

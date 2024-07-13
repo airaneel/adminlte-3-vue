@@ -1,0 +1,80 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/rdhStore/auth.ts",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/src/components/main/MenuSideBar/menuSidebar.vue",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin",
+          "Pragma": "no-cache",
+          "Cache-Control": "no-cache"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"37e-ven4sZCru/qPVxJgCjiwidWTVLU\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "import { defineStore } from \"/node_modules/.vite/deps/pinia.js?v=e79d9748\";\nimport { computed, ref } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nexport const useRauthStore = defineStore(\"global\", () => {\n  const currentUser = ref(null);\n  const isLoggedIn = ref(false);\n  const getCurrentUser = computed(() => currentUser.value);\n  const setCurrentUser = (user) => {\n    currentUser.value = user;\n  };\n  const getCurrentUsername = computed(() => currentUser.value?.username || \"\");\n  const setCurrentUsername = (username) => {\n    if (currentUser.value) {\n      currentUser.value.username = username;\n    }\n  };\n  const getIsLoggedIn = computed(() => isLoggedIn.value);\n  const setIsLoggedIn = (value) => {\n    isLoggedIn.value = value;\n  };\n  return {\n    getCurrentUser,\n    setCurrentUser,\n    getCurrentUsername,\n    setCurrentUsername,\n    getIsLoggedIn,\n    setIsLoggedIn\n  };\n});\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImF1dGgudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgZGVmaW5lU3RvcmUgfSBmcm9tICdwaW5pYSdcbmltcG9ydCB7IGNvbXB1dGVkLCByZWYgfSBmcm9tICd2dWUnXG5cbmludGVyZmFjZSBVc2VyIHtcbiAgICBpZD86IG51bWJlciB8IG51bGxcbiAgICB1c2VybmFtZTogc3RyaW5nIHwgbnVsbFxuICAgIGVtYWlsPzogc3RyaW5nIHwgbnVsbFxuXG59XG5cblxuZXhwb3J0IGNvbnN0IHVzZVJhdXRoU3RvcmUgPSBkZWZpbmVTdG9yZSgnZ2xvYmFsJywgKCkgPT4ge1xuICAgIGNvbnN0IGN1cnJlbnRVc2VyID0gcmVmPFVzZXIgfCBudWxsPihudWxsKTsgLy8g0JjQvdC40YbQuNCw0LvQuNC30LDRhtC40Y8g0YEgbnVsbFxuICAgIGNvbnN0IGlzTG9nZ2VkSW4gPSByZWY8Ym9vbGVhbj4oZmFsc2UpOyAvLyDQmNC90LjRhtC40LDQu9C40LfQsNGG0LjRjyDRgSBmYWxzZVxuXG4gICAgY29uc3QgZ2V0Q3VycmVudFVzZXIgPSBjb21wdXRlZCgoKSA9PiBjdXJyZW50VXNlci52YWx1ZSk7XG4gICAgY29uc3Qgc2V0Q3VycmVudFVzZXIgPSAodXNlcjogVXNlcikgPT4ge1xuICAgICAgICBjdXJyZW50VXNlci52YWx1ZSA9IHVzZXI7XG4gICAgfTtcblxuICAgIGNvbnN0IGdldEN1cnJlbnRVc2VybmFtZSA9IGNvbXB1dGVkKCgpID0+IGN1cnJlbnRVc2VyLnZhbHVlPy51c2VybmFtZSB8fCAnJyk7XG4gICAgY29uc3Qgc2V0Q3VycmVudFVzZXJuYW1lID0gKHVzZXJuYW1lOiBzdHJpbmcpID0+IHtcbiAgICAgICAgaWYgKGN1cnJlbnRVc2VyLnZhbHVlKSB7XG4gICAgICAgICAgICBjdXJyZW50VXNlci52YWx1ZS51c2VybmFtZSA9IHVzZXJuYW1lO1xuICAgICAgICB9XG4gICAgfTtcblxuICAgIGNvbnN0IGdldElzTG9nZ2VkSW4gPSBjb21wdXRlZCgoKSA9PiBpc0xvZ2dlZEluLnZhbHVlKTtcbiAgICBjb25zdCBzZXRJc0xvZ2dlZEluID0gKHZhbHVlOiBib29sZWFuKSA9PiB7XG4gICAgICAgIGlzTG9nZ2VkSW4udmFsdWUgPSB2YWx1ZTtcbiAgICB9O1xuXG4gIHJldHVybiB7XG4gICAgICBnZXRDdXJyZW50VXNlcixcbiAgICAgIHNldEN1cnJlbnRVc2VyLFxuICAgICAgZ2V0Q3VycmVudFVzZXJuYW1lLFxuICAgICAgc2V0Q3VycmVudFVzZXJuYW1lLFxuICAgICAgZ2V0SXNMb2dnZWRJbixcbiAgICAgIHNldElzTG9nZ2VkSW4sXG4gIH1cbn0pIl0sIm1hcHBpbmdzIjoiQUFBQSxTQUFTLG1CQUFtQjtBQUM1QixTQUFTLFVBQVUsV0FBVztBQVV2QixhQUFNLGdCQUFnQixZQUFZLFVBQVUsTUFBTTtBQUNyRCxRQUFNLGNBQWMsSUFBaUIsSUFBSTtBQUN6QyxRQUFNLGFBQWEsSUFBYSxLQUFLO0FBRXJDLFFBQU0saUJBQWlCLFNBQVMsTUFBTSxZQUFZLEtBQUs7QUFDdkQsUUFBTSxpQkFBaUIsQ0FBQyxTQUFlO0FBQ25DLGdCQUFZLFFBQVE7QUFBQSxFQUN4QjtBQUVBLFFBQU0scUJBQXFCLFNBQVMsTUFBTSxZQUFZLE9BQU8sWUFBWSxFQUFFO0FBQzNFLFFBQU0scUJBQXFCLENBQUMsYUFBcUI7QUFDN0MsUUFBSSxZQUFZLE9BQU87QUFDbkIsa0JBQVksTUFBTSxXQUFXO0FBQUEsSUFDakM7QUFBQSxFQUNKO0FBRUEsUUFBTSxnQkFBZ0IsU0FBUyxNQUFNLFdBQVcsS0FBSztBQUNyRCxRQUFNLGdCQUFnQixDQUFDLFVBQW1CO0FBQ3RDLGVBQVcsUUFBUTtBQUFBLEVBQ3ZCO0FBRUYsU0FBTztBQUFBLElBQ0g7QUFBQSxJQUNBO0FBQUEsSUFDQTtBQUFBLElBQ0E7QUFBQSxJQUNBO0FBQUEsSUFDQTtBQUFBLEVBQ0o7QUFDRixDQUFDOyIsIm5hbWVzIjpbXX0="
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.00007208299939520657
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/rdhStore/auth.ts (200) — 2024-07-13T11:51:59.702Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/rdhStore/auth.ts"
+        }
+      ]
+    }
+  ]
+}

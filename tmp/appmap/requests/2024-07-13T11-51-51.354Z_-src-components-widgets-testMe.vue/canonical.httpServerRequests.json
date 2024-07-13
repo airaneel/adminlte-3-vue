@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /src/components/widgets/testMe.vue",
+    "parameters": "(vue,type,index,scoped,lang.css)",
+    "status": 200
+  }
+]

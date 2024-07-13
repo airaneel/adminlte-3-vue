@@ -1,29 +1,31 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "esnext",
-        "strict": true,
-        "jsx": "preserve",
-        "importHelpers": true,
-        "moduleResolution": "node",
-        "experimentalDecorators": true,
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "sourceMap": false,
-        "baseUrl": "./",
-        "types": ["webpack-env", "jest"],
-        "paths": {
-            "@/*": ["src/*"],
-        },
-        "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-        "resolveJsonModule": true,
-        "strictNullChecks": false,
-        "noEmit": true
+      "target": "es6", // или "esnext"
+      "module": "esnext",
+      "strict": true,
+      "jsx": "preserve",
+      "importHelpers": true,
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "sourceMap": true, // Полезно для отладки
+      "baseUrl": ".",
+      "types": ["webpack-env", "jest"],
+      "paths": {
+        "@/*": ["src/*"]
+      },
+      "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+      "resolveJsonModule": true,
+      "strictNullChecks": true, // Включено для избежания null/undefined ошибок
+      "noEmit": true,
+      "incremental": true, // Ускоряет повторную компиляцию
+      "outDir": "./dist", // Скомпилированные файлы пойдут сюда
+      "noUnusedLocals": true, // Генерирует ошибки для неиспользуемых переменных
+      "noUnusedParameters": true // Генерирует ошибки для неиспользуемых параметров
     },
-    "include": [
-        "src/*",
-        "src/**/*",
-    ],
-    "exclude": ["node_modules"]
-}
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist"]
+  }
+  

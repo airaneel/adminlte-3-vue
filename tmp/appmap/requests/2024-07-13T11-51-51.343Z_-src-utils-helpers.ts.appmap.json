@@ -1,0 +1,80 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/utils/helpers.ts",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/src/app/app.vue",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin",
+          "Pragma": "no-cache",
+          "Cache-Control": "no-cache"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"326-d4E2Rz532+VftDqpjJYfVzoyY8w\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "export const calculateWindowSize = (windowWidth) => {\n  if (windowWidth >= 1200) {\n    return \"lg\";\n  }\n  if (windowWidth >= 992) {\n    return \"md\";\n  }\n  if (windowWidth >= 768) {\n    return \"sm\";\n  }\n  return \"xs\";\n};\nexport const sleep = (time) => new Promise((res) => setTimeout(res, time));\nexport const setWindowClass = (classList) => {\n  const window = document && document.getElementById(\"root\");\n  if (window) {\n    window.classList = classList;\n  }\n};\nexport const addWindowClass = (classList) => {\n  const window = document && document.getElementById(\"root\");\n  if (window) {\n    window.classList.add(classList);\n  }\n};\nexport const removeWindowClass = (classList) => {\n  const window = document && document.getElementById(\"root\");\n  if (window) {\n    window.classList.remove(classList);\n  }\n};\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhlbHBlcnMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IGNhbGN1bGF0ZVdpbmRvd1NpemUgPSAod2luZG93V2lkdGg6IG51bWJlcik6IHN0cmluZyA9PiB7XG4gICAgaWYgKHdpbmRvd1dpZHRoID49IDEyMDApIHtcbiAgICAgICAgcmV0dXJuICdsZyc7XG4gICAgfVxuICAgIGlmICh3aW5kb3dXaWR0aCA+PSA5OTIpIHtcbiAgICAgICAgcmV0dXJuICdtZCc7XG4gICAgfVxuICAgIGlmICh3aW5kb3dXaWR0aCA+PSA3NjgpIHtcbiAgICAgICAgcmV0dXJuICdzbSc7XG4gICAgfVxuICAgIHJldHVybiAneHMnO1xufTtcblxuZXhwb3J0IGNvbnN0IHNsZWVwID0gKHRpbWU6IG51bWJlcikgPT5cbiAgICBuZXcgUHJvbWlzZSgocmVzKSA9PiBzZXRUaW1lb3V0KHJlcywgdGltZSkpO1xuXG5leHBvcnQgY29uc3Qgc2V0V2luZG93Q2xhc3MgPSAoY2xhc3NMaXN0OiBzdHJpbmcpID0+IHtcbiAgICBjb25zdCB3aW5kb3c6IEhUTUxFbGVtZW50IHwgbnVsbCA9XG4gICAgICAgIGRvY3VtZW50ICYmIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyb290Jyk7XG4gICAgaWYgKHdpbmRvdykge1xuICAgICAgICAod2luZG93IGFzIGFueSkuY2xhc3NMaXN0ID0gY2xhc3NMaXN0O1xuICAgIH1cbn07XG5leHBvcnQgY29uc3QgYWRkV2luZG93Q2xhc3MgPSAoY2xhc3NMaXN0OiBzdHJpbmcpID0+IHtcbiAgICBjb25zdCB3aW5kb3c6IEhUTUxFbGVtZW50IHwgbnVsbCA9XG4gICAgICAgIGRvY3VtZW50ICYmIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyb290Jyk7XG4gICAgaWYgKHdpbmRvdykge1xuICAgICAgICB3aW5kb3cuY2xhc3NMaXN0LmFkZChjbGFzc0xpc3QpO1xuICAgIH1cbn07XG5cbmV4cG9ydCBjb25zdCByZW1vdmVXaW5kb3dDbGFzcyA9IChjbGFzc0xpc3Q6IHN0cmluZykgPT4ge1xuICAgIGNvbnN0IHdpbmRvdzogSFRNTEVsZW1lbnQgfCBudWxsID1cbiAgICAgICAgZG9jdW1lbnQgJiYgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKTtcbiAgICBpZiAod2luZG93KSB7XG4gICAgICAgIHdpbmRvdy5jbGFzc0xpc3QucmVtb3ZlKGNsYXNzTGlzdCk7XG4gICAgfVxufTtcbiJdLCJtYXBwaW5ncyI6IkFBQU8sYUFBTSxzQkFBc0IsQ0FBQyxnQkFBZ0M7QUFDaEUsTUFBSSxlQUFlLE1BQU07QUFDckIsV0FBTztBQUFBLEVBQ1g7QUFDQSxNQUFJLGVBQWUsS0FBSztBQUNwQixXQUFPO0FBQUEsRUFDWDtBQUNBLE1BQUksZUFBZSxLQUFLO0FBQ3BCLFdBQU87QUFBQSxFQUNYO0FBQ0EsU0FBTztBQUNYO0FBRU8sYUFBTSxRQUFRLENBQUMsU0FDbEIsSUFBSSxRQUFRLENBQUMsUUFBUSxXQUFXLEtBQUssSUFBSSxDQUFDO0FBRXZDLGFBQU0saUJBQWlCLENBQUMsY0FBc0I7QUFDakQsUUFBTSxTQUNGLFlBQVksU0FBUyxlQUFlLE1BQU07QUFDOUMsTUFBSSxRQUFRO0FBQ1IsSUFBQyxPQUFlLFlBQVk7QUFBQSxFQUNoQztBQUNKO0FBQ08sYUFBTSxpQkFBaUIsQ0FBQyxjQUFzQjtBQUNqRCxRQUFNLFNBQ0YsWUFBWSxTQUFTLGVBQWUsTUFBTTtBQUM5QyxNQUFJLFFBQVE7QUFDUixXQUFPLFVBQVUsSUFBSSxTQUFTO0FBQUEsRUFDbEM7QUFDSjtBQUVPLGFBQU0sb0JBQW9CLENBQUMsY0FBc0I7QUFDcEQsUUFBTSxTQUNGLFlBQVksU0FBUyxlQUFlLE1BQU07QUFDOUMsTUFBSSxRQUFRO0FBQ1IsV0FBTyxVQUFVLE9BQU8sU0FBUztBQUFBLEVBQ3JDO0FBQ0o7IiwibmFtZXMiOltdfQ=="
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.00021008298790547997
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/utils/helpers.ts (200) — 2024-07-13T11:51:51.343Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/utils/helpers.ts"
+        }
+      ]
+    }
+  ]
+}

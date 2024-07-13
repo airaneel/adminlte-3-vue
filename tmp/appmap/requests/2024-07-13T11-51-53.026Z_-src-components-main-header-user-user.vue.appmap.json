@@ -1,0 +1,80 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/components/main/header/user/user.vue",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/src/components/main/header/header.vue",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin",
+          "Pragma": "no-cache",
+          "Cache-Control": "no-cache"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"9ae-uM0QPG3DXy3uPLnF29m2rt5F+8I\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/components/main/header/user/user.vue\");const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createCommentVNode as _createCommentVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\"\nimport _imports_0 from \"/public/assets/img/user2-160x160.jpg?import\"\n\n\nconst _hoisted_1 = { class: \"nav-item dropdown user-menu\" }\nconst _hoisted_2 = /*#__PURE__*/_createStaticVNode(\"<a href=\\\"#\\\" class=\\\"nav-link dropdown-toggle\\\" data-bs-toggle=\\\"dropdown\\\"><img src=\\\"\" + _imports_0 + \"\\\" class=\\\"user-image rounded-circle shadow\\\" alt=\\\"User Image\\\"><span class=\\\"d-none d-md-inline\\\">Alexander Pierce</span></a><ul class=\\\"dropdown-menu dropdown-menu-lg dropdown-menu-end\\\"><!-- User image --><li class=\\\"user-header text-bg-primary\\\"><img src=\\\"\" + _imports_0 + \"\\\" class=\\\"rounded-circle shadow\\\" alt=\\\"User Image\\\"><p> Alexander Pierce - Web Developer <small>Member since Nov. 2023</small></p></li><!-- Menu Body --><li class=\\\"user-body\\\"><!--begin::Row--><div class=\\\"row\\\"><div class=\\\"col-4 text-center\\\"><a href=\\\"#\\\">Followers</a></div><div class=\\\"col-4 text-center\\\"><a href=\\\"#\\\">Sales</a></div><div class=\\\"col-4 text-center\\\"><a href=\\\"#\\\">Friends</a></div></div><!--end::Row--></li><!-- Menu Footer--><li class=\\\"user-footer\\\"><a href=\\\"#\\\" class=\\\"btn btn-default btn-flat\\\">Profile</a><a href=\\\"#\\\" class=\\\"btn btn-default btn-flat float-end\\\">Sign out</a></li></ul>\", 2)\nconst _hoisted_4 = [\n  _hoisted_2\n]\n\nfunction _sfc_render(_ctx, _cache) {\n  return (_openBlock(), _createElementBlock(\"li\", _hoisted_1, [..._hoisted_4]))\n}\n\n\n_sfc_main.__hmrId = \"6e0ece49\"\ntypeof __VUE_HMR_RUNTIME__ !== 'undefined' && __VUE_HMR_RUNTIME__.createRecord(_sfc_main.__hmrId, _sfc_main)\nimport.meta.hot.accept(mod => {\n  if (!mod) return\n  const { default: updated, _rerender_only } = mod\n  if (_rerender_only) {\n    __VUE_HMR_RUNTIME__.rerender(updated.__hmrId, updated.render)\n  } else {\n    __VUE_HMR_RUNTIME__.reload(updated.__hmrId, updated)\n  }\n})\nimport _export_sfc from \"/@id/__x00__plugin-vue:export-helper\"\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__file',\"/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/main/header/user/user.vue\"]])\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVzZXIudnVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7T0FJWSxVQUEwQzs7O3FCQUgxQyxLQUFLLEVBQUMsNkJBQTZCO2dDQUQvQzs7RUFFUSxVQU9JOzs7O3dCQVJKLG9CQTZDRyxNQTdDSCxVQTZDRyxFQTlDWCIsInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZT5cbiAgICAgICAgPGxpIGNsYXNzPVwibmF2LWl0ZW0gZHJvcGRvd24gdXNlci1tZW51XCI+XG4gICAgICAgIDxhIGhyZWY9XCIjXCIgY2xhc3M9XCJuYXYtbGluayBkcm9wZG93bi10b2dnbGVcIiBkYXRhLWJzLXRvZ2dsZT1cImRyb3Bkb3duXCI+XG4gICAgICAgICAgPGltZ1xuICAgICAgICAgICAgc3JjPVwiL3B1YmxpYy9hc3NldHMvaW1nL3VzZXIyLTE2MHgxNjAuanBnXCJcbiAgICAgICAgICAgIGNsYXNzPVwidXNlci1pbWFnZSByb3VuZGVkLWNpcmNsZSBzaGFkb3dcIlxuICAgICAgICAgICAgYWx0PVwiVXNlciBJbWFnZVwiXG4gICAgICAgICAgLz5cbiAgICAgICAgICA8c3BhbiBjbGFzcz1cImQtbm9uZSBkLW1kLWlubGluZVwiPkFsZXhhbmRlciBQaWVyY2U8L3NwYW4+XG4gICAgICAgIDwvYT5cbiAgICAgICAgPHVsIGNsYXNzPVwiZHJvcGRvd24tbWVudSBkcm9wZG93bi1tZW51LWxnIGRyb3Bkb3duLW1lbnUtZW5kXCI+XG4gICAgICAgICAgPCEtLSBVc2VyIGltYWdlIC0tPlxuICAgICAgICAgIDxsaSBjbGFzcz1cInVzZXItaGVhZGVyIHRleHQtYmctcHJpbWFyeVwiPlxuICAgICAgICAgICAgPGltZ1xuICAgICAgICAgICAgICBzcmM9XCIvcHVibGljL2Fzc2V0cy9pbWcvdXNlcjItMTYweDE2MC5qcGdcIlxuICAgICAgICAgICAgICBjbGFzcz1cInJvdW5kZWQtY2lyY2xlIHNoYWRvd1wiXG4gICAgICAgICAgICAgIGFsdD1cIlVzZXIgSW1hZ2VcIlxuICAgICAgICAgICAgLz5cblxuICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgIEFsZXhhbmRlciBQaWVyY2UgLSBXZWIgRGV2ZWxvcGVyXG4gICAgICAgICAgICAgIDxzbWFsbD5NZW1iZXIgc2luY2UgTm92LiAyMDIzPC9zbWFsbD5cbiAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICA8L2xpPlxuICAgICAgICAgIDwhLS0gTWVudSBCb2R5IC0tPlxuICAgICAgICAgIDxsaSBjbGFzcz1cInVzZXItYm9keVwiPlxuICAgICAgICAgICAgPCEtLWJlZ2luOjpSb3ctLT5cbiAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzcz1cImNvbC00IHRleHQtY2VudGVyXCI+XG4gICAgICAgICAgICAgICAgPGEgaHJlZj1cIiNcIj5Gb2xsb3dlcnM8L2E+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwiY29sLTQgdGV4dC1jZW50ZXJcIj5cbiAgICAgICAgICAgICAgICA8YSBocmVmPVwiI1wiPlNhbGVzPC9hPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzcz1cImNvbC00IHRleHQtY2VudGVyXCI+XG4gICAgICAgICAgICAgICAgPGEgaHJlZj1cIiNcIj5GcmllbmRzPC9hPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPCEtLWVuZDo6Um93LS0+XG4gICAgICAgICAgPC9saT5cbiAgICAgICAgICA8IS0tIE1lbnUgRm9vdGVyLS0+XG4gICAgICAgICAgPGxpIGNsYXNzPVwidXNlci1mb290ZXJcIj5cbiAgICAgICAgICAgIDxhIGhyZWY9XCIjXCIgY2xhc3M9XCJidG4gYnRuLWRlZmF1bHQgYnRuLWZsYXRcIj5Qcm9maWxlPC9hPlxuICAgICAgICAgICAgPGEgaHJlZj1cIiNcIiBjbGFzcz1cImJ0biBidG4tZGVmYXVsdCBidG4tZmxhdCBmbG9hdC1lbmRcIj5TaWduIG91dDwvYT5cbiAgICAgICAgICA8L2xpPlxuICAgICAgICA8L3VsPlxuICAgICAgPC9saT5cbjwvdGVtcGxhdGU+Il19"
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.00009162499918602407
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/components/main/header/user/user.vue (200) — 2024-07-13T11:51:53.026Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/components/main/header/user/user.vue"
+        }
+      ]
+    }
+  ]
+}

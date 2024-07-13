@@ -1,0 +1,80 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/components/main/header/header.vue",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/src/pages/main.vue?t=1720874283103",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin",
+          "Pragma": "no-cache",
+          "Cache-Control": "no-cache"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"db8-UY6VLz5wizKySzA/gjDnff8PVrQ\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/components/main/header/header.vue\");import { defineComponent as _defineComponent } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nimport { FontAwesomeIcon as Ficon } from \"/node_modules/.vite/deps/@fortawesome_vue-fontawesome.js?v=e79d9748\";\nimport { faBars } from \"/node_modules/.vite/deps/@fortawesome_free-solid-svg-icons.js?v=e79d9748\";\nimport { useUiStore } from \"/src/rdhStore/uiStore.ts\";\nimport Messages from \"/src/components/main/header/messages/messages.vue\";\nimport Notifications from \"/src/components/main/header/notifications/notifications.vue\";\nimport fullScreenToggle from \"/src/components/main/header/fullScreenToggle.vue\";\nimport User from \"/src/components/main/header/user/user.vue\";\nimport SidebarSearch from \"/src/components/SideBarSearch/sidebar-search.vue\";\nconst _sfc_main = /* @__PURE__ */ _defineComponent({\n  __name: \"header\",\n  setup(__props, { expose: __expose }) {\n    __expose();\n    const ui = useUiStore();\n    const toggleControlSidebar = ui.toggleControlSidebar;\n    const __returned__ = { ui, toggleControlSidebar, get Ficon() {\n      return Ficon;\n    }, get faBars() {\n      return faBars;\n    }, Messages, Notifications, fullScreenToggle, User, SidebarSearch };\n    Object.defineProperty(__returned__, \"__isScriptSetup\", { enumerable: false, value: true });\n    return __returned__;\n  }\n});\nimport { createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nconst _hoisted_1 = { class: \"app-header navbar navbar-expand bg-body\" };\nconst _hoisted_2 = { class: \"container-fluid\" };\nconst _hoisted_3 = { class: \"navbar-nav\" };\nconst _hoisted_4 = { class: \"nav-item\" };\nconst _hoisted_5 = { class: \"navbar-nav ml-auto\" };\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return _openBlock(), _createElementBlock(\"nav\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"ul\", _hoisted_3, [\n        _createElementVNode(\"li\", _hoisted_4, [\n          _createElementVNode(\"span\", {\n            class: \"nav-link\",\n            role: \"button\",\n            onClick: _cache[0] || (_cache[0] = (...args) => $setup.ui.toggleMenuSidebar && $setup.ui.toggleMenuSidebar(...args))\n          }, [\n            _createVNode($setup[\"Ficon\"], { icon: $setup.faBars }, null, 8, [\"icon\"])\n          ])\n        ])\n      ]),\n      _createElementVNode(\"ul\", _hoisted_5, [\n        _createVNode($setup[\"SidebarSearch\"]),\n        _createVNode($setup[\"Messages\"]),\n        _createVNode($setup[\"Notifications\"]),\n        _createVNode($setup[\"User\"]),\n        _createVNode($setup[\"fullScreenToggle\"])\n      ])\n    ])\n  ]);\n}\n_sfc_main.__hmrId = \"780b847c\";\ntypeof __VUE_HMR_RUNTIME__ !== \"undefined\" && __VUE_HMR_RUNTIME__.createRecord(_sfc_main.__hmrId, _sfc_main);\nimport.meta.hot.accept((mod) => {\n  if (!mod) return;\n  const { default: updated, _rerender_only } = mod;\n  if (_rerender_only) {\n    __VUE_HMR_RUNTIME__.rerender(updated.__hmrId, updated.render);\n  } else {\n    __VUE_HMR_RUNTIME__.reload(updated.__hmrId, updated);\n  }\n});\nimport _export_sfc from \"/@id/__x00__plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"render\", _sfc_render], [\"__file\", \"/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/main/header/header.vue\"]]);\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IjtBQTRCQSxTQUFTLG1CQUFtQixhQUFhO0FBQ3pDLFNBQVMsY0FBeUI7QUFFbEMsU0FBUyxrQkFBa0I7QUFDM0IsT0FBTyxjQUFjO0FBQ3JCLE9BQU8sbUJBQW1CO0FBQzFCLE9BQU8sc0JBQXNCO0FBQzdCLE9BQU8sVUFBVTtBQUNqQixPQUFPLG1CQUFtQjs7Ozs7QUFFdEIsVUFBTSxLQUFLLFdBQVc7QUFFdEIsVUFBTSx1QkFBdUIsR0FBRzs7Ozs7Ozs7Ozs7cUJBdkM3QixPQUFNLDBDQUF5QztxQkFDakQsT0FBTSxrQkFBaUI7cUJBRWxCLE9BQU0sYUFBWTtxQkFDaEIsT0FBTSxXQUFVO3FCQVNsQixPQUFNLHFCQUFvQjs7dUJBYmxDLG9CQXVCTSxPQXZCTixZQXVCTTtBQUFBLElBdEJSLG9CQXFCTSxPQXJCTixZQXFCTTtBQUFBLE1BbkJBLG9CQVFLLE1BUkwsWUFRSztBQUFBLFFBUEgsb0JBS0ssTUFMTCxZQUtLO0FBQUEsVUFKSCxvQkFHTztBQUFBLFlBSEQsT0FBTTtBQUFBLFlBQVcsTUFBSztBQUFBLFlBQVUsU0FBSyx1Q0FBRSxVQUFHLHFCQUFILFVBQUcsa0JBQWlCO0FBQUE7WUFDL0QsYUFBdUIsbUJBQWYsTUFBTSxjQUFNO0FBQUE7OztNQU8xQixvQkFPSyxNQVBMLFlBT0s7QUFBQSxRQUxILGFBQWdDO0FBQUEsUUFDaEMsYUFBWTtBQUFBLFFBQ1osYUFBaUI7QUFBQSxRQUNqQixhQUFPO0FBQUEsUUFDUCxhQUFvQjtBQUFBIiwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJoZWFkZXIudnVlIl0sInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZT5cbiAgPG5hdiBjbGFzcz1cImFwcC1oZWFkZXIgbmF2YmFyIG5hdmJhci1leHBhbmQgYmctYm9keVwiPlxuPGRpdiBjbGFzcz1cImNvbnRhaW5lci1mbHVpZFwiPlxuICAgICAgXG4gICAgICA8dWwgY2xhc3M9XCJuYXZiYXItbmF2XCI+XG4gICAgICAgIDxsaSBjbGFzcz1cIm5hdi1pdGVtXCI+XG4gICAgICAgICAgPHNwYW4gY2xhc3M9XCJuYXYtbGlua1wiIHJvbGU9XCJidXR0b25cIiBAY2xpY2s9XCJ1aS50b2dnbGVNZW51U2lkZWJhclwiPlxuICAgICAgICAgICAgPEZpY29uIDppY29uPVwiZmFCYXJzXCIvPlxuICBcbiAgICAgICAgICA8L3NwYW4+XG4gICAgICAgIDwvbGk+XG4gICAgIFxuICAgICAgPC91bD5cbiAgXG4gICAgICA8dWwgY2xhc3M9XCJuYXZiYXItbmF2IG1sLWF1dG9cIj5cbiAgIFxuICAgICAgICA8U2lkZWJhclNlYXJjaCA+PC9TaWRlYmFyU2VhcmNoPlxuICAgICAgICA8TWVzc2FnZXMgLz5cbiAgICAgICAgPE5vdGlmaWNhdGlvbnMgLz5cbiAgICAgICAgPFVzZXIvPlxuICAgICAgICA8ZnVsbFNjcmVlblRvZ2dsZSAvPlxuICAgICAgPC91bD5cbiAgXG48L2Rpdj5cbiAgPC9uYXY+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0IHNldHVwIGxhbmc9XCJ0c1wiPlxuaW1wb3J0IHsgRm9udEF3ZXNvbWVJY29uIGFzIEZpY29uIH0gZnJvbSAnQGZvcnRhd2Vzb21lL3Z1ZS1mb250YXdlc29tZSdcbmltcG9ydCB7IGZhQmFycywgZmFUaExhcmdlIH0gZnJvbSAnQGZvcnRhd2Vzb21lL2ZyZWUtc29saWQtc3ZnLWljb25zJ1xuXG5pbXBvcnQgeyB1c2VVaVN0b3JlIH0gZnJvbSAnLi4vLi4vLi4vcmRoU3RvcmUvdWlTdG9yZSc7XG5pbXBvcnQgTWVzc2FnZXMgZnJvbSAnQC9jb21wb25lbnRzL21haW4vaGVhZGVyL21lc3NhZ2VzL21lc3NhZ2VzLnZ1ZSc7XG5pbXBvcnQgTm90aWZpY2F0aW9ucyBmcm9tICdAL2NvbXBvbmVudHMvbWFpbi9oZWFkZXIvbm90aWZpY2F0aW9ucy9ub3RpZmljYXRpb25zLnZ1ZSc7XG5pbXBvcnQgZnVsbFNjcmVlblRvZ2dsZSBmcm9tICdAL2NvbXBvbmVudHMvbWFpbi9oZWFkZXIvZnVsbFNjcmVlblRvZ2dsZS52dWUnO1xuaW1wb3J0IFVzZXIgZnJvbSAnQC9jb21wb25lbnRzL21haW4vaGVhZGVyL3VzZXIvdXNlci52dWUnO1xuaW1wb3J0IFNpZGViYXJTZWFyY2ggZnJvbSAnQC9jb21wb25lbnRzL1NpZGVCYXJTZWFyY2gvc2lkZWJhci1zZWFyY2gudnVlJztcblxuICAgIGNvbnN0IHVpID0gdXNlVWlTdG9yZSgpXG5cbiAgICBjb25zdCB0b2dnbGVDb250cm9sU2lkZWJhciA9IHVpLnRvZ2dsZUNvbnRyb2xTaWRlYmFyXG5cblxuXG5cbjwvc2NyaXB0PlxuXG5cbiJdLCJmaWxlIjoiL1VzZXJzL2FuZHlqYXp6eS9Eb2N1bWVudHMvY29kZXMvQWRtaW5Db3JwL2NvcnAvc3JjL2NvbXBvbmVudHMvbWFpbi9oZWFkZXIvaGVhZGVyLnZ1ZSJ9"
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.00015745899872854352
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/components/main/header/header.vue (200) — 2024-07-13T13:08:26.908Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/components/main/header/header.vue"
+        }
+      ]
+    }
+  ]
+}

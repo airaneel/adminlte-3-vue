@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /src/components/main/MenuSideBar/menuSidebar.vue",
+    "parameters": "(vue,type,index,scoped,lang.css)",
+    "status": 200
+  }
+]

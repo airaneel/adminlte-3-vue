@@ -1,11 +1,13 @@
-import { createLogger, defineConfig, loadEnv} from 'vite';
+import { defineConfig, loadEnv} from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import 'dotenv/config';
-import ViteLogger from './src/utils/viteLogger';
+
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
+import createViteLogger from './src/utils/viteLogger';
 
 
-const logger = ViteLogger();
+const logger = createViteLogger();
 
 export default () => {
     const mode = process.env.MODE || 'development'; // Default to 'development' if MODE is not se
@@ -14,8 +16,12 @@ export default () => {
     const { VITE_MODE_ENV } = process.env;
     logger.info(`Vite is running in ${VITE_MODE_ENV} mode.`);
     return defineConfig({
+    
         mode: VITE_MODE_ENV === 'production' ? 'production' : 'development',
-        plugins: [vue()],
+        plugins: [vue({ template: { transformAssetUrls } }), vuetify({
+            autoImport: { labs: true },
+            
+        }),],
         resolve: {
             alias: {
                 '@': path.resolve(__dirname, './src'),
@@ -25,8 +31,10 @@ export default () => {
                 '@pages': path.resolve(__dirname, './src/pages')
             }
         },
+   
         customLogger: logger,
         logLevel: VITE_MODE_ENV === 'production' ? 'warn' : 'info',
+        
     });
 
 };

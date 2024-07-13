@@ -1,0 +1,6 @@
+[
+  {
+    "caller": "GET /src/components/regru/bigSearchForm.vue",
+    "callee": "utils/viteLogger"
+  }
+]

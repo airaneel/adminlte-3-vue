@@ -1,0 +1,80 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/pages/main.vue",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/src/router/index.ts",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin",
+          "Pragma": "no-cache",
+          "Cache-Control": "no-cache"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"1387-eaCBK95U01OLnytXbneJGrsPtbE\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/pages/main.vue\");import { defineComponent as _defineComponent } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nimport { watch, computed, onMounted } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nimport Topbar from \"/src/components/main/header/header.vue\";\nimport { useWindowSize } from \"/node_modules/.vite/deps/@vueuse_core.js?v=e79d9748\";\nimport { addAppClass } from \"/src/utils/updateClass.ts\";\nimport { useUiStore } from \"/src/rdhStore/uiStore.ts\";\nimport { RouterView } from \"/node_modules/.vite/deps/vue-router.js?v=e79d9748\";\nimport MenuSidebar from \"/src/components/main/MenuSideBar/menuSidebar.vue\";\nimport Footer from \"/src/components/main/footer/footer.vue\";\nconst _sfc_main = /* @__PURE__ */ _defineComponent({\n  __name: \"main\",\n  setup(__props, { expose: __expose }) {\n    __expose();\n    const ui = useUiStore();\n    const darkModeSelected = computed(() => ui.darkMode);\n    const menuSidebarCollapsed = computed(() => ui.menuSidebarCollapsed);\n    const { width } = useWindowSize();\n    const screenSize = computed(() => {\n      if (width.value >= 1200) return \"lg\";\n      if (width.value >= 992) return \"md\";\n      if (width.value >= 768) return \"sm\";\n      return \"xs\";\n    });\n    const sidebarClass = computed(() => {\n      if (screenSize.value === \"xs\" && ui.menuSidebarCollapsed)\n        return \"sidebar-open\";\n      if ((screenSize.value === \"lg\" || screenSize.value === \"md\") && ui.menuSidebarCollapsed)\n        return \"sidebar-collapse\";\n      if (screenSize.value !== \"lg\" && screenSize.value !== \"md\" && !ui.menuSidebarCollapsed)\n        return \"sidebar-closed\";\n      return \"\";\n    });\n    let appElement = document.getElementById(\"app\");\n    const updateAppClasses = () => {\n      if (appElement) {\n        if (darkModeSelected.value) {\n          appElement.classList.add(\"dark-mode\");\n        } else {\n          appElement.classList.remove(\"dark-mode\");\n        }\n        appElement.classList.remove(\"sidebar-closed\", \"sidebar-collapse\", \"sidebar-open\", \"control-sidebar-slide-open\");\n        if (sidebarClass.value) {\n          appElement.classList.add(sidebarClass.value);\n        }\n        ui.setMainSidebarState(ui.menuSidebarCollapsed);\n      }\n    };\n    watch([() => ui.menuSidebarCollapsed, screenSize], () => {\n      updateAppClasses();\n      ui.setScreenSize(screenSize.value);\n    });\n    onMounted(() => {\n      addAppClass(\"sidebar-expand-lg\");\n      addAppClass(\"sidebar-mini\");\n      addAppClass(\"layout-fixed\");\n      addAppClass(\"sidebar-open\");\n      updateAppClasses();\n      ui.setScreenSize(screenSize.value);\n    });\n    const __returned__ = { ui, darkModeSelected, menuSidebarCollapsed, width, screenSize, sidebarClass, get appElement() {\n      return appElement;\n    }, set appElement(v) {\n      appElement = v;\n    }, updateAppClasses, Topbar, get RouterView() {\n      return RouterView;\n    }, MenuSidebar, Footer };\n    Object.defineProperty(__returned__, \"__isScriptSetup\", { enumerable: false, value: true });\n    return __returned__;\n  }\n});\nimport { createVNode as _createVNode, createElementVNode as _createElementVNode, createCommentVNode as _createCommentVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, Fragment as _Fragment } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nconst _hoisted_1 = { class: \"app-wrapper\" };\nconst _hoisted_2 = { class: \"app-main\" };\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return _openBlock(), _createElementBlock(\n    _Fragment,\n    null,\n    [\n      _createElementVNode(\"div\", _hoisted_1, [\n        _createVNode($setup[\"Topbar\"]),\n        _createVNode($setup[\"MenuSidebar\"]),\n        _createElementVNode(\"main\", _hoisted_2, [\n          _createVNode($setup[\"RouterView\"])\n        ]),\n        _createVNode($setup[\"Footer\"])\n      ]),\n      _createCommentVNode(\" <ControlSidebar/> \"),\n      $setup.screenSize === \"xs\" && $setup.menuSidebarCollapsed ? (_openBlock(), _createElementBlock(\"div\", {\n        key: 0,\n        id: \"sidebar-overlay\",\n        onClick: _cache[0] || (_cache[0] = (...args) => $setup.ui.toggleControlSidebar && $setup.ui.toggleControlSidebar(...args))\n      })) : _createCommentVNode(\"v-if\", true)\n    ],\n    64\n    /* STABLE_FRAGMENT */\n  );\n}\n_sfc_main.__hmrId = \"6053abfa\";\ntypeof __VUE_HMR_RUNTIME__ !== \"undefined\" && __VUE_HMR_RUNTIME__.createRecord(_sfc_main.__hmrId, _sfc_main);\nimport.meta.hot.accept((mod) => {\n  if (!mod) return;\n  const { default: updated, _rerender_only } = mod;\n  if (_rerender_only) {\n    __VUE_HMR_RUNTIME__.rerender(updated.__hmrId, updated.render);\n  } else {\n    __VUE_HMR_RUNTIME__.reload(updated.__hmrId, updated);\n  }\n});\nimport _export_sfc from \"/@id/__x00__plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"render\", _sfc_render], [\"__file\", \"/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/pages/main.vue\"]]);\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IjtBQW9CQSxTQUFTLE9BQU8sVUFBVSxpQkFBOEI7QUFDeEQsT0FBTyxZQUFZO0FBR25CLFNBQVMscUJBQXFCO0FBQzlCLFNBQVMsbUJBQW1DO0FBQzVDLFNBQVMsa0JBQWtCO0FBQzNCLFNBQVMsa0JBQWtCO0FBRTNCLE9BQU8saUJBQWlCO0FBQ3hCLE9BQU8sWUFBWTs7Ozs7QUFFbkIsVUFBTSxLQUFLLFdBQVc7QUFDdEIsVUFBTSxtQkFBbUIsU0FBUyxNQUFNLEdBQUcsUUFBUTtBQUNuRCxVQUFNLHVCQUF1QixTQUFTLE1BQU0sR0FBRyxvQkFBb0I7QUFDbkUsVUFBTSxFQUFFLE1BQU0sSUFBSSxjQUFjO0FBRWhDLFVBQU0sYUFBYSxTQUFTLE1BQU07QUFDaEMsVUFBSSxNQUFNLFNBQVMsS0FBTSxRQUFPO0FBQ2hDLFVBQUksTUFBTSxTQUFTLElBQUssUUFBTztBQUMvQixVQUFJLE1BQU0sU0FBUyxJQUFLLFFBQU87QUFDL0IsYUFBTztBQUFBLElBQ1QsQ0FBQztBQUVELFVBQU0sZUFBZSxTQUFTLE1BQU07QUFDbEMsVUFBSSxXQUFXLFVBQVUsUUFBUSxHQUFHO0FBQ2xDLGVBQU87QUFDVCxXQUFLLFdBQVcsVUFBVSxRQUFRLFdBQVcsVUFBVSxTQUFTLEdBQUc7QUFDakUsZUFBTztBQUNULFVBQUksV0FBVyxVQUFVLFFBQVEsV0FBVyxVQUFVLFFBQVEsQ0FBQyxHQUFHO0FBQ2hFLGVBQU87QUFDVCxhQUFPO0FBQUEsSUFDVCxDQUFDO0FBRUQsUUFBSSxhQUFpQyxTQUFTLGVBQWUsS0FBSztBQUVsRSxVQUFNLG1CQUFtQixNQUFNO0FBQzdCLFVBQUksWUFBWTtBQUNkLFlBQUksaUJBQWlCLE9BQU87QUFDMUIscUJBQVcsVUFBVSxJQUFJLFdBQVc7QUFBQSxRQUN0QyxPQUFPO0FBQ0wscUJBQVcsVUFBVSxPQUFPLFdBQVc7QUFBQSxRQUN6QztBQUVBLG1CQUFXLFVBQVUsT0FBTyxrQkFBa0Isb0JBQW9CLGdCQUFnQiw0QkFBNEI7QUFFOUcsWUFBSSxhQUFhLE9BQU87QUFDdEIscUJBQVcsVUFBVSxJQUFJLGFBQWEsS0FBSztBQUFBLFFBQzdDO0FBQ0EsV0FBRyxvQkFBb0IsR0FBRyxvQkFBb0I7QUFBQSxNQUNoRDtBQUFBLElBQ0Y7QUFFQSxVQUFNLENBQUMsTUFBTSxHQUFHLHNCQUFzQixVQUFVLEdBQUcsTUFBTTtBQUN2RCx1QkFBaUI7QUFDakIsU0FBRyxjQUFjLFdBQVcsS0FBSztBQUFBLElBQ25DLENBQUM7QUFFRCxjQUFVLE1BQU07QUFDZCxrQkFBWSxtQkFBbUI7QUFDL0Isa0JBQVksY0FBYztBQUMxQixrQkFBWSxjQUFjO0FBQzFCLGtCQUFZLGNBQWM7QUFDMUIsdUJBQWlCO0FBQ2pCLFNBQUcsY0FBYyxXQUFXLEtBQUs7QUFBQSxJQUNuQyxDQUFDOzs7Ozs7Ozs7Ozs7O3FCQXBGTSxPQUFNLGNBQWE7cUJBS2hCLE9BQU0sV0FBVTs7dUJBTjFCO0FBQUE7QUFBQTtBQUFBO0FBQUEsTUFDRSxvQkFTTSxPQVROLFlBU007QUFBQSxRQVBKLGFBQVM7QUFBQSxRQUVULGFBQWM7QUFBQSxRQUNkLG9CQUVPLFFBRlAsWUFFTztBQUFBLFVBREwsYUFBYztBQUFBO1FBRWhCLGFBQVM7QUFBQTtNQUdYO0FBQUEsTUFHTSxzQkFBVSxRQUFhLDZDQUY3QixvQkFJTztBQUFBLFFBakJUO0FBQUEsUUFjRSxJQUFHO0FBQUEsUUFFRixTQUFLLHVDQUFFLFVBQUcsd0JBQUgsVUFBRyxxQkFBb0I7QUFBQSxZQWhCakM7QUFBQSIsIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsibWFpbi52dWUiXSwic291cmNlc0NvbnRlbnQiOlsiPHRlbXBsYXRlPlxuICA8ZGl2IGNsYXNzPVwiYXBwLXdyYXBwZXJcIj5cblxuICAgIDxUb3BiYXIvPlxuXG4gICAgPE1lbnVTaWRlYmFyLz5cbiAgICA8bWFpbiBjbGFzcz1cImFwcC1tYWluXCI+XG4gICAgICA8Um91dGVyVmlldyAvPlxuICAgIDwvbWFpbj5cbiAgICA8Rm9vdGVyLz5cbiAgPC9kaXY+XG5cbiAgPCEtLSA8Q29udHJvbFNpZGViYXIvPiAtLT5cbiAgPGRpdlxuICBpZD1cInNpZGViYXItb3ZlcmxheVwiXG4gIHYtaWY9XCJzY3JlZW5TaXplID09PSAneHMnICYmIG1lbnVTaWRlYmFyQ29sbGFwc2VkXCJcbiAgQGNsaWNrPVwidWkudG9nZ2xlQ29udHJvbFNpZGViYXJcIlxuICA+PC9kaXY+XG48L3RlbXBsYXRlPlxuPHNjcmlwdCBzZXR1cCBsYW5nPVwidHNcIj5cbmltcG9ydCB7IHdhdGNoLCBjb21wdXRlZCwgb25Nb3VudGVkLCBvblVubW91bnRlZCB9IGZyb20gJ3Z1ZSc7XG5pbXBvcnQgVG9wYmFyIGZyb20gJ0AvY29tcG9uZW50cy9tYWluL2hlYWRlci9oZWFkZXIudnVlJztcblxuXG5pbXBvcnQgeyB1c2VXaW5kb3dTaXplIH0gZnJvbSAnQHZ1ZXVzZS9jb3JlJztcbmltcG9ydCB7IGFkZEFwcENsYXNzLCByZW1vdmVBcHBDbGFzcyB9IGZyb20gJ0AvdXRpbHMvdXBkYXRlQ2xhc3MnO1xuaW1wb3J0IHsgdXNlVWlTdG9yZSB9IGZyb20gJ0AvcmRoU3RvcmUvdWlTdG9yZSc7XG5pbXBvcnQgeyBSb3V0ZXJWaWV3IH0gZnJvbSAndnVlLXJvdXRlcic7XG5pbXBvcnQgQ29udHJvbFNpZGViYXIgZnJvbSAnQC9jb21wb25lbnRzL21haW4vY29udHJvbFNpZGVCYXIvQ29udHJvbFNpZGViYXIudnVlJztcbmltcG9ydCBNZW51U2lkZWJhciBmcm9tICdAL2NvbXBvbmVudHMvbWFpbi9NZW51U2lkZUJhci9tZW51U2lkZWJhci52dWUnO1xuaW1wb3J0IEZvb3RlciBmcm9tICdAL2NvbXBvbmVudHMvbWFpbi9mb290ZXIvZm9vdGVyLnZ1ZSc7XG5cbmNvbnN0IHVpID0gdXNlVWlTdG9yZSgpO1xuY29uc3QgZGFya01vZGVTZWxlY3RlZCA9IGNvbXB1dGVkKCgpID0+IHVpLmRhcmtNb2RlKTtcbmNvbnN0IG1lbnVTaWRlYmFyQ29sbGFwc2VkID0gY29tcHV0ZWQoKCkgPT4gdWkubWVudVNpZGViYXJDb2xsYXBzZWQpO1xuY29uc3QgeyB3aWR0aCB9ID0gdXNlV2luZG93U2l6ZSgpO1xuXG5jb25zdCBzY3JlZW5TaXplID0gY29tcHV0ZWQoKCkgPT4ge1xuICBpZiAod2lkdGgudmFsdWUgPj0gMTIwMCkgcmV0dXJuICdsZyc7XG4gIGlmICh3aWR0aC52YWx1ZSA+PSA5OTIpIHJldHVybiAnbWQnO1xuICBpZiAod2lkdGgudmFsdWUgPj0gNzY4KSByZXR1cm4gJ3NtJztcbiAgcmV0dXJuICd4cyc7XG59KTtcblxuY29uc3Qgc2lkZWJhckNsYXNzID0gY29tcHV0ZWQoKCkgPT4ge1xuICBpZiAoc2NyZWVuU2l6ZS52YWx1ZSA9PT0gJ3hzJyAmJiB1aS5tZW51U2lkZWJhckNvbGxhcHNlZClcbiAgICByZXR1cm4gJ3NpZGViYXItb3Blbic7XG4gIGlmICgoc2NyZWVuU2l6ZS52YWx1ZSA9PT0gJ2xnJyB8fCBzY3JlZW5TaXplLnZhbHVlID09PSAnbWQnKSAmJiB1aS5tZW51U2lkZWJhckNvbGxhcHNlZClcbiAgICByZXR1cm4gJ3NpZGViYXItY29sbGFwc2UnO1xuICBpZiAoc2NyZWVuU2l6ZS52YWx1ZSAhPT0gJ2xnJyAmJiBzY3JlZW5TaXplLnZhbHVlICE9PSAnbWQnICYmICF1aS5tZW51U2lkZWJhckNvbGxhcHNlZClcbiAgICByZXR1cm4gJ3NpZGViYXItY2xvc2VkJztcbiAgcmV0dXJuICcnO1xufSk7XG5cbmxldCBhcHBFbGVtZW50OiBIVE1MRWxlbWVudCB8IG51bGwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXBwJyk7XG5cbmNvbnN0IHVwZGF0ZUFwcENsYXNzZXMgPSAoKSA9PiB7XG4gIGlmIChhcHBFbGVtZW50KSB7XG4gICAgaWYgKGRhcmtNb2RlU2VsZWN0ZWQudmFsdWUpIHtcbiAgICAgIGFwcEVsZW1lbnQuY2xhc3NMaXN0LmFkZCgnZGFyay1tb2RlJyk7XG4gICAgfSBlbHNlIHtcbiAgICAgIGFwcEVsZW1lbnQuY2xhc3NMaXN0LnJlbW92ZSgnZGFyay1tb2RlJyk7XG4gICAgfVxuXG4gICAgYXBwRWxlbWVudC5jbGFzc0xpc3QucmVtb3ZlKCdzaWRlYmFyLWNsb3NlZCcsICdzaWRlYmFyLWNvbGxhcHNlJywgJ3NpZGViYXItb3BlbicsICdjb250cm9sLXNpZGViYXItc2xpZG... (814 more characters)"
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.0002096250100294128
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/pages/main.vue (200) — 2024-07-13T11:51:59.675Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/pages/main.vue"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/components/regru/field.vue",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/@vite/client",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0,
+      "message": [
+        {
+          "name": "t",
+          "value": "'1720876320362'",
+          "class": "String"
+        }
+      ]
+    },
+    {
+      "event": "call",
+      "id": 2,
+      "thread_id": 0,
+      "method_id": "formatMessage",
+      "static": true,
+      "parameters": [
+        {
+          "class": "String",
+          "value": "'error'",
+          "name": "type"
+        },
+        {
+          "class": "String",
+          "value": "'\\x1B[31mInternal server error: Error parsing JavaScript expression: Unexpected token, expected \",\" (1:17)\\x1B[39m\\n' +\n  '  Plugin: \\x1B[35mvite:vue\\x1B[39m\\n' +\n  '  File: \\x1B[36m/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/regru/field.vue\\x1B[39m:12:14\\n' +\n  '\\x1B[33m  10 |  \\t\\t  :data-id=\"field.props?.ref\"\\n' +\n  '  11 |  \\t\\t  :placeholder=\"field.label\"\\n' +\n  '  12 |  \\t\\t  v-model=\"field.props.name]\"\\n' +\n  '     |                ^\\n' +\n  '  13 |  \\t\\t></component>\\n' +\n  '  14 |  \\t\\t<select\\x1B[39m\\n' +\n  '      at createCompilerError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1328:17)\\n' +\n  '      at emitError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2812:5)\\n' +\n  '      at createExp (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2805:7)\\n' +\n  '      at Object.onattribend (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2329:29)\\n' +\n  '      at Tokenizer.handleInAttrValue (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:909:16)\\n' +\n  '      at Tokenizer.stateInAttrValueDoubleQuotes (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:919:10)\\n' +\n  '      at Tokenizer.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1063:16)\\n' +\n  '      at Object.baseParse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2851:13)\\n' +\n  '      at Object.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:706:23)\\n' +\n  '      at Object.parse$2 [as parse] (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1850:24)'",
+          "name": "msg"
+        },
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "clear",
+              "class": "Boolean"
+            },
+            {
+              "name": "timestamp",
+              "class": "Boolean"
+            },
+            {
+              "name": "error",
+              "class": "Object",
+              "properties": [
+                {
+                  "name": "id",
+                  "class": "String"
+                },
+                {
+                  "name": "plugin",
+                  "class": "String"
+                },
+                {
+                  "name": "message",
+                  "class": "String"
+                },
+                {
+                  "name": "name",
+                  "class": "String"
+                },
+                {
+                  "name": "stack",
+                  "class": "String"
+                },
+                {
+                  "name": "loc",
+                  "class": "Object",
+                  "properties": [
+                    {
+                      "name": "file",
+                      "class": "String"
+                    },
+                    {
+                      "name": "line",
+                      "class": "Number"
+                    },
+                    {
+                      "name": "column",
+                      "class": "Number"
+                    }
+                  ]
+                },
+                {
+                  "name": "pluginCode",
+                  "class": "String"
+                },
+                {
+                  "name": "frame",
+                  "class": "String"
+                }
+              ]
+            }
+          ],
+          "value": "{\n  clear: true,\n  timestamp: true,\n  error: {\n    id: '/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/regru/field.vue',\n    plugin: 'vite:vue',\n    message: 'Error parsing JavaScript expression: Unexpected token, expected \",\" (1:17)',\n    name: 'SyntaxError',\n    stack: 'SyntaxError: Error parsing JavaScript expression: Unexpected token, expected \",\" (1:17)\\n' +\n      '    at createCompilerError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1328:17)\\n' +\n      '    at emitError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2812:5)\\n' +\n      '    at createExp (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2805:7)\\n' +\n      '    at Object.onattribend (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2329:29)\\n' +\n      '    at Tokenizer.handleInAttrValue (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:909:16)\\n' +\n      '    at Tokenizer.stateInAttrValueDoubleQuotes (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:919:10)\\n' +\n      '    at Tokenizer.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1063:16)\\n' +\n      '    at Object.baseParse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2851:13)\\n' +\n      '    at Object.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:706:23)\\n' +\n      '    at Object.parse$2 [as parse] (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1850:24)',\n    loc: [Object],\n    pluginCode: '<template>\\n' +\n      '\\t<div class=\"col-md-6\">\\n' +\n      '\\t  <div class=\"input-group input-group-sm mb-2\">\\n' +\n      '\\t\\t<component\\n' +\n      `\\t\\t  v-if=\"field.type !== 'select'\"\\n` +\n      '\\t\\t  :is=\"field.type\"\\n' +\n      '\\t\\t  :id=\"field.type + index\"\\n' +\n      '\\t\\t  class=\"form-control\"\\n' +\n      '\\t\\t  :type=\"field.props?.type\"\\n' +\n      '\\t\\t  :data-id=\"field.props?.ref\"\\n' +\n      '\\t\\t  :placeholder=\"field.label\"\\n' +\n      '\\t\\t  v-model=\"field.props.name]\"\\n' +\n      '\\t\\t></component>\\n' +\n      '\\t\\t<select\\n' +\n      '\\t\\t  v-else\\n' +\n      '\\t\\t  :id=\"field.type + index\"\\n' +\n      '\\t\\t   v-model=\"Query[field.props.name]\"\\n' +\n      '\\t\\t  class=\"form-select\"\\n' +\n      '\\t\\t  :data-id=\"field.props?.ref\"\\n' +\n      '\\t\\t >\\n' +\n      '\\t\\t  <option value=\"\" disabled>{{ field.placeholder }}</option>\\n' +\n      '\\t\\t  <option v-for=\"option in field.options\" :key=\"option.value\" :value=\"option.value\">\\n' +\n      '\\t\\t\\t{{ option.text }}\\n' +\n      '\\t\\t  </option>\\n' +\n      '\\t\\t</select>\\n' +\n      '\\t  </div>\\n' +\n      '\\t</div>\\n' +\n      '  </template>\\n' +\n      '  \\n' +\n      '  <script setup lang=\"ts\">\\n' +\n      \"  import flatpickr from 'flatpickr';\\n\" +\n      \"  import 'flatpickr/dist/themes/dark.css';\\n\" +\n      \"import { defineProps } from 'vue';\\n\" +\n      \"import { Russian } from 'flatpickr/dist/l10n/ru.js';\\n\" +\n      \"import { Field, Query } from './types';\\n\" +\n      'flatpickr.localize(Russian);\\n' +\n      '\\n' +\n      'const Query = defineModel<Query>()\\n' +\n      'defineProps<{\\n' +\n      '  field: Field; // Use the Field type as a prop type\\n' +\n      '  index: number;\\n' +\n      '}>();\\n' +\n      '  \\n' +\n      '\\n' +\n      '\\n' +\n      '\\n' +\n      '  </script>\\n' +\n      '  ',\n    frame: '10 |  \\t\\t  :data-id=\"field.props?.ref\"\\n' +\n      '11 |  \\t\\t  :placeholder=\"field.label\"\\n' +\n      '12 |  \\t\\t  v-model=\"field.props.name]\"\\n' +\n      '   |                ^\\n' +\n      '13 |  \\t\\t></component>\\n' +\n      '14 |  \\t\\t<select'\n  }\n}",
+          "object_id": 41,
+          "name": "options"
+        }
+      ],
+      "defined_class": "viteLogger",
+      "path": "src/utils/viteLogger.ts",
+      "lineno": 7
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 3,
+      "parent_id": 2,
+      "return_value": {
+        "class": "String",
+        "value": "'RDH [4:12:00 PM] [ERROR] \\x1B[31mInternal server error: Error parsing JavaScript expression: Unexpected token, expected \",\" (1:17)\\x1B[39m\\n' +\n  '  Plugin: \\x1B[35mvite:vue\\x1B[39m\\n' +\n  '  File: \\x1B[36m/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/regru/field.vue\\x1B[39m:12:14\\n' +\n  '\\x1B[33m  10 |  \\t\\t  :data-id=\"field.props?.ref\"\\n' +\n  '  11 |  \\t\\t  :placeholder=\"field.label\"\\n' +\n  '  12 |  \\t\\t  v-model=\"field.props.name]\"\\n' +\n  '     |                ^\\n' +\n  '  13 |  \\t\\t></component>\\n' +\n  '  14 |  \\t\\t<select\\x1B[39m\\n' +\n  '      at createCompilerError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1328:17)\\n' +\n  '      at emitError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2812:5)\\n' +\n  '      at createExp (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2805:7)\\n' +\n  '      at Object.onattribend (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2329:29)\\n' +\n  '      at Tokenizer.handleInAttrValue (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:909:16)\\n' +\n  '      at Tokenizer.stateInAttrValueDoubleQuotes (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:919:10)\\n' +\n  '      at Tokenizer.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1063:16)\\n' +\n  '      at Object.baseParse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2851:13)\\n' +\n  '      at Object.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:706:23)\\n' +\n  '      at Object.parse$2 [as parse] (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1850:24)'"
+      },
+      "elapsed": 0.000012375006917864084
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 500,
+        "headers": {
+          "Access-Control-Allow-Origin": "*"
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "\n        <!DOCTYPE html>\n        <html lang=\"en\">\n          <head>\n            <meta charset=\"UTF-8\" />\n            <title>Error</title>\n            <script type=\"module\">\n              import { ErrorOverlay } from '/@vite/client'\n              document.body.appendChild(new ErrorOverlay({\"message\":\"Error parsing JavaScript expression: Unexpected token, expected \\\",\\\" (1:17)\",\"stack\":\"    at createCompilerError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1328:17)\\n    at emitError (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2812:5)\\n    at createExp (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2805:7)\\n    at Object.onattribend (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2329:29)\\n    at Tokenizer.handleInAttrValue (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:909:16)\\n    at Tokenizer.stateInAttrValueDoubleQuotes (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:919:10)\\n    at Tokenizer.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1063:16)\\n    at Object.baseParse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2851:13)\\n    at Object.parse (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:706:23)\\n    at Object.parse$2 [as parse] (/Users/andyjazzy/Documents/codes/AdminCorp/corp/node_modules/vue/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1850:24)\",\"id\":\"/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/regru/field.vue\",\"frame\":\"10 |  \\t\\t  :data-id=\\\"field.props?.ref\\\"\\n11 |  \\t\\t  :placeholder=\\\"field.label\\\"\\n12 |  \\t\\t  v-model=\\\"field.props.name]\\\"\\n   |                ^\\n13 |  \\t\\t>\\u003c/component>\\n14 |  \\t\\t\\u003cselect\",\"plugin\":\"vite:vue\",\"pluginCode\":\"\\u003ctemplate>\\n\\t\\u003cdiv class=\\\"col-md-6\\\">\\n\\t  \\u003cdiv class=\\\"input-group input-group-sm mb-2\\\">\\n\\t\\t\\u003ccomponent\\n\\t\\t  v-if=\\\"field.type !== 'select'\\\"\\n\\t\\t  :is=\\\"field.type\\\"\\n\\t\\t  :id=\\\"field.type + index\\\"\\n\\t\\t  class=\\\"form-control\\\"\\n\\t\\t  :type=\\\"field.props?.type\\\"\\n\\t\\t  :data-id=\\\"field.props?.ref\\\"\\n\\t\\t  :placeholder=\\\"field.label\\\"\\n\\t\\t  v-model=\\\"field.props.name]\\\"\\n\\t\\t>\\u003c/component>\\n\\t\\t\\u003cselect\\n\\t\\t  v-else\\n\\t\\t  :id=\\\"field.type + index\\\"\\n\\t\\t   v-model=\\\"Query[field.props.name]\\\"\\n\\t\\t  class=\\\"form-select\\\"\\n\\t\\t  :data-id=\\\"field.props?.ref\\\"\\n\\t\\t >\\n\\t\\t  \\u003coption value=\\\"\\\" disabled>{{ field.placeholder }}\\u003c/option>\\n\\t\\t  \\u003coption v-for=\\\"option in field.options\\\" :key=\\\"option.value\\\" :value=\\\"option.value\\\">\\n\\t\\t\\t{{ option.text }}\\n\\t\\t  \\u003c/option>\\n\\t\\t\\u003c/select>\\n\\t  \\u003c/div>\\n\\t\\u003c/div>\\n  \\u003c/template>\\n  \\n  \\u003cscript setup lang=\\\"ts\\\">\\n  import flatpickr from 'flatpickr';\\n  import 'flatpickr/dist/themes/dark.css';\\nimport { defineProps } from 'vue';\\nimport { Russian } from 'flatpickr/dist/l10n/ru.js';\\nimport { Field, Query } from './types';\\nflatpickr.localize(Russian);\\n\\nconst Query = defineModel\\u003cQuery>()\\ndefineProps\\u003c{\\n  field: Field; // Use the Field type as a prop type\\n  index: number;\\n}>();\\n  \\n\\n\\n\\n  \\u003c/script>\\n  \",\"loc\":{\"file\":\"/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/regru/field.vue\",\"line\":12,\"column\":14}}))\n            </script>\n          </head>\n          <body>\n          </body>\n        </html>\n      "
+        }
+      },
+      "id": 4,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.0027567499928409234
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/components/regru/field.vue (500) — 2024-07-13T13:12:00.377Z"
+  },
+  "classMap": [
+    {
+      "name": "utils",
+      "type": "package",
+      "children": [
+        {
+          "type": "class",
+          "name": "viteLogger",
+          "children": [
+            {
+              "type": "function",
+              "name": "formatMessage",
+              "static": true,
+              "location": "src/utils/viteLogger.ts:7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/components/regru/field.vue"
+        }
+      ]
+    }
+  ]
+}

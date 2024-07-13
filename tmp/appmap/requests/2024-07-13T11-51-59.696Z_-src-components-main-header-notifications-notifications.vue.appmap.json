@@ -1,0 +1,80 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/components/main/header/notifications/notifications.vue",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/src/components/main/header/header.vue",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin",
+          "Pragma": "no-cache",
+          "Cache-Control": "no-cache"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"1094-/bCPir2OTK4EtON70jqs2z3X8b8\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/components/main/header/notifications/notifications.vue\");import { defineComponent as _defineComponent } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nimport { faBell, faMailBulk } from \"/node_modules/.vite/deps/@fortawesome_free-solid-svg-icons.js?v=e79d9748\";\nimport { FontAwesomeIcon } from \"/node_modules/.vite/deps/@fortawesome_vue-fontawesome.js?v=e79d9748\";\nconst _sfc_main = /* @__PURE__ */ _defineComponent({\n  __name: \"notifications\",\n  setup(__props, { expose: __expose }) {\n    __expose();\n    const __returned__ = { get faBell() {\n      return faBell;\n    }, get faMailBulk() {\n      return faMailBulk;\n    }, get FontAwesomeIcon() {\n      return FontAwesomeIcon;\n    } };\n    Object.defineProperty(__returned__, \"__isScriptSetup\", { enumerable: false, value: true });\n    return __returned__;\n  }\n});\nimport { createCommentVNode as _createCommentVNode, createVNode as _createVNode, createElementVNode as _createElementVNode, createStaticVNode as _createStaticVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"/node_modules/.vite/deps/vue.js?v=e79d9748\";\nconst _hoisted_1 = { class: \"nav-item dropdown\" };\nconst _hoisted_2 = {\n  class: \"nav-link\",\n  \"data-bs-toggle\": \"dropdown\",\n  href: \"#\"\n};\nconst _hoisted_3 = /* @__PURE__ */ _createElementVNode(\n  \"span\",\n  { class: \"navbar-badge badge text-bg-warning\" },\n  \"15\",\n  -1\n  /* HOISTED */\n);\nconst _hoisted_4 = { class: \"dropdown-menu dropdown-menu-lg dropdown-menu-end\" };\nconst _hoisted_5 = /* @__PURE__ */ _createElementVNode(\n  \"span\",\n  { class: \"dropdown-item dropdown-header\" },\n  \"15 Notifications\",\n  -1\n  /* HOISTED */\n);\nconst _hoisted_6 = /* @__PURE__ */ _createElementVNode(\n  \"div\",\n  { class: \"dropdown-divider\" },\n  null,\n  -1\n  /* HOISTED */\n);\nconst _hoisted_7 = {\n  href: \"#\",\n  class: \"dropdown-item\"\n};\nconst _hoisted_8 = /* @__PURE__ */ _createElementVNode(\n  \"span\",\n  { class: \"float-end text-secondary fs-7\" },\n  \"3 mins\",\n  -1\n  /* HOISTED */\n);\nconst _hoisted_9 = /* @__PURE__ */ _createStaticVNode('<div class=\"dropdown-divider\"></div><a href=\"#\" class=\"dropdown-item\"><i class=\"bi bi-people-fill me-2\"></i> 8 friend requests <span class=\"float-end text-secondary fs-7\">12 hours</span></a><div class=\"dropdown-divider\"></div><a href=\"#\" class=\"dropdown-item\"><i class=\"bi bi-file-earmark-fill me-2\"></i> 3 new reports <span class=\"float-end text-secondary fs-7\">2 days</span></a><div class=\"dropdown-divider\"></div><a href=\"#\" class=\"dropdown-item dropdown-footer\"> See All Notifications </a>', 6);\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return _openBlock(), _createElementBlock(\n    _Fragment,\n    null,\n    [\n      _createCommentVNode(\"begin::Notifications Dropdown Menu\"),\n      _createElementVNode(\"li\", _hoisted_1, [\n        _createElementVNode(\"a\", _hoisted_2, [\n          _createVNode($setup[\"FontAwesomeIcon\"], { icon: $setup.faBell }, null, 8, [\"icon\"]),\n          _hoisted_3\n        ]),\n        _createElementVNode(\"div\", _hoisted_4, [\n          _hoisted_5,\n          _hoisted_6,\n          _createElementVNode(\"a\", _hoisted_7, [\n            _createVNode($setup[\"FontAwesomeIcon\"], { icon: $setup.faMailBulk }, null, 8, [\"icon\"]),\n            _hoisted_8\n          ]),\n          _hoisted_9\n        ])\n      ]),\n      _createCommentVNode(\"end::Notifications Dropdown Menu\")\n    ],\n    2112\n    /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */\n  );\n}\n_sfc_main.__hmrId = \"944867cf\";\ntypeof __VUE_HMR_RUNTIME__ !== \"undefined\" && __VUE_HMR_RUNTIME__.createRecord(_sfc_main.__hmrId, _sfc_main);\nimport.meta.hot.accept((mod) => {\n  if (!mod) return;\n  const { default: updated, _rerender_only } = mod;\n  if (_rerender_only) {\n    __VUE_HMR_RUNTIME__.rerender(updated.__hmrId, updated.render);\n  } else {\n    __VUE_HMR_RUNTIME__.reload(updated.__hmrId, updated);\n  }\n});\nimport _export_sfc from \"/@id/__x00__plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"render\", _sfc_render], [\"__file\", \"/Users/andyjazzy/Documents/codes/AdminCorp/corp/src/components/main/header/notifications/notifications.vue\"]]);\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IjtBQUNBLFNBQVMsUUFBUSxrQkFBa0I7QUFDbkMsU0FBUyx1QkFBdUI7Ozs7Ozs7Ozs7Ozs7Ozs7O3FCQU10QixPQUFNLG9CQUFtQjs7RUFDeEIsT0FBTTtBQUFBLEVBQVcsa0JBQWU7QUFBQSxFQUFXLE1BQUs7O21CQUVqRDtBQUFBLEVBQTBEO0FBQUEsSUFBcEQsT0FBTSxxQ0FBb0M7QUFBQSxFQUFDO0FBQUEsRUFBRTtBQUFBO0FBQUE7cUJBRWhELE9BQU0sbURBQWtEO21CQUMzRDtBQUFBLEVBQW1FO0FBQUEsSUFBN0QsT0FBTSxnQ0FBK0I7QUFBQSxFQUFDO0FBQUEsRUFBZ0I7QUFBQTtBQUFBO21CQUM1RDtBQUFBLEVBQW9DO0FBQUEsSUFBL0IsT0FBTSxtQkFBa0I7QUFBQTtBQUFBO0FBQUE7QUFBQTs7RUFDMUIsTUFBSztBQUFBLEVBQUksT0FBTTs7bUJBRWhCO0FBQUEsRUFBeUQ7QUFBQSxJQUFuRCxPQUFNLGdDQUErQjtBQUFBLEVBQUM7QUFBQSxFQUFNO0FBQUE7QUFBQTttQkFsQjlEOzt1QkFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLE1BT1U7QUFBQSxNQUNKLG9CQTJCSyxNQTNCTCxZQTJCSztBQUFBLFFBMUJILG9CQUdJLEtBSEosWUFHSTtBQUFBLFVBRkYsYUFBaUMsNkJBQWYsTUFBTSxjQUFNO0FBQUEsVUFDOUI7QUFBQTtRQUVGLG9CQXFCTSxPQXJCTixZQXFCTTtBQUFBLFVBcEJKO0FBQUEsVUFDQTtBQUFBLFVBQ0Esb0JBR0ksS0FISixZQUdJO0FBQUEsWUFGRixhQUFxQyw2QkFBbkIsTUFBTSxrQkFBVTtBQUFBLFlBQ2xDO0FBQUE7VUFFRjtBQUFBOztNQWdCSjtBQUFBIiwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJub3RpZmljYXRpb25zLnZ1ZSJdLCJzb3VyY2VzQ29udGVudCI6WyI8c2NyaXB0IHNldHVwIGxhbmc9XCJ0c1wiPlxuaW1wb3J0IHsgZmFCZWxsLCBmYU1haWxCdWxrIH0gZnJvbSAnQGZvcnRhd2Vzb21lL2ZyZWUtc29saWQtc3ZnLWljb25zJztcbmltcG9ydCB7IEZvbnRBd2Vzb21lSWNvbiB9IGZyb20gJ0Bmb3J0YXdlc29tZS92dWUtZm9udGF3ZXNvbWUnO1xuPC9zY3JpcHQ+XG5cbjx0ZW1wbGF0ZT5cblxuICAgICAgICAgIDwhLS1iZWdpbjo6Tm90aWZpY2F0aW9ucyBEcm9wZG93biBNZW51LS0+XG4gICAgICA8bGkgY2xhc3M9XCJuYXYtaXRlbSBkcm9wZG93blwiPlxuICAgICAgICA8YSBjbGFzcz1cIm5hdi1saW5rXCIgZGF0YS1icy10b2dnbGU9XCJkcm9wZG93blwiIGhyZWY9XCIjXCI+XG4gICAgICAgICAgPEZvbnRBd2Vzb21lSWNvbiA6aWNvbj0nZmFCZWxsJy8+XG4gICAgICAgICAgPHNwYW4gY2xhc3M9XCJuYXZiYXItYmFkZ2UgYmFkZ2UgdGV4dC1iZy13YXJuaW5nXCI+MTU8L3NwYW4+XG4gICAgICAgIDwvYT5cbiAgICAgICAgPGRpdiBjbGFzcz1cImRyb3Bkb3duLW1lbnUgZHJvcGRvd24tbWVudS1sZyBkcm9wZG93bi1tZW51LWVuZFwiPlxuICAgICAgICAgIDxzcGFuIGNsYXNzPVwiZHJvcGRvd24taXRlbSBkcm9wZG93bi1oZWFkZXJcIj4xNSBOb3RpZmljYXRpb25zPC9zcGFuPlxuICAgICAgICAgIDxkaXYgY2xhc3M9XCJkcm9wZG93bi1kaXZpZGVyXCI+PC9kaXY+XG4gICAgICAgICAgPGEgaHJlZj1cIiNcIiBjbGFzcz1cImRyb3Bkb3duLWl0ZW1cIj5cbiAgICAgICAgICAgIDxGb250QXdlc29tZUljb24gOmljb249J2ZhTWFpbEJ1bGsnLz5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwiZmxvYXQtZW5kIHRleHQtc2Vjb25kYXJ5IGZzLTdcIj4zIG1pbnM8L3NwYW4+XG4gICAgICAgICAgPC9hPlxuICAgICAgICAgIDxkaXYgY2xhc3M9XCJkcm9wZG93bi1kaXZpZGVyXCI+PC9kaXY+XG4gICAgICAgICAgPGEgaHJlZj1cIiNcIiBjbGFzcz1cImRyb3Bkb3duLWl0ZW1cIj5cbiAgICAgICAgICAgIDxpIGNsYXNzPVwiYmkgYmktcGVvcGxlLWZpbGwgbWUtMlwiPjwvaT4gOCBmcmllbmQgcmVxdWVzdHNcbiAgICAgICAgICAgIDxzcGFuIGNsYXNzPVwiZmxvYXQtZW5kIHRleHQtc2Vjb25kYXJ5IGZzLTdcIj4xMiBob3Vyczwvc3Bhbj5cbiAgICAgICAgICA8L2E+XG4gICAgICAgICAgPGRpdiBjbGFzcz1cImRyb3Bkb3duLWRpdmlkZXJcIj48L2Rpdj5cbiAgICAgICAgICA8YSBocmVmPVwiI1wiIGNsYXNzPVwiZHJvcGRvd24taXRlbVwiPlxuICAgICAgICAgICAgPGkgY2xhc3M9XCJiaSBiaS1maWxlLWVhcm1hcmstZmlsbCBtZS0yXCI+PC9pPiAzIG5ldyByZXBvcnRzXG4gICAgICAgICAgICA8c3BhbiBjbGFzcz1cImZsb2F0LWVuZCB0ZXh0LXNlY29uZGFyeSBmcy03XCI+MiBkYXlzPC9zcGFuPlxuICAgICAgICAgIDwvYT5cbiAgICAgICAgICA8ZGl2IGNsYXNzPVwiZHJvcGRvd24tZGl2aWRlclwiPjwvZGl2PlxuICAgICAgICAgIDxhIGhyZWY9XCIjXCIgY2xhc3M9XCJkcm9wZG93bi1pdGVtIGRyb3Bkb3duLWZvb3RlclwiPlxuICAgICAgICAgICAgU2VlIEFsbCBOb3RpZmljYXRpb25zXG4gICAgICAgICAgPC9hPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvbGk+XG4gICAgICA8IS0tZW5kOjpOb3RpZmljYXRpb25zIERyb3Bkb3duIE1lbnUtLT5cblxuPC90ZW1wbGF0ZT4iXSwiZmlsZSI6Ii9Vc2Vycy9hbmR5amF6enkvRG9jdW1lbnRzL2NvZGVzL0FkbWluQ29ycC9jb3JwL3NyYy9jb21wb25lbnRzL21haW4vaGVhZGVyL25vdGlmaWNhdGlvbnMvbm90aWZpY2F0aW9ucy52dWUifQ=="
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.00007987499702721834
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/components/main/header/notifications/notifications.vue (200) — 2024-07-13T11:51:59.696Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/components/main/header/notifications/notifications.vue"
+        }
+      ]
+    }
+  ]
+}

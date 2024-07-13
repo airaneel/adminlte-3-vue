@@ -1,0 +1,6 @@
+[
+  {
+    "caller": "GET /public/assets/img/user2-160x160.jpg",
+    "callee": "utils/viteLogger"
+  }
+]

@@ -1,80 +1,67 @@
 import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router';
-
-import rdhmain from '@/modules/main/rdhMain.vue';
-import rdhLogin from '@/modules/rdhLogin/login.vue';
-import Register from '@/modules/register/register.vue';
-
-import Dashboard from '@/pages/dashboard/dashboard.vue';
-import Profile from '@/pages/profile/profile.vue';
-import ForgotPassword from '@/modules/forgot-password/forgot-password.vue';
-import RecoverPassword from '@/modules/recover-password/recover-password.vue';
-import SubMenu from '@/pages/main-menu/sub-menu/sub-menu.vue';
-import Blank from '@/pages/blank/blank.vue';
 import Cookies from 'js-cookie';
+import { faCircle, faTachometerAlt, faUser, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
-const routes: Array<RouteRecordRaw> = [
+
+
+export const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
         name: 'Main',
-        component: rdhmain,
+        component: () => import('@/pages/main.vue'),
         meta: {
+            title: 'RDH',
+            ruName: 'Главная',
             requiresAuth: true
         },
         children: [
             {
+                path: '/dashboard',
+                name: 'Dashboard',
+                component: () => import('@/pages/dashboard/dashboard.vue'),
+                meta: {
+                    title: 'RDH - Панель управления',
+                    ruName: 'Дешборд',
+                    requiresAuth: true,
+                    icon: faTachometerAlt
+                }
+            },
+            {
+                path: '/regru',
+                name: 'Regru',
+                component: () => import('@/pages/regru.vue'),
+                meta: {
+                    title: 'RDH - Регистрационные удостоверения',
+                    ruName: 'РУ',
+                    requiresAuth: true,
+                    icon: faCircle as IconDefinition
+                }
+            },
+            {
                 path: 'profile',
                 name: 'Profile',
-                component: Profile,
+                component: () => import('@/pages/profile/profile.vue'),
                 meta: {
-                    requiresAuth: true
+                    ruName: "Профиль",
+                    requiresAuth: true,
+                    icon: faUser as IconDefinition
                 }
             },
-            {
-                path: 'blank',
-                name: 'Blank',
-                component: Blank,
-                meta: {
-                    requiresAuth: true
-                }
-            },
-            {
-                path: 'sub-menu-1',
-                name: 'Sub Menu 1',
-                component: SubMenu,
-                meta: {
-                    requiresAuth: true
-                }
-            },
-            {
-                path: 'sub-menu-2',
-                name: 'Sub Menu 2',
-                component: Blank,
-                meta: {
-                    requiresAuth: true
-                }
-            },
-            {
-                path: '',
-                name: 'Dashboard',
-                component: Dashboard,
-                meta: {
-                    requiresAuth: true
-                }
-            }
         ]
     },
     {
         path: '/login',
         name: 'Login',
-        component: rdhLogin,
+        component: () => import('@/pages/login.vue'),
         meta: {
+            title: 'Войти',
             requiresUnauth: true
         }
     },
     {
         path: '/register',
         name: 'Register',
-        component: Register,
+        component: () => import('@/modules/register/register.vue'  ),
         meta: {
             requiresUnauth: true
         }
@@ -82,7 +69,7 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/forgot-password',
         name: 'ForgotPassword',
-        component: ForgotPassword,
+        component: () => import('@/modules/forgot-password/forgot-password.vue'  ),
         meta: {
             requiresUnauth: true
         }
@@ -90,9 +77,10 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/recover-password',
         name: 'RecoverPassword',
-        component: RecoverPassword,
+        component: () => import('@/modules/recover-password/recover-password.vue'  ),
         meta: {
             requiresUnauth: true
+
         }
     }
 ];
@@ -109,6 +97,10 @@ router.beforeEach(async (to, from, next) => {
 
     if (to.meta.requiresAuth && !storedAuthentication) {
         return next('/login');
+    }
+
+    if (to.meta.title) {
+        document.title = to.meta.title as string;
     }
 
     if (to.meta.requiresUnauth && storedAuthentication) {

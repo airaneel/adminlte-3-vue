@@ -1,0 +1,87 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/src/router/index.ts",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:5173",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
+          "Accept": "*/*",
+          "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Connection": "keep-alive",
+          "Referer": "http://localhost:5173/src/main.ts?t=1720874283103",
+          "Cookie": "csrftoken=JoG0lboZVZucsyUC10B83fyK2PSrJqgf; _pk_id.1.1fff=76aff4dcfa6d42d0.1719754794.; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzczOTQ1LCJpYXQiOjE3MjAzNzM2NDUsImp0aSI6IjkyYjQzYmVjZjYxOTQyYTg5NDNjNWU2OGVjMDllYTQ3IiwidXNlcl9pZCI6MX0.9q_idMkvw61A5G6GQkM1WGfNo-jUZdncjM_JDqPh1Ps; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMDQ2MDA0NSwiaWF0IjoxNzIwMzczNjQ1LCJqdGkiOiIwODJmMTYzMDEwNWY0YmViYTE2MjZjNjI5Y2U0ODFkMSIsInVzZXJfaWQiOjF9.Kh6m-J9pRfNqxauGr3E2UcLozG_px7iFCtCHeCHGb8I; tabstyle=html-tab; vuexy-color-scheme=dark; vuexy-isVerticalNavCollapsed=false; r-color-scheme=dark; rh-color-scheme=dark; rdh-color-scheme=dark; rdh--color-scheme=dark; rdh-corp-color-scheme=dark; rdh-corporte-color-scheme=dark; rdh-corporate-color-scheme=dark; rRD-corporate-color-scheme=dark; -corporate-color-scheme=dark; RDH-corporate-color-scheme=dark; RDH-corporate-isVerticalNavCollapsed=true; RDH-color-scheme=dark; -color-scheme=dark; R-color-scheme=dark; RDH-theme=light; RDH-corporate-theme=dark",
+          "Sec-Fetch-Dest": "script",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin",
+          "Pragma": "no-cache",
+          "Cache-Control": "no-cache"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0,
+      "message": [
+        {
+          "name": "t",
+          "value": "'1720874283103'",
+          "class": "String"
+        }
+      ]
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"a3c-CkUWC4jNiSL8IIyQ8z0RxFPf8DQ\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "import { createRouter, createWebHistory } from \"/node_modules/.vite/deps/vue-router.js?v=e79d9748\";\nimport Cookies from \"/node_modules/.vite/deps/js-cookie.js?v=e79d9748\";\nimport { faCircle, faTachometerAlt, faUser } from \"/node_modules/.vite/deps/@fortawesome_free-solid-svg-icons.js?v=e79d9748\";\nexport const routes = [\n  {\n    path: \"/\",\n    name: \"Main\",\n    component: () => import(\"/src/pages/main.vue?t=1720874283103\"),\n    meta: {\n      title: \"RDH\",\n      ruName: \"Главная\",\n      requiresAuth: true\n    },\n    children: [\n      {\n        path: \"/dashboard\",\n        name: \"Dashboard\",\n        component: () => import(\"/src/pages/dashboard/dashboard.vue\"),\n        meta: {\n          title: \"RDH - Панель управления\",\n          ruName: \"Дешборд\",\n          requiresAuth: true,\n          icon: faTachometerAlt\n        }\n      },\n      {\n        path: \"/regru\",\n        name: \"Regru\",\n        component: () => import(\"/src/pages/regru.vue\"),\n        meta: {\n          title: \"RDH - Регистрационные удостоверения\",\n          ruName: \"РУ\",\n          requiresAuth: true,\n          icon: faCircle\n        }\n      },\n      {\n        path: \"profile\",\n        name: \"Profile\",\n        component: () => import(\"/src/pages/profile/profile.vue\"),\n        meta: {\n          ruName: \"Профиль\",\n          requiresAuth: true,\n          icon: faUser\n        }\n      }\n    ]\n  },\n  {\n    path: \"/login\",\n    name: \"Login\",\n    component: () => import(\"/src/pages/login.vue\"),\n    meta: {\n      title: \"Войти\",\n      requiresUnauth: true\n    }\n  },\n  {\n    path: \"/register\",\n    name: \"Register\",\n    component: () => import(\"/src/modules/register/register.vue\"),\n    meta: {\n      requiresUnauth: true\n    }\n  },\n  {\n    path: \"/forgot-password\",\n    name: \"ForgotPassword\",\n    component: () => import(\"/src/modules/forgot-password/forgot-password.vue\"),\n    meta: {\n      requiresUnauth: true\n    }\n  },\n  {\n    path: \"/recover-password\",\n    name: \"RecoverPassword\",\n    component: () => import(\"/src/modules/recover-password/recover-password.vue\"),\n    meta: {\n      requiresUnauth: true\n    }\n  }\n];\nconst router = createRouter({\n  history: createWebHistory(),\n  routes\n});\nrouter.beforeEach(async (to, from, next) => {\n  let storedAuthentication = Cookies.get(\"accessToken\");\n  if (to.meta.requiresAuth && !storedAuthentication) {\n    return next(\"/login\");\n  }\n  if (to.meta.title) {\n    document.title = to.meta.title;\n  }\n  if (to.meta.requiresUnauth && storedAuthentication) {\n    return next(\"/\");\n  }\n  return next();\n});\nexport default router;\n\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Y3JlYXRlUm91dGVyLCBjcmVhdGVXZWJIaXN0b3J5LCBSb3V0ZVJlY29yZFJhd30gZnJvbSAndnVlLXJvdXRlcic7XG5pbXBvcnQgQ29va2llcyBmcm9tICdqcy1jb29raWUnO1xuaW1wb3J0IHsgZmFDaXJjbGUsIGZhVGFjaG9tZXRlckFsdCwgZmFVc2VyLCBJY29uRGVmaW5pdGlvbiB9IGZyb20gJ0Bmb3J0YXdlc29tZS9mcmVlLXNvbGlkLXN2Zy1pY29ucyc7XG5cblxuXG5leHBvcnQgY29uc3Qgcm91dGVzOiBBcnJheTxSb3V0ZVJlY29yZFJhdz4gPSBbXG4gICAge1xuICAgICAgICBwYXRoOiAnLycsXG4gICAgICAgIG5hbWU6ICdNYWluJyxcbiAgICAgICAgY29tcG9uZW50OiAoKSA9PiBpbXBvcnQoJ0AvcGFnZXMvbWFpbi52dWUnKSxcbiAgICAgICAgbWV0YToge1xuICAgICAgICAgICAgdGl0bGU6ICdSREgnLFxuICAgICAgICAgICAgcnVOYW1lOiAn0JPQu9Cw0LLQvdCw0Y8nLFxuICAgICAgICAgICAgcmVxdWlyZXNBdXRoOiB0cnVlXG4gICAgICAgIH0sXG4gICAgICAgIGNoaWxkcmVuOiBbXG4gICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgcGF0aDogJy9kYXNoYm9hcmQnLFxuICAgICAgICAgICAgICAgIG5hbWU6ICdEYXNoYm9hcmQnLFxuICAgICAgICAgICAgICAgIGNvbXBvbmVudDogKCkgPT4gaW1wb3J0KCdAL3BhZ2VzL2Rhc2hib2FyZC9kYXNoYm9hcmQudnVlJyksXG4gICAgICAgICAgICAgICAgbWV0YToge1xuICAgICAgICAgICAgICAgICAgICB0aXRsZTogJ1JESCAtINCf0LDQvdC10LvRjCDRg9C/0YDQsNCy0LvQtdC90LjRjycsXG4gICAgICAgICAgICAgICAgICAgIHJ1TmFtZTogJ9CU0LXRiNCx0L7RgNC0JyxcbiAgICAgICAgICAgICAgICAgICAgcmVxdWlyZXNBdXRoOiB0cnVlLFxuICAgICAgICAgICAgICAgICAgICBpY29uOiBmYVRhY2hvbWV0ZXJBbHRcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgIHBhdGg6ICcvcmVncnUnLFxuICAgICAgICAgICAgICAgIG5hbWU6ICdSZWdydScsXG4gICAgICAgICAgICAgICAgY29tcG9uZW50OiAoKSA9PiBpbXBvcnQoJ0AvcGFnZXMvcmVncnUudnVlJyksXG4gICAgICAgICAgICAgICAgbWV0YToge1xuICAgICAgICAgICAgICAgICAgICB0aXRsZTogJ1JESCAtINCg0LXQs9C40YHRgtGA0LDRhtC40L7QvdC90YvQtSDRg9C00L7RgdGC0L7QstC10YDQtdC90LjRjycsXG4gICAgICAgICAgICAgICAgICAgIHJ1TmFtZTogJ9Cg0KMnLFxuICAgICAgICAgICAgICAgICAgICByZXF1aXJlc0F1dGg6IHRydWUsXG4gICAgICAgICAgICAgICAgICAgIGljb246IGZhQ2lyY2xlIGFzIEljb25EZWZpbml0aW9uXG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICBwYXRoOiAncHJvZmlsZScsXG4gICAgICAgICAgICAgICAgbmFtZTogJ1Byb2ZpbGUnLFxuICAgICAgICAgICAgICAgIGNvbXBvbmVudDogKCkgPT4gaW1wb3J0KCdAL3BhZ2VzL3Byb2ZpbGUvcHJvZmlsZS52dWUnKSxcbiAgICAgICAgICAgICAgICBtZXRhOiB7XG4gICAgICAgICAgICAgICAgICAgIHJ1TmFtZTogXCLQn9GA0L7RhNC40LvRjFwiLFxuICAgICAgICAgICAgICAgICAgICByZXF1aXJlc0F1dGg6IHRydWUsXG4gICAgICAgICAgICAgICAgICAgIGljb246IGZhVXNlciBhcyBJY29uRGVmaW5pdGlvblxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH0sXG4gICAgICAgIF1cbiAgICB9LFxuICAgIHtcbiAgICAgICAgcGF0aDogJy9sb2dpbicsXG4gICAgICAgIG5hbWU6ICdMb2dpbicsXG4gICAgICAgIGNvbXBvbmVudDogKCkgPT4gaW1wb3J0KCdAL3BhZ2VzL2xvZ2luLnZ1ZScpLFxuICAgICAgICBtZXRhOiB7XG4gICAgICAgICAgICB0aXRsZTogJ9CS0L7QudGC0LgnLFxuICAgICAgICAgICAgcmVxdWlyZXNVbmF1dGg6IHRydWVcbiAgICAgICAgfVxuICAgIH0sXG4gICAge1xuICAgICAgICBwYXRoOiAnL3JlZ2lzdGVyJyxcbiAgICAgICAgbmFtZTogJ1JlZ2lzdGVyJyxcbiAgICAgICAgY29tcG9uZW50OiAoKSA9PiBpbXBvcnQoJ0AvbW9kdWxlcy9yZWdpc3Rlci9yZWdpc3Rlci52dWUnICApLFxuICAgICAgICBtZXRhOiB7XG4gICAgICAgICAgICByZXF1aXJlc1VuYXV0aDogdHJ1ZVxuICAgICAgICB9XG4gICAgfSxcbiAgICB7XG4gICAgICAgIHBhdGg6ICcvZm9yZ290LXBhc3N3b3JkJyxcbiAgICAgICAgbmFtZTogJ0ZvcmdvdFBhc3N3b3JkJyxcbiAgICAgICAgY29tcG9uZW50OiAoKSA9PiBpbXBvcnQoJ0AvbW9kdWxlcy9mb3Jnb3QtcGFzc3dvcmQvZm9yZ290LXBhc3N3b3JkLnZ1ZScgICksXG4gICAgICAgIG1ldGE6IHtcbiAgICAgICAgICAgIHJlcXVpcmVzVW5hdXRoOiB0cnVlXG4gICAgICAgIH1cbiAgICB9LFxuICAgIHtcbiAgICAgICAgcGF0aDogJy9yZWNvdmVyLXBhc3N3b3JkJyxcbiAgICAgICAgbmFtZTogJ1JlY292ZXJQYXNzd29yZCcsXG4gICAgICAgIGNvbXBvbmVudDogKCkgPT4gaW1wb3J0KCdAL21vZHVsZXMvcmVjb3Zlci1wYXNzd29yZC9yZWNvdmVyLXBhc3N3b3JkLnZ1ZScgICksXG4gICAgICAgIG1ldGE6IHtcbiAgICAgICAgICAgIHJlcXVpcmVzVW5hdXRoOiB0cnVlXG5cbiAgICAgICAgfVxuICAgIH1cbl07XG5cbmNvbnN0IHJvdXRlciA9IGNyZWF0ZVJvdXRlcih7XG4gICAgaGlzdG9yeTogY3JlYXRlV2ViSGlzdG9yeSgpLFxuICAgIHJvdXRlc1xufSk7XG5cbnJvdXRlci5iZWZvcmVFYWNoKGFzeW5jICh0bywgZnJvbSwgbmV4dCkgPT4ge1xuICAgIGxldCBzdG9yZWRBdXRoZW50aWNhdGlvbiA9IENvb2tpZXMuZ2V0KCdhY2Nlc3NUb2tlbicpO1xuXG5cblxuICAgIGlmICh0by5tZXRhLnJlcXVpcmVzQXV0aCAmJiAhc3RvcmVkQXV0aGVudGljYXRpb24pIHtcbiAgICAgICAgcmV0dXJuIG5leHQoJy9sb2dpbicpO1xuICAgIH1cblxuICAgIGlmICh0by5tZXRhLnRpdGxlKSB7XG4gICAgICAgIGRvY3VtZW50LnRpdGxlID0gdG8ubWV0YS50aXRsZSBhcyBzdHJpbmc7XG4gICAgfVxuXG4gICAgaWYgKHRvLm1ldGEucmVxdWlyZXNVbmF1dGggJiYgc3RvcmVkQXV0aGVudGljYXRpb24pIHtcbiAgICAgICAgcmV0dXJuIG5leHQoJy8nKTtcbiAgICB9XG5cbiAgICByZXR1cm4gbmV4dCgpO1xufSk7XG5cbmV4cG9ydCBkZWZhdWx0IHJvdXRlcjtcblxuIl0sIm1hcHBpbmdzIjoiQUFBQSxTQUFRLGNBQWMsd0JBQXVDO0FBQzdELE9BQU8sYUFBYTtBQUNwQixTQUFTLFVBQVUsaUJBQWlCLGNBQThCO0FBSTNELGFBQU0sU0FBZ0M7QUFBQSxFQUN6QztBQUFBLElBQ0ksTUFBTTtBQUFBLElBQ04sTUFBTTtBQUFBLElBQ04sV0FBVyxNQUFNLE9BQU8sa0JBQWtCO0FBQUEsSUFDMUMsTUFBTTtBQUFBLE1BQ0YsT0FBTztBQUFBLE1BQ1AsUUFBUTtBQUFBLE1BQ1IsY0FBYztBQUFBLElBQ2xCO0FBQUEsSUFDQSxVQUFVO0FBQUEsTUFDTjtBQUFBLFFBQ0ksTUFBTTtBQUFBLFFBQ04sTUFBTTtBQUFBLFFBQ04sV0FBVyxNQUFNLE9BQU8saUNBQWlDO0FBQUEsUUFDekQsTUFBTTtBQUFBLFVBQ0YsT0FBTztBQUFBLFVBQ1AsUUFBUTtBQUFBLFVBQ1IsY0FBYztBQUFBLFVBQ2QsTUFBTTtBQUFBLFFBQ1Y7QUFBQSxNQUNKO0FBQUEsTUFDQTtBQUFBLFFBQ0ksTUFBTTtBQUFBLFFBQ04sTUFBTTtBQUFBLFFBQ04sV0FBVyxNQUFNLE9BQU8sbUJBQW1CO0FBQUEsUUFDM0MsTUFBTTtBQUFBLFVBQ0YsT0FBTztBQUFBLFVBQ1AsUUFBUTtBQUFBLFVBQ1IsY0FBYztBQUFBLFVBQ2QsTUFBTTtBQUFBLFFBQ1Y7QUFBQSxNQUNKO0FBQUEsTUFDQTtBQUFBLFFBQ0ksTUFBTTtBQUFBLFFBQ04sTUFBTTtBQUFBLFFBQ04sV0FBVyxNQUFNLE9BQU8sNkJBQTZCO0FBQUEsUUFDckQsTUFBTTtBQUFBLFVBQ0YsUUFBUTtBQUFBLFVBQ1IsY0FBYztBQUFBLFVBQ2QsTUFBTTtBQUFBLFFBQ1Y7QUFBQSxNQUNKO0FBQUEsSUFDSjtBQUFBLEVBQ0o7QUFBQSxFQUNBO0FBQUEsSUFDSSxNQUFNO0FBQUEsSUFDTixNQUFNO0FBQUEsSUFDTixXQUFXLE1BQU0sT0FBTyxtQkFBbUI7QUFBQSxJQUMzQyxNQUFNO0FBQUEsTUFDRixPQUFPO0FBQUEsTUFDUCxnQkFBZ0I7QUFBQSxJQUNwQjtBQUFBLEVBQ0o7QUFBQSxFQUNBO0FBQUEsSUFDSSxNQUFNO0FBQUEsSUFDTixNQUFNO0FBQUEsSUFDTixXQUFXLE1BQU0sT0FBTyxpQ0FBbUM7QUFBQSxJQUMzRCxNQUFNO0FBQUEsTUFDRixnQkFBZ0I7QUFBQSxJQUNwQjtBQUFBLEVBQ0o7QUFBQSxFQUNBO0FBQUEsSUFDSSxNQUFNO0FBQUEsSUFDTixNQUFNO0FBQUEsSUFDTixXQUFXLE1BQU0sT0FBTywrQ0FBaUQ7QUFBQSxJQUN6RSxNQUFNO0FBQUEsTUFDRixnQkFBZ0I7QUFBQSxJQUNwQjtBQUFBLEVBQ0o7QUFBQSxFQUNBO0FBQUEsSUFDSSxNQUFNO0FBQUEsSUFDTixNQUFNO0FBQUEsSUFDTixXQUFXLE1BQU0sT0FBTyxpREFBbUQ7QUFBQSxJQUMzRSxNQUFNO0FBQUEsTUFDRixnQkFBZ0I7QUFBQSxJQUVwQjtBQUFBLEVBQ0o7QUFDSjtBQUVBLE1BQU0sU0FBUyxhQUFhO0FBQUEsRUFDeEIsU0FBUyxpQkFBaUI7QUFBQSxFQUMxQjtBQUNKLENBQUM7QUFFRCxPQUFPLFdBQVcsT0FBTyxJQUFJLE1BQU0sU0FBUztBQUN4QyxNQUFJLHVCQUF1QixRQUFRLElBQUksYUFBYTtBQUlwRCxNQUFJLEdBQUcsS0FBSyxnQkFBZ0IsQ0FBQyxzQkFBc0I7QUFDL0MsV0FBTyxLQUFLLFFBQVE7QUFBQSxFQUN4QjtBQUVBLE1BQUksR0FBRyxLQUFLLE9BQU87QUFDZixhQUFTLFFBQVEsR0FBRyxLQUFLO0FBQUEsRUFDN0I7QUFFQSxNQUFJLEdBQUcsS0FBSyxrQkFBa0Isc0JBQXNCO0FBQ2hELFdBQU8sS0FBSyxHQUFHO0FBQUEsRUFDbkI7QUFFQSxTQUFPLEtBQUs7QUFDaEIsQ0FBQztBQUVELGVBQWU7IiwibmFtZXMiOltdfQ=="
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.0001295830006711185
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "rdh-admin",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /src/router/index.ts (200) — 2024-07-13T13:08:26.822Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /src/router/index.ts"
+        }
+      ]
+    }
+  ]
+}
