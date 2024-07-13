@@ -3,7 +3,6 @@ import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import 'dotenv/config';
 
-import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 import createViteLogger from './src/utils/viteLogger';
 
 
@@ -18,10 +17,7 @@ export default () => {
     return defineConfig({
     
         mode: VITE_MODE_ENV === 'production' ? 'production' : 'development',
-        plugins: [vue({ template: { transformAssetUrls } }), vuetify({
-            autoImport: { labs: true },
-            
-        }),],
+        plugins: [vue(),],
         resolve: {
             alias: {
                 '@': path.resolve(__dirname, './src'),

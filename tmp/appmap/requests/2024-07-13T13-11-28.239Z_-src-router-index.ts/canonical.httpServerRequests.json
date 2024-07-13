@@ -1,7 +1,0 @@
-[
-  {
-    "route": "GET /src/router/index.ts",
-    "parameters": "(t)",
-    "status": 304
-  }
-]

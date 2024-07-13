@@ -1,6 +1,0 @@
-[
-  {
-    "caller": "GET /public/assets/img/rdh.svg",
-    "callee": "utils/viteLogger"
-  }
-]

@@ -5,6 +5,7 @@ import {Button, Checkbox} from '@profabric/vue-components';
 import {registerWithEmail, signInByGoogle} from '@/services/auth';
 
 @Component({
+    
     components: {
       
         'pf-checkbox': Checkbox,

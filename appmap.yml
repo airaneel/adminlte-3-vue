@@ -1,8 +1,0 @@
-name: rdh-admin
-language: typescript
-appmap_dir: tmp/appmap
-packages:
-  - path: ./src
-    exclude:
-      - node_modules
-      - .yarn

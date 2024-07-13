@@ -1,7 +1,0 @@
-[
-  {
-    "route": "GET /src/translation/en.json",
-    "parameters": "(import)",
-    "status": 200
-  }
-]

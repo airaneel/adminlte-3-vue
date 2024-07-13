@@ -1,7 +1,0 @@
-[
-  {
-    "route": "GET /src/components/widgets/breadCrumbs.vue",
-    "parameters": "(vue,type,index,scoped,lang.css)",
-    "status": 200
-  }
-]

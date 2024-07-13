@@ -1,7 +1,0 @@
-[
-  {
-    "route": "GET /public/assets/img/rdh.svg",
-    "parameters": "(import)",
-    "status": 200
-  }
-]

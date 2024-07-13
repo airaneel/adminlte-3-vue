@@ -1,4 +1,4 @@
-export interface Field {
+export interface FieldType {
 	label: string;
 	type: string;
 	props: {
@@ -11,7 +11,7 @@ export interface Field {
 	options?: { value: string; text: string }[];
 }
 
-export interface Query<T = any> {
-    [key: string]: T;
+export interface QueryType  {
+    [key: string]: any;
 }
 

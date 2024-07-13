@@ -5,7 +5,7 @@
       <div class="card-body">
         <form @submit.prevent="handleSubmit">
           <div class="row">
-            <Field v-for="(field, index) in fields" :key="index" :index="index" :field="field" v-model:Query="field.props.name" />
+            <Field v-for="(field, index) in fields" :key="index" :index="index" :field="field" v-model="Query[field.props.name]" />
           </div>
           <div class="d-grid">
             <button type="submit" class="btn btn-success">Поиск</button>
@@ -38,7 +38,7 @@ import Field from './field.vue'; // компонент Field
 import axios from 'axios';
 import { Regdoc } from '@/types/regdoc';
 import { useToast } from 'vue-toastification'
-import { Field as FieldType, Query } from './types';
+import { FieldType, QueryType } from './types';
 
 
 
@@ -136,7 +136,7 @@ const fields: FieldType[] = [
   },
 ];
 
-const Query = reactive<Query>({});
+const Query = reactive<QueryType>({});
 
 const updateModelValue = ({ value, fieldName }: { value: string; fieldName: string }) => {
   Query[fieldName] = value;

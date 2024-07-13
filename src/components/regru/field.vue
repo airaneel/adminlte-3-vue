@@ -32,12 +32,12 @@
   import 'flatpickr/dist/themes/dark.css';
 import { defineProps } from 'vue';
 import { Russian } from 'flatpickr/dist/l10n/ru.js';
-import { Field, Query } from './types';
+import { FieldType, QueryType } from './types';
 flatpickr.localize(Russian);
 
-const Query = defineModel({default: () => ({}) as Query});
+const Query = defineModel({default: () => ({}) as QueryType});
 defineProps<{
-  field: Field; // Use the Field type as a prop type
+  field: FieldType; // Use the Field type as a prop type
   index: number;
 }>();
   
