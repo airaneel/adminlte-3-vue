@@ -10,6 +10,7 @@ export const useUiStore = defineStore('ui', () => {
     const menuSidebarCollapsed = ref<boolean>(false);
     const controlSidebarCollapsed = ref<boolean>(true);
     const screenSize = ref<string>('lg');
+    
 
     const toggleDarkMode = () => {
         darkMode.value = !darkMode.value;

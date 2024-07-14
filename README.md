@@ -1,54 +1,141 @@
-<p align="center" style="margin-bottom: 32px">
-  <a href="https://erdkse.com" >
-    <img src="https://raw.githubusercontent.com/erdkse/adminlte-3-vue/main/public/assets/img/logo.png" alt="AdminLTE logo" width="75" height="75">
-  </a>
-</p>
+# RDH-CORP
 
-<h1 align="center">Admin LTE 3.2.0 - Vue 3.4.27</h1>
+## Description
+[Your Project Description]
 
-<p>
-  This repository is a form of original AdminLTE project. It is aim to use AdminLTE template with Vue.
-</p>
-<br>
+## Getting Started
 
-<span align="center">
+### Prerequisites
+- Node.js (v14 or higher)
+- npm (v6 or higher) or yarn (v1.22 or higher)
 
-![Stars](https://img.shields.io/github/stars/erdkse/adminlte-3-vue?style=flat-square)
-![Forks](https://img.shields.io/github/forks/erdkse/adminlte-3-vue?style=flat-square)
-![Issues](https://img.shields.io/github/issues/erdkse/adminlte-3-vue?style=flat-square)
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-green.svg?style=flat-square)](#contributors-)
-![GitHub last commit](https://img.shields.io/github/last-commit/erdkse/adminlte-3-vue.svg)
-[![License](https://img.shields.io/github/license/erdkse/adminlte-3-vue.svg)](LICENSE)
-![Sponsors](https://img.shields.io/github/sponsors/erdkse.svg)
+### Installation
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/[Your Username]/RDH-CORP.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd RDH-CORP
+    ```
+3. Install dependencies:
+    ```sh
+    npm install
+    ```
+    or
+    ```sh
+    yarn install
+    ```
 
-</span>
+### Running the Application
+To start the development server:
+```sh
+npm run dev
+```
+or
+```sh
+yarn dev
+```
 
-## Demo
+To build the application for production:
+```sh
+npm run build
+```
+or
+```sh
+yarn build
+```
 
-Online demo: https://www.erdkse.com/projects/preview/adminlte-vue
+To preview the production build:
+```sh
+npm run preview
+```
+or
+```sh
+yarn preview
+```
 
-To login website you can `create` a user. All authenication related features are `working` and `live`!
+### Running Tests
+To run unit tests:
+```sh
+npm run test:unit
+```
+or
+```sh
+yarn test:unit
+```
 
-`Firebase` is added as backend provider to increase better user experince.
+### Linting
+To lint the codebase:
+```sh
+npm run lint
+```
+or
+```sh
+yarn lint
+```
 
-## Development
+## Project Structure
+```
+├── public
+│   └── [static assets]
+├── src
+│   ├── app
+│   │   └── app.vue
+│   ├── components
+│   │   └── [reusable Vue components]
+│   ├── pages
+│   │   └── [application pages]
+│   ├── router
+│   │   └── index.ts
+│   ├── store
+│   │   └── [Vuex stores]
+│   ├── translation
+│   │   └── [i18n setup]
+│   ├── utils
+│   │   └── [utility functions and classes]
+│   ├── main.scss
+│   └── main.ts
+├── package.json
+├── vite.config.ts
+└── README.md
+```
 
-First, install the dependencies with `npm install` command.
+## Key Features
+- **Vue 3**: The progressive JavaScript framework for building user interfaces.
+- **Vue Router**: The official router for Vue.js for building single-page applications.
+- **Pinia**: The intuitive state management library for Vue.
+- **Vue Toastification**: A Vue.js toast notification library.
+- **i18n**: Internationalization plugin for Vue.js.
+- **TypeScript**: Typed JavaScript at any scale.
 
-You need to run `npm run firebase:start` on a different terminal and keep it running.
+## Configuration
+### Environment Variables
+The project uses environment variables defined in the Vite project config. You can set these variables in a `.env` file at the root of the project.
 
-Then, in the project directory, you can run: `npm run dev`
+### Toast Notification Options
+The toast notifications are configured with the following options:
+- `timeout`: 3000ms
+- `closeOnClick`: true
+- `pauseOnFocusLoss`: true
+- `pauseOnHover`: true
+- `draggable`: true
+- `draggablePercent`: 0.6
+- `showCloseButtonOnHover`: false
+- `hideProgressBar`: false
+- `closeButton`: 'button'
+- `icon`: true
+- `rtl`: false
 
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+## Contributing
+We welcome contributions to improve this project. To contribute, please follow these steps:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature-name`).
+5. Open a pull request.
+
+Please ensure your code follows the project's coding standards and includes appropriate tests.
 
 ## License
-
-[![License](https://img.shields.io/github/license/erdkse/adminlte-3-vue.svg)](/LICENSE)
-
-Released 2021 by [Erdi Köse](https://erdkse.com)
-
-## Support for more
-
-If you liked my work and would like to support for my expenses like server costs, please; (ie. `Firebase`)
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/erdkse)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.

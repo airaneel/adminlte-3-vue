@@ -1,18 +1,25 @@
 <template>
- <div class="form-check form-switch">
-    <input 
-      class="form-check-input" 
-      type="checkbox" 
-      role="switch" 
-      id="flexSwitchCheckChecked" 
-      :checked="theme" 
-      @change="toggleTheme">
-    <label class="form-check-label" for="flexSwitchCheckChecked">Тема</label>
+  <div class="form-check form-switch">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      role="switch"
+      id="flexSwitchCheckChecked"
+      :checked="theme"
+      @change="toggleTheme"
+    />
+    <label
+      class="form-check-label"
+      for="flexSwitchCheckChecked"
+      >Тема</label
+    >
   </div>
 
   <div class="login-box">
     <div class="login-logo">
-      <RouterLink to="/" class="h1"
+      <RouterLink
+        to="/"
+        class="h1"
         ><b>{{ $t('labels.admin') }}</b
         >{{ $t('labels.lte') }}</RouterLink
       >
@@ -22,7 +29,7 @@
       <div class="card-body login-card-body">
         <p class="login-box-msg">Введите логин и пароль</p>
 
-        <form @click.prevent=''>
+        <form @click.prevent="">
           <div class="input-group mb-2">
             <input
               class="form-control"
@@ -32,9 +39,11 @@
               v-model="username"
             />
             <span class="input-group-text">
-              <Ficon beat :icon="faUser" />
+              <Ficon
+                beat
+                :icon="faUser"
+              />
             </span>
-     
           </div>
 
           <div class="input-group mb-2">
@@ -46,27 +55,37 @@
               v-model="password"
             />
 
-         <span  class="input-group-text">
-                <Ficon beat :icon="faLock" />
-              
-         </span>
+            <span class="input-group-text">
+              <Ficon
+                beat
+                :icon="faLock"
+              />
+            </span>
           </div>
 
           <div class="row">
             <div class="col-8">
               <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" v-model="rememberMe" />
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  v-model="rememberMe"
+                />
                 <label class="form-check-label">
                   {{ $t('labels.rememberMe') }}
                 </label>
               </div>
             </div>
             <div class="col-4">
-          <div class="d-grid">
-                  <button type="button" class="btn btn-primary btn-block" @click="loginProcess">
-                    {{ $t('labels.signIn') }}
-                  </button>
-          </div>
+              <div class="d-grid">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-block"
+                  @click="loginProcess"
+                >
+                  {{ $t('labels.signIn') }}
+                </button>
+              </div>
             </div>
             <!-- /.col -->
           </div>
@@ -75,7 +94,10 @@
         <div class="row">
           <div class="col">
             <p class="mb-0">
-              <RouterLink to="/register" class="text-center">
+              <RouterLink
+                to="/register"
+                class="text-center"
+              >
                 {{ $t('labels.registerMembership') }}
               </RouterLink>
             </p>
@@ -100,7 +122,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 
 import { useToast } from 'vue-toastification'
-import { addAppClass, removeAppClass } from '@/utils/updateClass'
+import { addAppClass, removeAppClass } from '@/utils/helpers'
 import { FontAwesomeIcon as Ficon } from '@fortawesome/vue-fontawesome'
 import { faLock, faUser } from '@fortawesome/free-solid-svg-icons'
 import { useUiStore } from '@/rdhStore/uiStore'

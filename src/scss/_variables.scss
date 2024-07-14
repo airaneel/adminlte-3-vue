@@ -3,7 +3,7 @@
 //
 
 // Prefix for :root CSS variables and others.
-$lte-prefix:                      lte- !default;
+$lte-prefix:                      rdh- !default;
 
 // TRANSITIONS SETTINGS
 // --------------------------------------------------------
@@ -94,7 +94,7 @@ $lte-brand-link-border-buttom:    1px !default;
 // CARDS
 // --------------------------------------------------------
 $lte-card-shadow: 0 0 1px rgba(var(--#{$prefix}body-color-rgb), .125), 0 1px 3px rgba(var(--#{$prefix}body-color-rgb), .2) !default;
-$lte-card-title-font-size: 1.1rem !default;
+$lte-card-title-font-size: 1rem !default;
 $lte-card-title-font-weight: $font-weight-normal !default;
 
 // PROGRESS BARS

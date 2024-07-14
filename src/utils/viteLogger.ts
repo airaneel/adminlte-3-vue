@@ -4,7 +4,7 @@ function createViteLogger(): Logger {
     let hasWarned = false;
     
 
-    const formatMessage = (type: LogType, msg: string, options?: LogOptions): string => {
+    const formatMessage = (type: LogType, msg: string): string => {
         const date = new Date();
         const prefix = `RDH [${date.toLocaleTimeString()}] `;
         return `${prefix}[${type.toUpperCase()}] ${msg}`;

@@ -1,48 +1,41 @@
 <template>
   <nav class="app-header navbar navbar-expand bg-body">
-<div class="container-fluid">
-      
+    <div class="container-fluid">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <span class="nav-link" role="button" @click="ui.toggleMenuSidebar">
-            <Ficon :icon="faBars"/>
-  
-          </span>
+          <a
+            class="nav-link"
+            role="button"
+            @click="ui.toggleMenuSidebar"
+            data-lte-toggle="sidebar"
+          >
+            <Ficon :icon="faBars" />
+          </a>
         </li>
-     
       </ul>
-  
-      <ul class="navbar-nav ml-auto">
-   
-        <SidebarSearch ></SidebarSearch>
+
+      <ul class="navbar-nav ms-auto">
         <Messages />
         <Notifications />
-        <User/>
+        <User />
         <fullScreenToggle />
       </ul>
-  
-</div>
+    </div>
   </nav>
 </template>
 
 <script setup lang="ts">
 import { FontAwesomeIcon as Ficon } from '@fortawesome/vue-fontawesome'
-import { faBars, faThLarge } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-import { useUiStore } from '../../../rdhStore/uiStore';
-import Messages from '@/components/main/header/messages/messages.vue';
-import Notifications from '@/components/main/header/notifications/notifications.vue';
-import fullScreenToggle from '@/components/main/header/fullScreenToggle.vue';
-import User from '@/components/main/header/user/user.vue';
-import SidebarSearch from '@/components/SideBarSearch/sidebar-search.vue';
+import Messages from '@/components/main/header/messages/messages.vue'
+import Notifications from '@/components/main/header/notifications/notifications.vue'
+import fullScreenToggle from '@/components/main/header/fullScreenToggle.vue'
+import User from '@/components/main/header/user/user.vue'
 
-    const ui = useUiStore()
+import { useUiStore } from '@/rdhStore/uiStore'
 
-    const toggleControlSidebar = ui.toggleControlSidebar
-
-
+const ui = useUiStore()
 
 
 </script>
-
-

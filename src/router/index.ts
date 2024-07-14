@@ -7,8 +7,9 @@ import { faCircle, faTachometerAlt, faUser, IconDefinition } from '@fortawesome/
 export const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
+        redirect: "/dashboard",
         name: 'Main',
-        component: () => import('@/pages/main.vue'),
+        component: () => import('@/pages/mainView.vue'),
         meta: {
             title: 'RDH',
             ruName: 'Главная',
@@ -18,7 +19,7 @@ export const routes: Array<RouteRecordRaw> = [
             {
                 path: '/dashboard',
                 name: 'Dashboard',
-                component: () => import('@/pages/dashboard/dashboard.vue'),
+                component: () => import('@/pages/dashboard/dashboardView.vue'),
                 meta: {
                     title: 'RDH - Панель управления',
                     ruName: 'Дешборд',
@@ -29,7 +30,7 @@ export const routes: Array<RouteRecordRaw> = [
             {
                 path: '/regru',
                 name: 'Regru',
-                component: () => import('@/pages/regru.vue'),
+                component: () => import('@/pages/regruView.vue'),
                 meta: {
                     title: 'RDH - Регистрационные удостоверения',
                     ruName: 'РУ',
@@ -52,7 +53,7 @@ export const routes: Array<RouteRecordRaw> = [
     {
         path: '/login',
         name: 'Login',
-        component: () => import('@/pages/login.vue'),
+        component: () => import('@/pages/loginView.vue'),
         meta: {
             title: 'Войти',
             requiresUnauth: true
@@ -90,8 +91,8 @@ const router = createRouter({
     routes
 });
 
-router.beforeEach(async (to, from, next) => {
-    let storedAuthentication = Cookies.get('accessToken');
+router.beforeEach(async (to, _from, next) => {
+    const storedAuthentication = Cookies.get('accessToken');
 
 
 

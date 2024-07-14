@@ -1,31 +1,50 @@
 {
-    "compilerOptions": {
-      "target": "es6", // или "esnext"
-      "module": "esnext",
-      "strict": true,
-      "jsx": "preserve",
-      "importHelpers": true,
-      "moduleResolution": "node",
-      "experimentalDecorators": true,
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "sourceMap": true, // Полезно для отладки
-      "baseUrl": ".",
-      "types": ["webpack-env", "jest"],
-      "paths": {
-        "@/*": ["src/*"]
-      },
-      "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-      "resolveJsonModule": true,
-      "strictNullChecks": true, // Включено для избежания null/undefined ошибок
-      "noEmit": true,
-      "incremental": true, // Ускоряет повторную компиляцию
-      "outDir": "./dist", // Скомпилированные файлы пойдут сюда
-      "noUnusedLocals": true, // Генерирует ошибки для неиспользуемых переменных
-      "noUnusedParameters": true // Генерирует ошибки для неиспользуемых параметров
+  "compilerOptions": {
+    "target": "es6", // Целевая версия ECMAScript для компиляции (можно использовать "esnext" для последних возможностей)
+    "module": "esnext", // Формат модуля, используемый в проекте
+    "strict": true, // Включает строгий режим типизации
+    "allowJs": true, // Разрешает компиляцию JS файлов
+    "importHelpers": true, // Подключает вспомогательные функции из tslib
+    "moduleResolution": "node", // Стиль разрешения модулей Node.js
+    "experimentalDecorators": true, // Включает поддержку экспериментальных декораторов
+    "skipLibCheck": true, // Пропускает проверку типов в файлах объявлений
+    "esModuleInterop": true, // Включает совместимость с модулями ES6 для CommonJS модулей
+    "allowSyntheticDefaultImports": true, // Разрешает импорт из модулей без явного экспорта по умолчанию
+    "sourceMap": true, // Генерирует карты исходников, полезно для отладки
+    "baseUrl": ".", // Базовый путь для разрешения неполных путей
+    "types": [
+      "webpack-env",
+      "jest"
+    ], // Типы, которые будут включены в компиляцию
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@rdhStore/*": [
+        "src/rdhStore/*"],
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "dist"]
-  }
-  
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ], // Библиотеки, которые будут включены в компиляцию
+    "resolveJsonModule": true, // Разрешает импорт JSON файлов как модулей
+    "strictNullChecks": true, // Включено для предотвращения ошибок связанных с null/undefined
+    "noEmit": true, // Не создавать выходные файлы при компиляции
+    "incremental": true, // Ускоряет повторную компиляцию за счет сохранения информации о прошлых компиляциях
+    "outDir": "./dist", // Директория для скомпилированных файлов
+    "noUnusedLocals": true, // Генерирует ошибки для локальных переменных, которые объявлены, но не используются
+    "noUnusedParameters": true // Генерирует ошибки для параметров функций, которые не используются
+  },
+  "include": [
+    "src/**/*"
+  ], // Файлы для включения в компиляцию
+  "exclude": [
+    "node_modules",
+    "dist"
+  ] // Исключает папки из процесса компиляции
+}
