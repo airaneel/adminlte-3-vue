@@ -1,38 +1,18 @@
-// Importing necessary modules and plugins from Vite, Vue, and other dependencies
 import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import 'dotenv/config';
-
-// Import custom logger utility for logging purposes
 import createViteLogger from './src/utils/viteLogger';
 
-// Initialize the logger
-const logger = createViteLogger();
+export default ({ mode }) => {
+    const env = loadEnv(mode, process.cwd());
+    const logger = createViteLogger();
 
-// Define and export the configuration function for Vite
-export default () => {
-    // Determine the mode of the environment, default to 'development' if not set
-    const mode = process.env.MODE || 'development';
-    // Load and merge environment variables specific to the current mode
-    process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
+    logger.info(`Vite is running in ${env.VITE_MODE_ENV || mode} mode.`);
 
-    // Extract the environment-specific mode variable
-    const { VITE_MODE_ENV } = process.env;
-    // Log the current mode using the custom logger
-    logger.info(`Vite is running in ${VITE_MODE_ENV} mode.`);
-    
-    // Return the configuration object for Vite
     return defineConfig({
-        // Set the mode based on the environment variable; default to 'development'
-        mode: VITE_MODE_ENV === 'production' ? 'production' : 'development',
-        
-        // Register plugins used by Vite, e.g., Vue support
-        plugins: [
-            vue(),
-        ],
-        
-        // Configure path aliases for easier imports
+        mode: env.VITE_MODE_ENV || 'development',
+        plugins: [vue()],
         resolve: {
             alias: {
                 '@': path.resolve(__dirname, './src'),
@@ -43,10 +23,40 @@ export default () => {
                 '@pages': path.resolve(__dirname, './src/pages')
             }
         },
-
-        // Use the custom logger for Vite's internal logging
+        css: {
+            devSourcemap: mode === 'development'
+        },
         customLogger: logger,
-        // Adjust log level based on the environment (less verbose in production)
-        logLevel: VITE_MODE_ENV === 'production' ? 'warn' : 'info',
+        logLevel: env.VITE_MODE_ENV === 'production' ? 'warn' : 'info',
+        server: {
+            open: true, // Automatically opens the application in the browser when running
+            proxy: {
+                '/api': {
+                    target: 'http://localhost:8000',
+                    changeOrigin: true,
+                    secure: false,
+                    rewrite: path => path.replace(/^\/api/, '')
+                
+                },
+
+                '/apiregdoc': {
+                    target: 'https://roszdravnadzor.gov.ru',
+                    changeOrigin: true,
+                    rewrite: (path) => path.replace(/^\/apiregdoc/, ''),
+                },},},
+        build: {
+            // Настройки для продакшн сборки
+
+            outDir: './dist', // папка, куда будет складываться продакшн билд
+            minify: 'esbuild', // минификация кода для уменьшения размера файлов
+            rollupOptions: {
+                // дополнительные настройки Rollup
+                output: {
+                    chunkFileNames: 'assets/[name]-[hash].js',
+                    entryFileNames: 'assets/[name]-[hash].js',
+                    assetFileNames: 'assets/[name]-[hash].[ext]'
+                }
+            }
+        }
     });
 };

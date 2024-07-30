@@ -6,9 +6,9 @@
   position: relative;
   display: grid;
   grid-template-areas:
-    "#{$lte-prefix}app-sidebar #{$lte-prefix}app-header"
-    "#{$lte-prefix}app-sidebar #{$lte-prefix}app-main"
-    "#{$lte-prefix}app-sidebar #{$lte-prefix}app-footer";
+    '#{$rdh-prefix}app-sidebar #{$rdh-prefix}app-header'
+    '#{$rdh-prefix}app-sidebar #{$rdh-prefix}app-main'
+    '#{$rdh-prefix}app-sidebar #{$rdh-prefix}app-footer';
   grid-template-rows: min-content 1fr min-content;
   grid-template-columns: auto 1fr;
   grid-gap: 0;

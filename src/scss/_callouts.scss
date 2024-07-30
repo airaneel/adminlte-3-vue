@@ -3,21 +3,22 @@
 //
 
 .callout {
-  --#{$prefix}link-color-rgb: var(--#{$lte-prefix}callout-link);
-  --#{$prefix}code-color: var(--#{$lte-prefix}callout-code-color);
+  --#{$prefix}link-color-rgb: var(--#{$rdh-prefix}callout-link);
+  --#{$prefix}code-color: var(--#{$rdh-prefix}callout-code-color);
 
   padding: 1.25rem;
-  color: var(--#{$lte-prefix}callout-color, inherit);
-  background-color: var(--#{$lte-prefix}callout-bg, var(--bs-gray-100));
-  border-left: .25rem solid var(--#{$lte-prefix}callout-border, var(--bs-gray-300));
+  color: var(--#{$rdh-prefix}callout-color, inherit);
+  background-color: var(--#{$rdh-prefix}callout-bg, var(--bs-gray-100));
+  border-left: 0.25rem solid
+    var(--#{$rdh-prefix}callout-border, var(--bs-gray-300));
 
   .callout-link {
-    font-weight: $lte-callout-link-font-weight;
+    font-weight: $rdh-callout-link-font-weight;
     color: var(--#{$prefix}callout-link-color);
   }
 
   h4 {
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
   }
 
   > :last-child {
@@ -25,16 +26,16 @@
   }
 
   + .callout {
-    margin-top: -.25rem;
+    margin-top: -0.25rem;
   }
 }
 
 // Variations
 @each $name, $color in $theme-colors {
   .callout-#{$name} {
-    --#{$lte-prefix}callout-color: var(--#{$prefix}#{$name}-text-emphasis);
-    --#{$lte-prefix}callout-bg: var(--#{$prefix}#{$name}-bg-subtle);
-    --#{$lte-prefix}callout-border: var(--#{$prefix}#{$name}-border-subtle);
+    --#{$rdh-prefix}callout-color: var(--#{$prefix}#{$name}-text-emphasis);
+    --#{$rdh-prefix}callout-bg: var(--#{$prefix}#{$name}-bg-subtle);
+    --#{$rdh-prefix}callout-border: var(--#{$prefix}#{$name}-border-subtle);
     --#{$prefix}callout-link-color: var(--#{$prefix}#{$name}-text-emphasis);
   }
 }

@@ -1,12 +1,12 @@
 <template>
   <aside
-    class="app-sidebar bg-body-secondary shadow"
-    data-bs-theme="dark"
+    class="app-sidebar bg-body shadow" data-bs-theme="dark"
   >
     <div class="sidebar-brand justify-content-start">
       <RouterLink
         to="/"
         class="brand-link"
+     
       >
         <div class="brand-text">
           <img
@@ -27,10 +27,12 @@
             v-for="route in mainChildrenRoutes"
             :key="route.name"
             class="nav-item"
+            
           >
             <RouterLink
               class="nav-link align-items-center"
               :to="{ name: route.name }"
+              v-if="route.meta?.isActive"
             >
               <FontAwesomeIcon
                 v-if="route.meta?.icon"
@@ -48,6 +50,7 @@
                 :key="child.name"
               >
                 <RouterLink
+                v-if="child.meta?.isActive"
                   class="nav-link"
                   :to="{ name: child.name }"
                   >{{ child.meta?.ruName || child.name }}</RouterLink
@@ -62,7 +65,7 @@
 </template>
 
 <script setup lang="ts">
-import configRdh from '@/config.ts/configRdh'
+import configRdh from '@/config/configRdh'
 import { useRouter } from 'vue-router'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 

@@ -1,20 +1,4 @@
 <template>
-  <div class="form-check form-switch">
-    <input
-      class="form-check-input"
-      type="checkbox"
-      role="switch"
-      id="flexSwitchCheckChecked"
-      :checked="theme"
-      @change="toggleTheme"
-    />
-    <label
-      class="form-check-label"
-      for="flexSwitchCheckChecked"
-      >Тема</label
-    >
-  </div>
-
   <div class="login-box">
     <div class="login-logo">
       <RouterLink
@@ -63,7 +47,7 @@
             </span>
           </div>
 
-          <div class="row">
+          <div class="row my-2">
             <div class="col-8">
               <div class="form-group form-check">
                 <input
@@ -76,6 +60,7 @@
                 </label>
               </div>
             </div>
+
             <div class="col-4">
               <div class="d-grid">
                 <button
@@ -87,11 +72,12 @@
                 </button>
               </div>
             </div>
-            <!-- /.col -->
+
+
           </div>
         </form>
 
-        <div class="row">
+        <div class="row my-2">
           <div class="col">
             <p class="mb-0">
               <RouterLink
@@ -110,6 +96,7 @@
             </p>
           </div>
         </div>
+        
       </div>
       <!-- /.login-card-body -->
     </div>
@@ -125,12 +112,9 @@ import { useToast } from 'vue-toastification'
 import { addAppClass, removeAppClass } from '@/utils/helpers'
 import { FontAwesomeIcon as Ficon } from '@fortawesome/vue-fontawesome'
 import { faLock, faUser } from '@fortawesome/free-solid-svg-icons'
-import { useUiStore } from '@/rdhStore/uiStore'
-import { toggleAppTheme } from '@/utils/themeSwitch'
+
 import { login } from '@/services/rdhAuth'
 
-const theme = useUiStore().darkMode
-const toggleTheme = toggleAppTheme
 const username = ref('')
 const password = ref('')
 const rememberMe = ref()

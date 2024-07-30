@@ -1,32 +1,35 @@
 .compact-mode {
-  .app-content-top-area:not(.app-content-top-area-sm):not(.app-content-top-area-md):not(.app-content-top-area-lg):not(.app-content-top-area-xl),
-  .app-content-bottom-area:not(.app-content-bottom-area-sm):not(.app-content-bottom-area-md):not(.app-content-bottom-area-lg):not(.app-content-bottom-area-xl) {
-    padding-top: $grid-gutter-width * .425;
-    padding-bottom: $grid-gutter-width * .425;
+  .app-content-top-area:not(.app-content-top-area-sm):not(
+      .app-content-top-area-md
+    ):not(.app-content-top-area-lg):not(.app-content-top-area-xl),
+  .app-content-bottom-area:not(.app-content-bottom-area-sm):not(
+      .app-content-bottom-area-md
+    ):not(.app-content-bottom-area-lg):not(.app-content-bottom-area-xl) {
+    padding-top: $grid-gutter-width * 0.425;
+    padding-bottom: $grid-gutter-width * 0.425;
   }
   .app-content-top-area-sm,
   .app-content-bottom-area-sm {
-    min-height: $lte-app-content-bottom-area-height-sm * .825;
+    min-height: $rdh-app-content-bottom-area-height-sm * 0.825;
   }
 
   .app-content-top-area-md,
   .app-content-bottom-area-md {
-    min-height: $lte-app-content-bottom-area-height-md * .825;
+    min-height: $rdh-app-content-bottom-area-height-md * 0.825;
   }
 
   .app-content-top-area-lg,
   .app-content-bottom-area-lg {
-    min-height: $lte-app-content-bottom-area-height-lg * .825;
+    min-height: $rdh-app-content-bottom-area-height-lg * 0.825;
   }
 
   .app-content-top-area-xl,
   .app-content-bottom-area-xl {
-    min-height: $lte-app-content-bottom-area-height-xl * .825;
+    min-height: $rdh-app-content-bottom-area-height-xl * 0.825;
   }
 
-
   .app-header {
-    max-height: $lte-app-header-height-compact;
+    max-height: $rdh-app-header-height-compact;
 
     .nav-link {
       max-height: $nav-link-height-compact;
@@ -34,18 +37,18 @@
   }
 
   .nav-link {
-    --bs-nav-link-padding-y: .25rem;
-    --bs-nav-link-padding-x: .5rem;
+    --bs-nav-link-padding-y: 0.25rem;
+    --bs-nav-link-padding-x: 0.5rem;
   }
 
   &.sidebar-mini.sidebar-collapse {
     .app-sidebar:not(:hover) {
-      min-width: $lte-sidebar-mini-width-compact;
-      max-width: $lte-sidebar-mini-width-compact;
+      min-width: $rdh-sidebar-mini-width-compact;
+      max-width: $rdh-sidebar-mini-width-compact;
 
       .sidebar-menu {
         .nav-link {
-          width: $lte-sidebar-mini-width-compact - $lte-sidebar-padding-x * 2 !important;
+          width: $rdh-sidebar-mini-width-compact - $rdh-sidebar-padding-x * 2 !important;
         }
       }
     }
@@ -53,7 +56,7 @@
 
   .logo-xs,
   .logo-xl {
-    max-height: $lte-app-header-height-compact;
+    max-height: $rdh-app-header-height-compact;
   }
 
   .brand-image {
@@ -62,11 +65,11 @@
   }
 
   .sidebar-brand {
-    height: $lte-app-header-height-compact;
+    height: $rdh-app-header-height-compact;
   }
 
   .app-footer {
-    padding: $lte-app-footer-padding-compact;
+    padding: $rdh-app-footer-padding-compact;
   }
 
   .sidebar-wrapper {
@@ -76,4 +79,3 @@
     }
   }
 }
-

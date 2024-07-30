@@ -1,5 +1,5 @@
 <template>
-  <nav class="app-header navbar navbar-expand bg-body">
+  <nav class="app-header navbar navbar-expand bg-body shadow">
     <div class="container-fluid">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -20,6 +20,7 @@
         <User />
         <fullScreenToggle />
       </ul>
+      <ThemeSwitcher />
     </div>
   </nav>
 </template>
@@ -34,6 +35,7 @@ import fullScreenToggle from '@/components/main/header/fullScreenToggle.vue'
 import User from '@/components/main/header/user/user.vue'
 
 import { useUiStore } from '@/rdhStore/uiStore'
+import ThemeSwitcher from '@/components/ui/themeSwitcher.vue'
 
 const ui = useUiStore()
 

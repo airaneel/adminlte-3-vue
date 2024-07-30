@@ -1,10 +1,10 @@
 <template>
-  {{ Query }}
   <form @submit.prevent='handleSubmit'>
     <template
       v-for='(groupFields, groupName, index) in groupedFields'
       :key='groupName'
     >
+  
       <hr
         class='my-2 hr'
         v-if='index !== 0'
@@ -63,6 +63,7 @@ const groupedFields = computed(() => {
         groups[group] = []
       }
       groups[group].push(field)
+      console.log('groupedFields:', groups)
       return groups
     },
     {} as Record<string, typeof fields>

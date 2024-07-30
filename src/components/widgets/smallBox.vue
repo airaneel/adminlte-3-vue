@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, computed, PropType } from 'vue'
+import { computed, PropType } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faBuyNLarge } from '@fortawesome/free-brands-svg-icons';

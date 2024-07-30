@@ -8,5 +8,6 @@ declare module 'vue-router' {
         requiresAuth?: boolean
         requiresUnauth?: boolean
         icon?: IconDefinition | string
+        isActive?: boolean
     }
 }

@@ -23,9 +23,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted, Transition } from 'vue';
+import { ref, computed, watch, onMounted } from 'vue';
 import { useRouter, useRoute, RouterLink } from 'vue-router';
-import { defineProps } from 'vue';
 import { MenuItem } from './menuItem';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {faCaretLeft } from '@fortawesome/free-solid-svg-icons';

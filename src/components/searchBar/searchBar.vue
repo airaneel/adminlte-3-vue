@@ -1,72 +1,56 @@
 <template>
-  <!-- SEARCH FORM -->
   <div class="row">
-    <form class="form-inline">
+    <form class="form-inline" @submit.prevent="handleSubmit">
       <div class="input-group">
         <input
           class="form-control"
           type="search"
+          v-model.trim="searchQuery"
           placeholder="Наименование МИ или номер РУ"
           aria-label="Search"
         />
-        <span
-          class="input-group-text"
-          type="submit"
-        >
-          <Ficon
-            :icon="faSearch"
-            class="nav-icon"
-          />
-        </span>
+        <button class="input-group-text" type="submit">
+          <FontAwesomeIcon :icon="faSearch" class="nav-icon" />
+        </button>
       </div>
+      <ProgressBar :loading="isLoading" />
     </form>
   </div>
 </template>
 
 <script setup lang="ts">
-import { FontAwesomeIcon as Ficon } from '@fortawesome/vue-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { ref } from 'vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import intanceAxios from '@/utils/rdhaxios';
+import ProgressBar from "@components/ui/progressBar.vue";
+import { useToast } from 'vue-toastification';
+import { ref } from 'vue';
+import { Emit } from 'vue-facing-decorator';
 
-const searchText = ref('')
-const foundMenuItems = ref<never[]>([])
-const isDropdownOpen = ref(false)
+const searchQuery = ref('');
+const isLoading = ref(false);
 
-const handleIconClick = () => {
-  searchText.value = ''
-  isDropdownOpen.value = false
-}
+const toast = useToast();
 
-const handleMenuItemClick = () => {
-  searchText.value = ''
-  isDropdownOpen.value = false
-}
-
-const findMenuItems = (menu: unknown[]) => {
-  foundMenuItems.value = []
-
-  if (!searchText.value) {
-    isDropdownOpen.value = false
-    return
+const handleSubmit = async () => {
+  if (!searchQuery.value) {
+    toast.error('Введите запрос для поиска');
+    return;
   }
 
-  menu.forEach((menuItem: any) => {
-    if (
-      menuItem.name.toLowerCase().includes(searchText.value.toLowerCase()) &&
-      menuItem.path
-    ) {
-      foundMenuItems.value.push(menuItem)
-    }
-    if (menuItem.children) {
-      findMenuItems(menuItem.children)
-    }
-  })
+  try {
+    isLoading.value = true;
+    let query = encodeURIComponent(searchQuery.value)
+    let url = "/api/regdocs/?search=" + query
+    const response = await intanceAxios.get(url);
+    const searchResults = response.data.results;
 
-  isDropdownOpen.value = foundMenuItems.value.length > 0
-}
-
-const boldString = (str: string, substr: string) => {
-  const re = new RegExp(`(${substr})`, 'gi')
-  return str.replace(re, `<strong class="text-light">$1</strong>`)
+    Emit('search-completed', searchResults);
+  } catch (error) {
+    toast.error('Ошибка при выполнении запроса');
+    console.error(error);
+  } finally {
+    isLoading.value = false;
+  }
 }
 </script>

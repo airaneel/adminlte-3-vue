@@ -3,13 +3,12 @@
 //
 
 .app-footer {
-  grid-area: #{$lte-prefix}app-footer;
+  grid-area: #{$rdh-prefix}app-footer;
   width: inherit;
   max-width: 100vw;
   min-height: 3rem;
-  padding: $lte-app-footer-padding;
-  color: $lte-app-footer-color;
-  background-color: $lte-app-footer-bg;
-  border-top: $lte-app-footer-border-top;
-  @include transition($lte-transition-speed $lte-transition-fn);
+  padding: $rdh-app-footer-padding;
+  color: $rdh-app-footer-color;
+  background-color: $rdh-app-footer-bg;
+  border-top: $rdh-app-footer-border-top;
 }

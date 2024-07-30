@@ -6,6 +6,7 @@ import { createPinia } from 'pinia';
 import App from './app/app.vue';
 import router from './router';
 
+
 // Importing internationalization setup
 import { i18n } from './translation';
 

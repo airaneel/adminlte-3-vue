@@ -3,11 +3,11 @@
 //
 
 .app-header {
-  z-index: $lte-zindex-app-header;
-  grid-area: #{$lte-prefix}app-header;
+  z-index: $rdh-zindex-app-header;
+  grid-area: #{$rdh-prefix}app-header;
   max-width: 100vw;
-  border-bottom: $lte-app-header-bottom-border;
-  @include transition($lte-transition-speed $lte-transition-fn);
+  border-bottom: $rdh-app-header-bottom-border;
+
 
   .nav-link {
     position: relative;
@@ -21,6 +21,6 @@
   top: 9px;
   right: 5px;
   padding: 2px 4px;
-  font-size: .6rem;
+  font-size: 0.6rem;
   font-weight: 400;
 }

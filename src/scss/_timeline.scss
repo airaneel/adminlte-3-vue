@@ -15,7 +15,7 @@
     left: 31px;
     width: 4px;
     margin: 0;
-    content: "";
+    content: '';
     background-color: var(--#{$prefix}border-color);
   }
   // Element
@@ -23,7 +23,7 @@
     &::before,
     &::after {
       display: table;
-      content: "";
+      content: '';
     }
 
     position: relative;
@@ -31,7 +31,7 @@
     margin-bottom: 15px;
     // The content
     > .timeline-item {
-      @include box-shadow($lte-card-shadow);
+      @include box-shadow($rdh-card-shadow);
       @include border-radius($border-radius);
       position: relative;
       padding: 0;
@@ -77,8 +77,6 @@
           margin: 0;
         }
       }
-
-
     }
 
     .timeline-icon {

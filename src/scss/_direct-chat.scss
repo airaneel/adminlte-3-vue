@@ -15,16 +15,15 @@
     }
   }
 
-
   &.timestamp-light {
     .direct-chat-timestamp {
-      color: rgba(var(--#{$prefix}body-color-rgb), .65);
+      color: rgba(var(--#{$prefix}body-color-rgb), 0.65);
     }
   }
 
   &.timestamp-dark {
     .direct-chat-timestamp {
-      color: rgba(var(--#{$prefix}body-color-rgb), .9);
+      color: rgba(var(--#{$prefix}body-color-rgb), 0.9);
     }
   }
 }
@@ -48,7 +47,7 @@
 
 .direct-chat-messages,
 .direct-chat-contacts {
-  @include transition(transform .5s ease-in-out);
+  @include transition(transform 0.5s ease-in-out);
 }
 
 .direct-chat-text {
@@ -59,9 +58,9 @@
   position: relative;
   padding: 5px 10px;
   margin: 5px 0 0 50px;
-  color: $lte-direct-chat-default-font-color;
-  background-color: $lte-direct-chat-default-msg-bg;
-  border: 1px solid $lte-direct-chat-default-msg-border-color;
+  color: $rdh-direct-chat-default-font-color;
+  background-color: $rdh-direct-chat-default-msg-bg;
+  border: 1px solid $rdh-direct-chat-default-msg-border-color;
 
   //Create the arrow
   &::after,
@@ -72,9 +71,9 @@
     width: 0;
     height: 0;
     pointer-events: none;
-    content: " ";
+    content: ' ';
     border: solid transparent;
-    border-right-color: $lte-direct-chat-default-msg-border-color;
+    border-right-color: $rdh-direct-chat-default-msg-border-color;
   }
 
   &::after {
@@ -96,7 +95,7 @@
       right: auto;
       left: 100%;
       border-right-color: transparent;
-      border-left-color: $lte-direct-chat-default-msg-border-color;
+      border-left-color: $rdh-direct-chat-default-msg-border-color;
     }
   }
 }
@@ -123,7 +122,7 @@
 }
 
 .direct-chat-timestamp {
-  color: rgba(var(--#{$prefix}body-color-rgb), .75);
+  color: rgba(var(--#{$prefix}body-color-rgb), 0.75);
 }
 
 //Direct chat contacts pane
@@ -170,7 +169,7 @@
     padding: 10px;
     margin: 0;
     text-decoration: none;
-    border-bottom: 1px solid rgba($black, .2);
+    border-bottom: 1px solid rgba($black, 0.2);
 
     &:last-of-type {
       border-bottom: 0;
@@ -216,20 +215,20 @@
 }
 
 .end > .direct-chat-text {
-  color: var(--#{$lte-prefix}direct-chat-color);
-  background-color: var(--#{$lte-prefix}direct-chat-bg);
-  border-color: var(--#{$lte-prefix}direct-chat-bg);
+  color: var(--#{$rdh-prefix}direct-chat-color);
+  background-color: var(--#{$rdh-prefix}direct-chat-bg);
+  border-color: var(--#{$rdh-prefix}direct-chat-bg);
 
   &::after,
   &::before {
-    border-left-color: var(--#{$lte-prefix}direct-chat-bg);
+    border-left-color: var(--#{$rdh-prefix}direct-chat-bg);
   }
 }
 
 // Color variants
 @each $name, $color in $theme-colors {
   .direct-chat-#{$name} {
-    --#{$lte-prefix}direct-chat-color: #{color-contrast($color)};
-    --#{$lte-prefix}direct-chat-bg: #{$color};
+    --#{$rdh-prefix}direct-chat-color: #{color-contrast($color)};
+    --#{$rdh-prefix}direct-chat-bg: #{$color};
   }
 }

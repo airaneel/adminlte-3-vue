@@ -13,7 +13,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { getAppTheme, toggleAppTheme } from '../utils/themeSwitcher';
+import { getAppTheme, toggleAppTheme } from '@/utils/themeSwitch';
 
 const isDarkTheme = ref(false);
 

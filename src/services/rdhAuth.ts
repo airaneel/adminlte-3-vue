@@ -1,12 +1,7 @@
-import instance from '@/utils/axios';
+import instance from '@/utils/rdhaxios';
 import Cookies from 'js-cookie';
 import { LoginResponse } from './rdhAuth/interfaces/auth';
 import { useRauthStore } from '@/rdhStore/auth';
-
-
-
-
-
 
 // Функция для входа с использованием имени пользователя и пароля
 export const login = async (username: string, password: string): Promise<LoginResponse> => {
@@ -19,7 +14,7 @@ export const login = async (username: string, password: string): Promise<LoginRe
         setTokens(access, refresh);
         return response.data;
     } catch (error) {
-        return handleError(error);
+        return handleError(error as Error);
     }
 };
 
@@ -31,7 +26,7 @@ export const registerWithEmail = async (email: string, password: string): Promis
             password,
         });
     } catch (error) {
-        return handleError(error);
+        return handleError(error as Error);
     }
 };
 
@@ -48,20 +43,16 @@ export const refreshAccessToken = async (): Promise<string> => {
         Cookies.set('accessToken', access, { expires: 7, secure: true, sameSite: 'Strict' });
         return access;
     } catch (error) {
-        return handleError(error);
+        return handleError(error as Error);
     }
 };
 
 export const logout = (): void => {
-
     Cookies.remove('accessToken');
     Cookies.remove('refreshToken');
     useRauthStore().setIsLoggedIn(false);
     useRauthStore().setCurrentUser(null);
-
 };
-
-
 
 // Вспомогательная функция для установки токенов в cookies
 const setTokens = (access: string, refresh: string): void => {
@@ -70,7 +61,7 @@ const setTokens = (access: string, refresh: string): void => {
 };
 
 // Вспомогательная функция для обработки ошибок
-const handleError = (error: any): never => {
+const handleError = (error: Error): never => {
     // Логирование ошибки или другие действия
     throw error;
 };

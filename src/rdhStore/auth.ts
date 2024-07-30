@@ -14,8 +14,8 @@ export const useRauthStore = defineStore('global', () => {
     const isLoggedIn = ref<boolean>(false); // Инициализация с false
 
     const getCurrentUser = computed(() => currentUser.value);
-    const setCurrentUser = (user: User) => {
-        currentUser.value = user;
+    const setCurrentUser = (curUser: User | null ) => {
+        currentUser.value = curUser;
     };
 
     const getCurrentUsername = computed(() => currentUser.value?.username || '');

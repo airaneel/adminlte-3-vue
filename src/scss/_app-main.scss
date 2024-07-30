@@ -1,24 +1,36 @@
 .app-main {
   position: relative;
-  grid-area: #{$lte-prefix}app-main;
+  background: $gray-200;
+
+  grid-area: #{$rdh-prefix}app-main;
   max-width: 100vw;
+  min-width: fit-content;
   padding-bottom: $grid-gutter-width * 0.5;
-  @include transition($lte-transition-speed $lte-transition-fn);
+  @include transition($rdh-transition-speed $rdh-transition-fn);
 
   .app-content-header {
-    padding: .5rem $lte-content-padding-x;
+    padding: 0.5rem $rdh-content-padding-x;
+  }
+
+    
+}
+
+
+.app-content-breadcrumb {
+  padding: 0.5rem $rdh-content-padding-x;
+
+  .breadcrumb {
+    padding: 0;
+    margin-bottom: 0;
+
+    a {
+      text-decoration: none;
+    }
   }
 }
 
-  .app-content-breadcrumb {
-    padding: .5rem $lte-content-padding-x;
-
-    .breadcrumb {
-      padding: 0;
-      margin-bottom: 0;
-
-      a {
-        text-decoration: none;
-      }
-    }
+[data-bs-theme=dark] {
+  .app-main {
+  background: $body-bg-dark;
   }
+}

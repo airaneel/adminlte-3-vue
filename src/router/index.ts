@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router';
 import Cookies from 'js-cookie';
-import { faCircle, faTachometerAlt, faUser, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { faCircle, faPortrait, faTachometerAlt, faUser, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { faMonero } from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -24,7 +25,8 @@ export const routes: Array<RouteRecordRaw> = [
                     title: 'RDH - Панель управления',
                     ruName: 'Дешборд',
                     requiresAuth: true,
-                    icon: faTachometerAlt
+                    icon: faTachometerAlt,
+                    isActive: true,
                 }
             },
             {
@@ -32,10 +34,35 @@ export const routes: Array<RouteRecordRaw> = [
                 name: 'Regru',
                 component: () => import('@/pages/regruView.vue'),
                 meta: {
-                    title: 'RDH - Регистрационные удостоверения',
-                    ruName: 'РУ',
+                    title: 'RDH - Бюрократ',
+                    ruName: 'Бюрократ',
                     requiresAuth: true,
-                    icon: faCircle as IconDefinition
+                    icon: faCircle as IconDefinition,
+                    isActive: true,
+                }
+            },
+            {
+                path: '/projects',
+                name: 'Projects',
+                component: () => import('@/pages/gantView.vue'),
+                meta: {
+                    title: 'RDH - Проекты',
+                    ruName: 'Проекты',
+                    requiresAuth: true,
+                    icon: faPortrait as IconDefinition,
+                    isActive: false,
+                }
+            },
+            {
+                path: '/bablogo',
+                name: 'Bablogo',
+                component: () => import('@/pages/bablogoView.vue'),
+                meta: {
+                    title: 'RDH - ФинПлан',
+                    ruName: 'ФинПлан',
+                    requiresAuth: true,
+                    icon: faMonero as IconDefinition,
+                    isActive: false,
                 }
             },
             {
@@ -45,7 +72,8 @@ export const routes: Array<RouteRecordRaw> = [
                 meta: {
                     ruName: "Профиль",
                     requiresAuth: true,
-                    icon: faUser as IconDefinition
+                    icon: faUser as IconDefinition,
+                    isActive: false,
                 }
             },
         ]
@@ -59,31 +87,6 @@ export const routes: Array<RouteRecordRaw> = [
             requiresUnauth: true
         }
     },
-    {
-        path: '/register',
-        name: 'Register',
-        component: () => import('@/modules/register/register.vue'  ),
-        meta: {
-            requiresUnauth: true
-        }
-    },
-    {
-        path: '/forgot-password',
-        name: 'ForgotPassword',
-        component: () => import('@/modules/forgot-password/forgot-password.vue'  ),
-        meta: {
-            requiresUnauth: true
-        }
-    },
-    {
-        path: '/recover-password',
-        name: 'RecoverPassword',
-        component: () => import('@/modules/recover-password/recover-password.vue'  ),
-        meta: {
-            requiresUnauth: true
-
-        }
-    }
 ];
 
 const router = createRouter({
@@ -107,6 +110,8 @@ router.beforeEach(async (to, _from, next) => {
     if (to.meta.requiresUnauth && storedAuthentication) {
         return next('/');
     }
+        
+
 
     return next();
 });
