@@ -30,3 +30,4 @@ firebase-debug.log
 ui-debug.log
 
 /tmp
+/tests

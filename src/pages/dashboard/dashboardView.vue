@@ -1,39 +1,39 @@
 <script setup lang="ts">
 
-import SmallBox from '@/components/widgets/smallBox.vue'
-import { faInfoCircle, faSchool } from '@fortawesome/free-solid-svg-icons'
-import { ref } from 'vue'
+  import SmallBox from '@/components/widgets/smallBox.vue'
+  import { faInfoCircle, faSchool } from '@fortawesome/free-solid-svg-icons'
+  import { ref } from 'vue'
 
-const items = ref([
-  {
-    boxType: 'warning',
-    faIcon: faSchool,
-    count: '150',
-    description: 'New Orders',
-    link: '#',
-  },
-  {
-    boxType: 'info',
-    faIcon: faInfoCircle,
-    count: '53',
-    description: 'Bounce Rate',
-    link: '#',
-  },
-  {
-    boxType: 'danger',
-    faIcon: faSchool,
-    count: '150',
-    description: 'New Orders',
-    link: '#',
-  },
-  {
-    boxType: 'primary',
-    faIcon: faInfoCircle,
-    count: '53',
-    description: 'Bounce Rate',
-    link: '#',
-  },
-])
+  const items = ref([
+    {
+      boxType: 'warning',
+      faIcon: faSchool,
+      count: '150',
+      description: 'New Orders',
+      link: '#',
+    },
+    {
+      boxType: 'info',
+      faIcon: faInfoCircle,
+      count: '53',
+      description: 'Bounce Rate',
+      link: '#',
+    },
+    {
+      boxType: 'danger',
+      faIcon: faSchool,
+      count: '150',
+      description: 'New Orders',
+      link: '#',
+    },
+    {
+      boxType: 'primary',
+      faIcon: faInfoCircle,
+      count: '53',
+      description: 'Bounce Rate',
+      link: '#',
+    },
+  ])
 </script>
 
 <template>
@@ -57,15 +57,8 @@ const items = ref([
     <div class="container-fluid">
       <!--begin::Row-->
       <div class="row">
-        <SmallBox
-          v-for="(element, index) in items"
-          :boxType="element.boxType"
-          :faIcon="element.faIcon"
-          :count="element.count"
-          :description="element.description"
-          :link="element.link"
-          :key="index"
-        />
+        <SmallBox v-for="(element, index) in items" :boxType="element.boxType" :faIcon="element.faIcon"
+          :count="element.count" :description="element.description" :link="element.link" :key="index" />
 
         <!--end::Col-->
       </div>
@@ -91,39 +84,17 @@ const items = ref([
               <h3 class="card-title">Direct Chat</h3>
 
               <div class="card-tools">
-                <span
-                  title="3 New Messages"
-                  class="badge text-bg-primary"
-                >
+                <span title="3 New Messages" class="badge text-bg-primary">
                   3
                 </span>
-                <button
-                  type="button"
-                  class="btn btn-tool"
-                  data-lte-toggle="card-collapse"
-                >
-                  <i
-                    data-lte-icon="expand"
-                    class="bi bi-plus-lg"
-                  ></i>
-                  <i
-                    data-lte-icon="collapse"
-                    class="bi bi-dash-lg"
-                  ></i>
+                <button type="button" class="btn btn-tool" data-lte-toggle="card-collapse">
+                  <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
+                  <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
                 </button>
-                <button
-                  type="button"
-                  class="btn btn-tool"
-                  title="Contacts"
-                  data-lte-toggle="chat-pane"
-                >
+                <button type="button" class="btn btn-tool" title="Contacts" data-lte-toggle="chat-pane">
                   <i class="bi bi-chat-text-fill"></i>
                 </button>
-                <button
-                  type="button"
-                  class="btn btn-tool"
-                  data-lte-toggle="card-remove"
-                >
+                <button type="button" class="btn btn-tool" data-lte-toggle="card-remove">
                   <i class="bi bi-x-lg"></i>
                 </button>
               </div>
@@ -143,11 +114,7 @@ const items = ref([
                     </span>
                   </div>
                   <!-- /.direct-chat-infos -->
-                  <img
-                    class="direct-chat-img"
-                    src="/public/assets/img/user1-128x128.jpg"
-                    alt="message user image"
-                  />
+                  <img class="direct-chat-img" src="/assets/img/user1-128x128.jpg" alt="message user image" />
                   <!-- /.direct-chat-img -->
                   <div class="direct-chat-text">
                     Is this template really for free? That's unbelievable!
@@ -167,11 +134,7 @@ const items = ref([
                     </span>
                   </div>
                   <!-- /.direct-chat-infos -->
-                  <img
-                    class="direct-chat-img"
-                    src="/public/assets/img/user3-128x128.jpg"
-                    alt="message user image"
-                  />
+                  <img class="direct-chat-img" src="/assets/img/user3-128x128.jpg" alt="message user image" />
                   <!-- /.direct-chat-img -->
                   <div class="direct-chat-text">You better believe it!</div>
                   <!-- /.direct-chat-text -->
@@ -189,11 +152,7 @@ const items = ref([
                     </span>
                   </div>
                   <!-- /.direct-chat-infos -->
-                  <img
-                    class="direct-chat-img"
-                    src="/public/assets/img/user1-128x128.jpg"
-                    alt="message user image"
-                  />
+                  <img class="direct-chat-img" src="/assets/img/user1-128x128.jpg" alt="message user image" />
                   <!-- /.direct-chat-img -->
                   <div class="direct-chat-text">
                     Working with AdminLTE on a great new app! Wanna join?
@@ -213,11 +172,7 @@ const items = ref([
                     </span>
                   </div>
                   <!-- /.direct-chat-infos -->
-                  <img
-                    class="direct-chat-img"
-                    src="/public/assets/img/user3-128x128.jpg"
-                    alt="message user image"
-                  />
+                  <img class="direct-chat-img" src="/assets/img/user3-128x128.jpg" alt="message user image" />
                   <!-- /.direct-chat-img -->
                   <div class="direct-chat-text">I would love to.</div>
                   <!-- /.direct-chat-text -->
@@ -231,11 +186,7 @@ const items = ref([
                 <ul class="contacts-list">
                   <li>
                     <a href="#">
-                      <img
-                        class="contacts-list-img"
-                        src="/public/assets/img/user1-128x128.jpg"
-                        alt="User Avatar"
-                      />
+                      <img class="contacts-list-img" src="/assets/img/user1-128x128.jpg" alt="User Avatar" />
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
@@ -254,11 +205,7 @@ const items = ref([
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img
-                        class="contacts-list-img"
-                        src="/public/assets/img/user7-128x128.jpg"
-                        alt="User Avatar"
-                      />
+                      <img class="contacts-list-img" src="/assets/img/user7-128x128.jpg" alt="User Avatar" />
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
@@ -277,11 +224,7 @@ const items = ref([
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img
-                        class="contacts-list-img"
-                        src="/public/assets/img/user3-128x128.jpg"
-                        alt="User Avatar"
-                      />
+                      <img class="contacts-list-img" src="/assets/img/user3-128x128.jpg" alt="User Avatar" />
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
@@ -300,11 +243,7 @@ const items = ref([
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img
-                        class="contacts-list-img"
-                        src="/public/assets/img/user5-128x128.jpg"
-                        alt="User Avatar"
-                      />
+                      <img class="contacts-list-img" src="/assets/img/user5-128x128.jpg" alt="User Avatar" />
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
@@ -323,11 +262,7 @@ const items = ref([
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img
-                        class="contacts-list-img"
-                        src="/public/assets/img/user6-128x128.jpg"
-                        alt="User Avatar"
-                      />
+                      <img class="contacts-list-img" src="/assets/img/user6-128x128.jpg" alt="User Avatar" />
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
@@ -346,11 +281,7 @@ const items = ref([
                   <!-- End Contact Item -->
                   <li>
                     <a href="#">
-                      <img
-                        class="contacts-list-img"
-                        src="/public/assets/img/user8-128x128.jpg"
-                        alt="User Avatar"
-                      />
+                      <img class="contacts-list-img" src="/assets/img/user8-128x128.jpg" alt="User Avatar" />
 
                       <div class="contacts-list-info">
                         <span class="contacts-list-name">
@@ -374,22 +305,11 @@ const items = ref([
             </div>
             <!-- /.card-body -->
             <div class="card-footer">
-              <form
-                action="#"
-                method="post"
-              >
+              <form action="#" method="post">
                 <div class="input-group">
-                  <input
-                    type="text"
-                    name="message"
-                    placeholder="Type Message ..."
-                    class="form-control"
-                  />
+                  <input type="text" name="message" placeholder="Type Message ..." class="form-control" />
                   <span class="input-group-append">
-                    <button
-                      type="button"
-                      class="btn btn-primary"
-                    >
+                    <button type="button" class="btn btn-primary">
                       Send
                     </button>
                   </span>
@@ -404,56 +324,32 @@ const items = ref([
 
         <!-- Start col -->
         <div class="col-lg-5 connectedSortable">
-          <div
-            class="card text-white bg-primary bg-gradient border-primary mb-4"
-          >
+          <div class="card text-white bg-primary bg-gradient border-primary mb-4">
             <div class="card-header border-0">
               <h3 class="card-title">Sales Value</h3>
               <div class="card-tools">
-                <button
-                  type="button"
-                  class="btn btn-primary btn-sm"
-                  data-lte-toggle="card-collapse"
-                >
-                  <i
-                    data-lte-icon="expand"
-                    class="bi bi-plus-lg"
-                  ></i>
-                  <i
-                    data-lte-icon="collapse"
-                    class="bi bi-dash-lg"
-                  ></i>
+                <button type="button" class="btn btn-primary btn-sm" data-lte-toggle="card-collapse">
+                  <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
+                  <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
                 </button>
               </div>
             </div>
             <div class="card-body">
-              <div
-                id="world-map"
-                style="height: 220px"
-              ></div>
+              <div id="world-map" style="height: 220px"></div>
             </div>
             <div class="card-footer border-0">
               <!--begin::Row-->
               <div class="row">
                 <div class="col-4 text-center">
-                  <div
-                    id="sparkline-1"
-                    class="text-dark"
-                  ></div>
+                  <div id="sparkline-1" class="text-dark"></div>
                   <div class="text-white">Visitors</div>
                 </div>
                 <div class="col-4 text-center">
-                  <div
-                    id="sparkline-2"
-                    class="text-dark"
-                  ></div>
+                  <div id="sparkline-2" class="text-dark"></div>
                   <div class="text-white">Online</div>
                 </div>
                 <div class="col-4 text-center">
-                  <div
-                    id="sparkline-3"
-                    class="text-dark"
-                  ></div>
+                  <div id="sparkline-3" class="text-dark"></div>
                   <div class="text-white">Sales</div>
                 </div>
               </div>

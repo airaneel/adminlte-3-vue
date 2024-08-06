@@ -21,14 +21,15 @@ import Toast, { PluginOptions } from 'vue-toastification';
 import { ProfabricComponents } from '@profabric/vue-components';
 // Importing a specific custom component
 import testMe from '@/components/widgets/testMe.vue';
+import logger from './utils/logger';
 // Importing utility modules
-import logger from '@/utils/logger';
+
 
 
 // Accessing environment variables defined in Vite project config
-const { VITE_NODE_ENV } = import.meta.env;
+const MODE = process.env.MODE;
 // Logging the current running mode of the application
-logger.info(`Vite is running in ${VITE_NODE_ENV} mode.`);
+logger.info(`Vite is running in ${MODE} mode.`);
 
 // Configuration options for the toast notifications
 const options: PluginOptions = {
@@ -51,7 +52,13 @@ const pinia = createPinia()
 const app = createApp(App);
 
 // Registering the 'testMe' component globally
-app.component("testMe", testMe);
+if (MODE == 'development') {
+    app.component("testMe", testMe)
+    logger.debug("Added 'testMe' component globally for development purposes");
+
+}
+
+
 
 // Adding plugins to the Vue application
 app.use(pinia)

@@ -112,8 +112,9 @@ import { useToast } from 'vue-toastification'
 import { addAppClass, removeAppClass } from '@/utils/helpers'
 import { FontAwesomeIcon as Ficon } from '@fortawesome/vue-fontawesome'
 import { faLock, faUser } from '@fortawesome/free-solid-svg-icons'
-
 import { login } from '@/services/rdhAuth'
+
+
 
 const username = ref('')
 const password = ref('')

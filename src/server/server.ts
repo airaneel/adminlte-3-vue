@@ -4,6 +4,8 @@ import { fileURLToPath } from 'url';
 
 const app = express();
 const port = process.env.PORT || 3000;
+const mode = process.env.MODE || "production";
+
 
 // Получаем путь к текущему файлу
 const __filename = fileURLToPath(import.meta.url);
@@ -14,11 +16,14 @@ app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 
 // Handle any other requests and serve the index.html file
-app.get('*', (req, res) => {
+app.get('*', (_req, res) => {
+
   res.sendFile(path.join(__dirname, 'index.html'));
+
 });
 
 // Start the server
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
+  console.log(`Mode is ${mode}`);
 });

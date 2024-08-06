@@ -2,51 +2,52 @@ import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import 'dotenv/config';
-import createViteLogger from './src/utils/viteLogger';
+import logger from './src/utils/logger';
+import VueDevTools from 'vite-plugin-vue-devtools';
 
-export default ({ mode }) => {
-    const env = loadEnv(mode, process.cwd());
-    const logger = createViteLogger();
 
-    logger.info(`Vite is running in ${env.VITE_MODE_ENV || mode} mode.`);
 
-    return defineConfig({
-        mode: env.VITE_MODE_ENV || 'development',
-        plugins: [vue()],
+export default defineConfig(({ mode }) => {
+    const env = loadEnv(mode, process.cwd(), '')
+    logger.info(`Vite mode: ${mode}`);
+    logger.info(`NODE_ENV: ${env.NODE_ENV}`);
+
+
+
+    return {
+        mode: env.MODE,
+        plugins: [
+            vue(),
+            VueDevTools()
+        ],
+        define: { 'process.env': JSON.stringify(process.env) },
+
         resolve: {
             alias: {
-                '@': path.resolve(__dirname, './src'),
-                '@css': path.resolve(__dirname, './src/css'),
-                '@store': path.resolve(__dirname, './src/store'),
-                '@components': path.resolve(__dirname, './src/components'),
-                '@modules': path.resolve(__dirname, './src/modules'),
-                '@pages': path.resolve(__dirname, './src/pages')
+                '@': path.resolve(__dirname, 'src'),
             }
         },
         css: {
-            devSourcemap: mode === 'development'
+            devSourcemap: env.MODE === 'development'
         },
-        customLogger: logger,
-        logLevel: env.VITE_MODE_ENV === 'production' ? 'warn' : 'info',
         server: {
-            open: true, // Automatically opens the application in the browser when running
             proxy: {
                 '/api': {
                     target: 'http://localhost:8000',
                     changeOrigin: true,
                     secure: false,
                     rewrite: path => path.replace(/^\/api/, '')
-                
                 },
-
-                '/apiregdoc': {
+                '/api/regdoc': {
                     target: 'https://roszdravnadzor.gov.ru',
                     changeOrigin: true,
                     rewrite: (path) => path.replace(/^\/apiregdoc/, ''),
-                },},},
+                },
+            },
+        },
+
         build: {
             // Настройки для продакшн сборки
-
             outDir: './dist', // папка, куда будет складываться продакшн билд
             minify: 'esbuild', // минификация кода для уменьшения размера файлов
             rollupOptions: {
@@ -58,5 +59,5 @@ export default ({ mode }) => {
                 }
             }
         }
-    });
-};
+    }
+});

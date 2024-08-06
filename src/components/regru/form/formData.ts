@@ -1,4 +1,5 @@
-import { FieldGroups, FieldType } from "@/types/regdoc";
+
+import { FieldGroups, FieldType } from "@/types/fiields";
 
 
 const fields: FieldType[] = [

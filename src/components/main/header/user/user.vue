@@ -1,21 +1,13 @@
 <template>
   <li class="nav-item dropdown user-menu">
     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-      <img
-        :src="userImage"
-        class="user-image rounded-circle shadow"
-        alt="User Image"
-      />
+      <img :src="userImage" class="user-image rounded-circle shadow" alt="User Image" />
       <span class="d-none d-md-inline">{{ userName }}</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
       <!-- User image -->
       <li class="user-header text-bg-primary">
-        <img
-          :src="userImage"
-          class="rounded-circle shadow"
-          alt="User Image"
-        />
+        <img :src="userImage" class="rounded-circle shadow" alt="User Image" />
         <p>
           {{ userName }} - Web Developer
           <small>Member since Nov. 2023</small>
@@ -39,15 +31,15 @@
 </template>
 
 <script setup lang="ts">
-import router from "@/router";
-import { logout } from "@/services/rdhAuth";
+  import router from "@/router";
+  import { logout } from "@/services/rdhAuth";
 
-const userImage = '/public/assets/img/user2-160x160.jpg';
-const userName = 'Alexander Pierce';
-const menuItems = ['Followers', 'Sales', 'Friends'];
+  const userImage = '/assets/img/user2-160x160.jpg';
+  const userName = 'Alexander Pierce';
+  const menuItems = ['Followers', 'Sales', 'Friends'];
 
-const logoutUser = async () => {
-  await logout();
-  router.push({ name: "Login" });
-}
+  const logoutUser = async () => {
+    await logout();
+    router.push({ name: "Login" });
+  }
 </script>

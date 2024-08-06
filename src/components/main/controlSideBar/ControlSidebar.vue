@@ -74,7 +74,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useUiStore } from '@/rdhStore/uiStore';
+import { useUiStore } from '@/store/uiStore';
 import { Checkbox as Pfcheckbox, Select as Pfselect } from '@profabric/vue-components';
 import { NAVBAR_DARK_VARIANTS, NAVBAR_LIGHT_VARIANTS, SIDEBAR_DARK_SKINS, SIDEBAR_LIGHT_SKINS } from '@/utils/themes';
 import { VSelect } from 'vuetify/lib/components/index.mjs';

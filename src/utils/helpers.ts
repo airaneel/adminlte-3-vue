@@ -34,14 +34,14 @@ export const addAppClass = (className: string, id = 'app-body') => {
         // Attempting to retrieve the element by its ID
         const appElement = document.getElementById(id);
         if (!appElement) {
-            // Logging error and throwing exception if element is not found
-            logger.error("Element not found");
-            throw new Error('Element with id "app" not found');
+            const errorMessage = 'Element with id "app" not found';
+            logger.error(errorMessage);
+            throw new Error(errorMessage);
         }
         // Adding the class to the element's class list
         appElement.classList.add(className);
         // Logging successful addition of class
-        logger.info(`Added class "${className}" to the app element`);
+        logger.debug(`Added class "${className}" to the app element`);
     } catch (error) {
         // Logging to console if there's an error during the process
         console.error(`Failed to add class "${className}":`, error);
@@ -64,10 +64,17 @@ export const removeAppClass = (className: string, id: string = 'app-body') => {
         // Removing the class from the element's class list
         appElement.classList.remove(className);
         // Logging successful removal of class
-        logger.info(`Removed class "${className}" from the app element`);
+        logger.debug(`Removed class "${className}" from the app element`);
     } catch (error) {
         // Logging errors to both logger and console
-        logger.error(`Failed to remove class "${className}":`, error);
-        console.error(`Failed to remove class "${className}":`, error);
+        logger.error(`Failed to remove class "${className}". ${error}`);
+        console.error(`Failed to remove class "${className}". ${error}`);
     }
+};
+
+
+
+export const handleError = (error: Error): never => {
+    logger.error("API request failed : " + error);
+    throw error;
 };

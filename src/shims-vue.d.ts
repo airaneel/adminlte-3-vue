@@ -5,3 +5,4 @@ declare module '*.vue' {
     export default component;
 }
 declare module 'datatables.net-plugins/i18n/ru';
+

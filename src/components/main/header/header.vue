@@ -34,7 +34,7 @@ import Notifications from '@/components/main/header/notifications/notifications.
 import fullScreenToggle from '@/components/main/header/fullScreenToggle.vue'
 import User from '@/components/main/header/user/user.vue'
 
-import { useUiStore } from '@/rdhStore/uiStore'
+import { useUiStore } from '@/store/uiStore'
 import ThemeSwitcher from '@/components/ui/themeSwitcher.vue'
 
 const ui = useUiStore()

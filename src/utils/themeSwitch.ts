@@ -1,4 +1,5 @@
-import createViteLogger from "@/utils/viteLogger";
+import logger from "@/utils/logger";
+
 
 
 export const setAppTheme = (theme: string) => {
@@ -8,7 +9,7 @@ export const setAppTheme = (theme: string) => {
             throw new Error('Element <html> not found');
         }
         htmlElement.setAttribute('data-bs-theme', theme);
-        createViteLogger().info('set theme "${theme}"');
+        logger.debug('set theme "${theme}"');
     } catch (error) {
         console.error(`Failed to set theme "${theme}":`, error);
     }
@@ -36,7 +37,7 @@ export const toggleAppTheme = (): void => {
         const currentTheme = htmlElement.getAttribute('data-bs-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         htmlElement.setAttribute('data-bs-theme', newTheme);
-        createViteLogger().info(`toggled theme to "${newTheme}"`);
+        logger.debug(`toggled theme to "${newTheme}"`);
     } catch (error) {
         console.error('Failed to toggle theme:', error);
     }
